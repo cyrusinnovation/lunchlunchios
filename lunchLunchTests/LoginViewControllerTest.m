@@ -20,6 +20,7 @@
 #import "MainViewController.h"
 
 
+
 @interface LoginViewControllerTest : XCTestCase
 
 @property(nonatomic, strong) LoginViewController *viewController;
@@ -32,6 +33,8 @@
     self.viewController = [[LoginViewController alloc] init];
     [PersonProviderTestHelper swizzleGetPerson];
     [CommandDispatcherTestHelper swizzleExecute];
+    self.viewController.emailTextField = [[UITextField alloc] init];
+    self.viewController.errorLabel = [[UILabel alloc] init];
 
 }
 
@@ -128,7 +131,8 @@
 
     [self.viewController textFieldShouldReturn:[[UITextField alloc] init]];
     MainViewController *destinationViewController = [[MainViewController alloc] init];
-    UIStoryboardSegue *segue = [[UIStoryboardSegue alloc] initWithIdentifier:@"loginSuccess" source:self.viewController destination:destinationViewController];
+    UINavigationController * navigationController = [[UINavigationController alloc] initWithRootViewController: destinationViewController];
+    UIStoryboardSegue *segue = [[UIStoryboardSegue alloc] initWithIdentifier:@"loginSuccess" source:self.viewController destination:navigationController];
 
     XCTAssertNil(destinationViewController.personLoggedIn);
     [self.viewController prepareForSegue:segue sender:self.viewController];

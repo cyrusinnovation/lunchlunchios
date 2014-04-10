@@ -12,9 +12,15 @@
 #import "Person.h"
 #import "LunchProvider.h"
 #import "LunchRetriever.h"
+#import "SegueCommand.h"
+#import "CommandDispatcher.h"
+#import "DetailViewController.h"
 
 @interface MainViewController ()
 
+
+@property(nonatomic, strong) NSObject <LunchProtocol> *detailedLunch;
+@property(nonatomic, strong) NSArray *lunchesForPerson;
 
 - (NSString *)buildLunchString:(NSObject <LunchProtocol> *)lunch;
 
@@ -24,35 +30,19 @@
 @end
 
 @implementation MainViewController {
-    NSArray *lunchesForPerson;
+
+
 }
-
-- (id)init {
-    self = [super initWithNibName:@"MainViewController" bundle:[NSBundle bundleForClass:[self class]]];
-    if (self) {
-
-    }
-    return self;
-}
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-
-    }
-    return self;
-}
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     LunchProvider *provider = [[LunchProvider alloc] initWithLunchRetriever:[[LunchRetriever alloc] init]];
-    lunchesForPerson = [provider findLunchesFor:self.personLoggedIn];
+    self.lunchesForPerson = [provider findLunchesFor:self.personLoggedIn];
 
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [lunchesForPerson count];
+    return [self.lunchesForPerson count];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -62,21 +52,20 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LunchCell" forIndexPath:indexPath];
-    NSObject <LunchProtocol> *lunch = [lunchesForPerson objectAtIndex:indexPath.row];
+    NSObject <LunchProtocol> *lunch = [self.lunchesForPerson objectAtIndex:indexPath.row];
     NSString *lunchString = [self buildLunchString:lunch];
     cell.textLabel.text = lunchString;
     return cell;
 }
 
 - (NSString *)buildLunchString:(NSObject <LunchProtocol> *)lunch {
-    NSObject <PersonProtocol> *lunchBuddy = [self findLunchBuddy:lunch];
     NSString *dateTimeString = [self buildDateTimeString:[lunch getDateAndTime]];
-    NSString *lunchString = [NSString localizedStringWithFormat:@"With %@ %@ on %@", [lunchBuddy getFirstName], [lunchBuddy getLastName], dateTimeString];
+    NSString *lunchString = dateTimeString;
     return lunchString;
 }
 
 - (NSObject <PersonProtocol> *)findLunchBuddy:(NSObject <LunchProtocol> *)lunch {
-    if([[lunch getPerson1] isEqual: self.personLoggedIn]){
+    if ([[lunch getPerson1] isEqual:self.personLoggedIn]) {
         return [lunch getPerson2];
     }
     return [lunch getPerson1];
@@ -90,6 +79,20 @@
     [dateStringGenerator setDateFormat:@"h:mm a"];
     NSString *timeString = [dateStringGenerator stringFromDate:lunchTime];
     return [NSString localizedStringWithFormat:@"%@ at %@", dateString, timeString];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    self.detailedLunch = [self.lunchesForPerson objectAtIndex:indexPath.row];
+    SegueCommand *segueCommand = [[SegueCommand alloc] initForViewController:self segueIdentifier:@"seeDetails"];
+    [[CommandDispatcher singleton] executeCommand:segueCommand];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"seeDetails"]) {
+        DetailViewController *controller = (DetailViewController *) segue.destinationViewController;
+        controller.lunch = self.detailedLunch;
+        controller.personLoggedIn = self.personLoggedIn;
+    }
 }
 
 @end

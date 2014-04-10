@@ -10,12 +10,13 @@
 
 #import "MainViewController.h"
 #import "Person.h"
-#import "PersonProvider.h"
 #import "SwizzleHelper.h"
 #import "SegueCommand.h"
 #import "LunchProviderTestHelper.h"
 #import "Lunch.h"
 #import "MockUITableView.h"
+#import "CommandDispatcherTestHelper.h"
+#import "DetailViewController.h"
 
 NSObject <PersonProtocol> *personToReturn;
 
@@ -30,12 +31,14 @@ NSObject <PersonProtocol> *personToReturn;
     [super setUp];
     self.viewController = [[MainViewController alloc] init];
     [LunchProviderTestHelper swizzleGetLunchesForPerson];
+    [CommandDispatcherTestHelper swizzleExecute];
 
 
 }
 
 - (void)tearDown {
     [LunchProviderTestHelper deswizzleGetLunchesForPersonAndClearFields];
+    [CommandDispatcherTestHelper deswizzleExecuteAndClearLastCommandExecuted];
     self.viewController = nil;
     [super tearDown];
 }
@@ -47,6 +50,7 @@ NSObject <PersonProtocol> *personToReturn;
     XCTAssertEqual(loggedInPerson, [LunchProviderTestHelper getPersonUsedToFindLunches]);
 
 }
+
 
 - (void)testUsesFoundListOfLunchesToProvideNumberOfRows {
     [LunchProviderTestHelper setLunchesToReturn:@[[[Lunch alloc] init], [[Lunch alloc] init], [[Lunch alloc] init], [[Lunch alloc] init], [[Lunch alloc] init]]];
@@ -76,7 +80,7 @@ NSObject <PersonProtocol> *personToReturn;
     [tableView setCellToReturn:cellToReturn];
     NSIndexPath *indexPath = [NSIndexPath indexPathForItem:3 inSection:1];
 
-    NSString *expectedText = @"With Bob Soomy on 5/12/2103 at 2:30 PM";
+    NSString *expectedText = @"5/12/2103 at 2:30 PM";
 
 
     [self checkViewCellBuilt:tableView cellToReturn:cellToReturn indexPath:indexPath expectedText:expectedText];
@@ -96,14 +100,14 @@ NSObject <PersonProtocol> *personToReturn;
     Lunch *lunch = [[Lunch alloc] init];
 
     Lunch *lunchToUse = [[Lunch alloc] initWithPerson1:personTheLunchIsWith person2:loggedInPerson dateTime:date];
-    [LunchProviderTestHelper setLunchesToReturn:@[lunch, lunch, lunch,  lunch, lunchToUse]];
+    [LunchProviderTestHelper setLunchesToReturn:@[lunch, lunch, lunch, lunch, lunchToUse]];
     [self.viewController viewDidLoad];
 
     MockUITableView *tableView = [[MockUITableView alloc] init];
     UITableViewCell *cellToReturn = [[UITableViewCell alloc] init];
     [tableView setCellToReturn:cellToReturn];
     NSIndexPath *indexPath = [NSIndexPath indexPathForItem:4 inSection:1];
-    NSString *expectedText = @"With Abdi LaRue on 12/2/2103 at 11:30 AM";
+    NSString *expectedText = @"12/2/2103 at 11:30 AM";
 
     [self checkViewCellBuilt:tableView cellToReturn:cellToReturn indexPath:indexPath expectedText:expectedText];
 }
@@ -115,4 +119,43 @@ NSObject <PersonProtocol> *personToReturn;
     XCTAssertEqualObjects(indexPath, [tableView getIndexPathForDequeue]);
     XCTAssertEqualObjects(expectedText, cellToReturn.textLabel.text);
 }
+
+
+- (void)testWillFireSegueCommandWhenARowISelectedOnTheTable {
+
+
+    XCTAssertNil([CommandDispatcherTestHelper getLastCommandExecuted]);
+    NSIndexPath *indexPath = [NSIndexPath indexPathForItem:3 inSection:1];
+    [self.viewController tableView:self.viewController.lunchTable didSelectRowAtIndexPath:indexPath];
+    XCTAssertTrue([[CommandDispatcherTestHelper getLastCommandExecuted] isKindOfClass:[SegueCommand class]]);
+    SegueCommand *command = (SegueCommand *) [CommandDispatcherTestHelper getLastCommandExecuted];
+    XCTAssertEqualObjects(@"seeDetails", [command getSegueIdentifier]);
+    XCTAssertEqualObjects(self.viewController, [command getViewController]);
+
+
+}
+
+- (void)testWhenARowIsSelectedTheLunchBePassedAlongToViewControllerOnTheSegue {
+
+    XCTAssertNil([CommandDispatcherTestHelper getLastCommandExecuted]);
+    Person *personLoggedIn = [[Person alloc] init];
+    self.viewController.personLoggedIn  = personLoggedIn;
+    Lunch *lunchToPassAlong = [[Lunch alloc] init];
+    [LunchProviderTestHelper setLunchesToReturn:@[[[Lunch alloc] init], [[Lunch alloc] init], [[Lunch alloc] init], lunchToPassAlong, [[Lunch alloc] init]]];
+    [self.viewController viewDidLoad];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForItem:3 inSection:1];
+    [self.viewController tableView:self.viewController.lunchTable didSelectRowAtIndexPath:indexPath];
+
+    DetailViewController *destinationViewController = [[DetailViewController alloc] init];
+    UIStoryboardSegue *segue = [[UIStoryboardSegue alloc] initWithIdentifier:@"seeDetails" source:self.viewController destination:destinationViewController];
+
+    XCTAssertNil(destinationViewController.personLoggedIn);
+    XCTAssertNil(destinationViewController.lunch);
+    [self.viewController prepareForSegue:segue sender:self.viewController];
+
+    XCTAssertEqual(lunchToPassAlong, destinationViewController.lunch);
+    XCTAssertEqual(personLoggedIn, destinationViewController.personLoggedIn);
+
+}
+
 @end

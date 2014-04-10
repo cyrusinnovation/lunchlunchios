@@ -22,15 +22,7 @@
 @implementation LoginViewController
 
 
-- (id)init {
-    self = [super initWithNibName:@"LoginViewController" bundle:[NSBundle bundleForClass:[self class]]];
-    if (self) {
 
-        self.emailTextField = [[UITextField alloc] init];
-        self.errorLabel = [[UILabel alloc] init];
-    }
-    return self;
-}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -76,8 +68,9 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"loginSuccess"]) {
-        MainViewController *controller = (MainViewController *) segue.destinationViewController;
-        controller.personLoggedIn = self.personFound;
+        UINavigationController * controller = segue.destinationViewController;
+        MainViewController *mainViewController = (MainViewController*)[controller topViewController];
+        mainViewController.personLoggedIn = self.personFound;
     }
 }
 

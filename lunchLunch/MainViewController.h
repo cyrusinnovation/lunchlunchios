@@ -11,6 +11,7 @@
 
 @class Person;
 
-@interface MainViewController : UITableViewController
+@interface MainViewController:  UIViewController <UITableViewDelegate, UITableViewDataSource>
+@property (strong, nonatomic) IBOutlet UITableView *lunchTable;
 @property(nonatomic, strong) NSObject <PersonProtocol>  *personLoggedIn;
 @end
