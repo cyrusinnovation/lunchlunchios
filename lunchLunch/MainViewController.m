@@ -24,7 +24,7 @@
 
 - (NSString *)buildLunchString:(NSObject <LunchProtocol> *)lunch;
 
-- (NSObject <PersonProtocol> *)findLunchBuddy:(NSObject <LunchProtocol> *)lunch;
+
 
 - (NSString *)buildDateTimeString:(NSDate *)lunchTime;
 @end
@@ -64,13 +64,6 @@
     return lunchString;
 }
 
-- (NSObject <PersonProtocol> *)findLunchBuddy:(NSObject <LunchProtocol> *)lunch {
-    if ([[lunch getPerson1] isEqual:self.personLoggedIn]) {
-        return [lunch getPerson2];
-    }
-    return [lunch getPerson1];
-
-}
 
 - (NSString *)buildDateTimeString:(NSDate *)lunchTime {
     NSDateFormatter *dateStringGenerator = [[NSDateFormatter alloc] init];

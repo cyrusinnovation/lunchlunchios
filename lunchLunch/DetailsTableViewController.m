@@ -6,6 +6,10 @@
 #import "DetailsTableViewController.h"
 
 
+@interface DetailsTableViewController ()
+- (NSObject <PersonProtocol> *)findLunchBuddy:(NSObject <LunchProtocol> *)lunch;
+@end
+
 @implementation DetailsTableViewController {
 
 
@@ -18,10 +22,19 @@
 
     NSDateFormatter * timeFormatter = [[NSDateFormatter alloc] init] ;
     [timeFormatter setDateFormat:@"h:mm a"];
-    NSObject <PersonProtocol> *lunchBuddy = [self.lunch getPerson2];
+    NSObject <PersonProtocol> *lunchBuddy = [self findLunchBuddy:self.lunch];
     self.nameLabel.text = [NSString stringWithFormat:@"%@ %@", [lunchBuddy getFirstName], [lunchBuddy getLastName]];
     self.dateLabel.text = [dateFormatter stringFromDate:[self.lunch getDateAndTime]];
     self.timeLabel.text = [timeFormatter stringFromDate:[self.lunch getDateAndTime]];
+}
+
+
+- (NSObject <PersonProtocol> *)findLunchBuddy:(NSObject <LunchProtocol> *)lunch {
+    if ([[lunch getPerson1] isEqual:self.personLoggedIn]) {
+        return [lunch getPerson2];
+    }
+    return [lunch getPerson1];
+
 }
 
 @end

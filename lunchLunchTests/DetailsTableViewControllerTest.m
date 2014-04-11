@@ -52,5 +52,26 @@
     XCTAssertEqualObjects(@"5/12/2103", [self.viewController.dateLabel text]);
     XCTAssertEqualObjects(@"2:30 PM", [self.viewController.timeLabel text]);
 
+
+
+}
+
+- (void)testWillShowLunchDetailsOnViewDidLoad_LoggedInPersonIsPerson2 {
+    Person *loggedInPerson = [[Person alloc] init];
+
+    NSDateFormatter *dateMaker = [[NSDateFormatter alloc] init];
+    [dateMaker setDateFormat:@"MM/dd/yyyy HH:mm"];
+    NSDate *date = [dateMaker dateFromString:@"11/01/2103 11:30"];
+
+    self.viewController.personLoggedIn = loggedInPerson;
+    Person *lunchBuddy = [[Person alloc] initWithFirstName:@"Bulk" lastName:@"Vanderhuge" email:@""];
+
+
+    self.viewController.lunch = [[Lunch alloc] initWithPerson1:lunchBuddy person2:loggedInPerson dateTime:date];
+    [self.viewController viewDidLoad];
+    XCTAssertEqualObjects(@"Bulk Vanderhuge", [self.viewController.nameLabel text]);
+    XCTAssertEqualObjects(@"11/1/2103", [self.viewController.dateLabel text]);
+    XCTAssertEqualObjects(@"11:30 AM", [self.viewController.timeLabel text]);
+
 }
 @end
