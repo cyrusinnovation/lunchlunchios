@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PersonReceiverProtocol.h"
 
-@interface LoginViewController : UIViewController<UITextFieldDelegate>
+@interface LoginViewController : UIViewController<UITextFieldDelegate, PersonReceiverProtocol>
 @property(strong, nonatomic) IBOutlet UITextField *emailTextField;
 - (IBAction)backgroundTap:(id)sender;
 @property (strong, nonatomic) IBOutlet UILabel *errorLabel;

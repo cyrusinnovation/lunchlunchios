@@ -9,20 +9,18 @@
 #import "LoginViewController.h"
 #import "CommandDispatcher.h"
 #import "SegueCommand.h"
-#import "PersonProvider.h"
-#import "PersonRetriever.h"
+#import "LoginProvider.h"
+
 #import "NullPerson.h"
 #import "MainViewController.h"
 #import "Person.h"
+#import "LoginProviderFactory.h"
 
 @interface LoginViewController ()
 @property(nonatomic) NSObject <PersonProtocol> *personFound;
 @end
 
 @implementation LoginViewController
-
-
-
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -44,10 +42,14 @@
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
-
-    PersonProvider *provider = [[PersonProvider alloc] initWithRetriever:[[PersonRetriever alloc] init]];
     NSString *emailToFind = self.emailTextField.text;
-    self.personFound = [provider findPersonByEmail:emailToFind];
+    NSObject <LoginProviderProtocol> *loginProvider = [LoginProviderFactory buildLoginProvider: self];
+    [loginProvider findPersonByEmail:emailToFind];
+    return YES;
+}
+
+- (void)handlePersonFound:(NSObject <PersonProtocol> *)person {
+    self.personFound = person;
     if (![self.personFound isEqual:[NullPerson singleton]]) {
         self.errorLabel.text = nil;
         SegueCommand *segueCommand = [[SegueCommand alloc] initForViewController:self segueIdentifier:@"loginSuccess"];
@@ -56,7 +58,6 @@
     else {
         self.errorLabel.text = @"Email does not exist";
     }
-    return YES;
 }
 
 - (IBAction)backgroundTap:(id)sender {

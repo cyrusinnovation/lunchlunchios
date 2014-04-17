@@ -7,7 +7,7 @@
 //
 
 #import "MainViewController.h"
-#import "PersonProvider.h"
+#import "LoginProvider.h"
 #import "PersonProtocol.h"
 #import "Person.h"
 #import "LunchProvider.h"

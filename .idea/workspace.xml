@@ -1,11 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/lunchLunchTests/ConnectionFactoryTest.m" line="29" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="bcc6f4bf-bcc4-4bad-8c9a-f8bdc2847256" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunch/ConnectionFactory.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunch/ConnectionFactory.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunch/ConnectionFactoryProtocol.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunchTests/ConnectionFactoryTest.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunch/LoginProvider.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunch/LoginProvider.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunch/LoginProviderFactory.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunch/LoginProviderFactory.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunchTests/LoginProviderFactoryTest.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunchTests/LoginProviderFactoryTestHelper.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunchTests/LoginProviderFactoryTestHelper.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunch/LoginProviderProtocol.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunchTests/LoginProviderTest.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunchTests/MockConnectionFactory.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunchTests/MockConnectionFactory.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunchTests/MockLoginProvider.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunchTests/MockLoginProvider.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunchTests/MockNSURLConnectionDelegate.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunchTests/MockNSURLConnectionDelegate.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunchTests/MockPersonParser.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunchTests/MockPersonParser.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunchTests/MockPersonReceiver.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunchTests/MockPersonReceiver.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunch/PersonParser.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunch/PersonParser.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunch/PersonParserProtocol.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunchTests/PersonParserTest.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunch/PersonReceiverProtocol.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/find.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lunchLunch/PersonProvider.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lunchLunch/PersonProvider.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lunchLunch/PersonRetriever.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lunchLunch/PersonRetriever.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lunchLunch/PersonRetrieverProtocol.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lunchLunchTests/MockPersonRetriever.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lunchLunchTests/MockPersonRetriever.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lunchLunchTests/PersonProviderTest.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lunchLunchTests/PersonProviderTestHelper.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lunchLunchTests/PersonProviderTestHelper.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lunchLunchTests/PersonRetrieverTest.m" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunch.xcodeproj/xcuserdata/Cyrus.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterPath="$PROJECT_DIR$/lunchLunch.xcodeproj/xcuserdata/Cyrus.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunch/DetailsTableViewController.m" afterPath="$PROJECT_DIR$/lunchLunch/DetailsTableViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunchTests/DetailsTableViewControllerTest.m" afterPath="$PROJECT_DIR$/lunchLunchTests/DetailsTableViewControllerTest.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunch/LoginViewController.h" afterPath="$PROJECT_DIR$/lunchLunch/LoginViewController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunch/LoginViewController.m" afterPath="$PROJECT_DIR$/lunchLunch/LoginViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunchTests/LoginViewControllerTest.m" afterPath="$PROJECT_DIR$/lunchLunchTests/LoginViewControllerTest.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunch/MainViewController.m" afterPath="$PROJECT_DIR$/lunchLunch/MainViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunch.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/lunchLunch.xcodeproj/project.pbxproj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="lunchLunch.iws" />
@@ -29,28 +74,75 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="DetailsTableViewController.m" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lunchLunch/DetailsTableViewController.m">
+      <file leaf-file-name="LoginProviderFactoryTestHelper.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lunchLunchTests/LoginProviderFactoryTestHelper.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="164" selection-start="971" selection-end="971" vertical-scroll-proportion="0.64935064" vertical-offset="0" max-vertical-offset="705">
+            <state line="7" column="33" selection-start="202" selection-end="202" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
+              <folding>
+                <element signature="e#100#133#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LunchRetrieverProtocol.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lunchLunch/LunchRetrieverProtocol.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DetailViewControllerTest.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lunchLunchTests/DetailViewControllerTest.m">
+      <file leaf-file-name="LunchProvider.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lunchLunch/LunchProvider.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="44" selection-start="355" selection-end="356" vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="765">
+            <state line="10" column="11" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DetailViewController.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lunchLunch/DetailViewController.m">
+      <file leaf-file-name="LunchProtocol.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lunchLunch/LunchProtocol.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="0" selection-start="217" selection-end="217" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Lunch.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lunchLunch/Lunch.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="0" selection-start="117" selection-end="117" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LunchProviderTest.m" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lunchLunchTests/LunchProviderTest.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="16" selection-start="285" selection-end="285" vertical-scroll-proportion="0.19248827" vertical-offset="83" max-vertical-offset="1290">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LunchProvider.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lunchLunch/LunchProvider.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="29" selection-start="204" selection-end="217" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LunchRetriever.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lunchLunch/LunchRetriever.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="810">
               <folding />
             </state>
           </provider>
@@ -59,7 +151,7 @@
       <file leaf-file-name="LoginViewController.m" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lunchLunch/LoginViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="61" selection-start="2111" selection-end="2111" vertical-scroll-proportion="0.0" vertical-offset="830" max-vertical-offset="1260">
+            <state line="60" column="1" selection-start="1611" selection-end="1611" vertical-scroll-proportion="0.0" vertical-offset="729" max-vertical-offset="1155">
               <folding />
             </state>
           </provider>
@@ -68,45 +160,7 @@
       <file leaf-file-name="LoginViewControllerTest.m" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lunchLunchTests/LoginViewControllerTest.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="0" selection-start="487" selection-end="487" vertical-scroll-proportion="0.0" vertical-offset="840" max-vertical-offset="2235">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainViewControllerTest.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lunchLunchTests/MainViewControllerTest.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="0" selection-start="1377" selection-end="1377" vertical-scroll-proportion="0.0" vertical-offset="592" max-vertical-offset="2505">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainViewController.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lunchLunch/MainViewController.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="0" selection-start="619" selection-end="619" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1455">
-              <folding>
-                <element signature="e#144#174#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DetailsTableViewControllerTest.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lunchLunchTests/DetailsTableViewControllerTest.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="15" selection-start="1647" selection-end="1647" vertical-scroll-proportion="0.0" vertical-offset="402" max-vertical-offset="1185">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainViewController.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lunchLunch/MainViewController.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="306" selection-end="306" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+            <state line="86" column="116" selection-start="2823" selection-end="2823" vertical-scroll-proportion="0.0" vertical-offset="900" max-vertical-offset="2160">
               <folding />
             </state>
           </provider>
@@ -130,27 +184,28 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/lunchLunchTests/DetailsTableViewControllerTest.h" />
-        <option value="$PROJECT_DIR$/lunchLunch/DetailViewController.h" />
-        <option value="$PROJECT_DIR$/lunchLunch/DetailsTableViewController.h" />
-        <option value="$PROJECT_DIR$/lunchLunch/DetailViewController.m" />
-        <option value="$PROJECT_DIR$/lunchLunchTests/MainNavigationControllerTest.h" />
-        <option value="$PROJECT_DIR$/lunchLunchTests/MainNavigationControllerTest.m" />
-        <option value="$PROJECT_DIR$/lunchLunch/MainNavigationController.h" />
-        <option value="$PROJECT_DIR$/lunchLunch/MainNavigationController.m" />
-        <option value="$PROJECT_DIR$/lunchLunch/LoginViewController.m" />
-        <option value="$PROJECT_DIR$/lunchLunch/MainViewController.h" />
-        <option value="$PROJECT_DIR$/lunchLunchTests/LoginViewControllerTest.m" />
+        <option value="$PROJECT_DIR$/lunchLunch/PersonParser.m" />
+        <option value="$PROJECT_DIR$/lunchLunchTests/LoginProviderFactoryTest.h" />
+        <option value="$PROJECT_DIR$/lunchLunch/LoginProviderFactory.h" />
+        <option value="$PROJECT_DIR$/lunchLunchTests/LoginProviderFactoryTest.m" />
+        <option value="$PROJECT_DIR$/lunchLunch/LoginProviderFactory.m" />
+        <option value="$PROJECT_DIR$/lunchLunchTests/LoginProviderFactoryTestHelper.h" />
+        <option value="$PROJECT_DIR$/lunchLunchTests/LoginProviderFactoryTestHelper.m" />
         <option value="$PROJECT_DIR$/lunchLunchTests/MainViewControllerTest.m" />
-        <option value="$PROJECT_DIR$/lunchLunchTests/DetailViewControllerTest.m" />
-        <option value="$PROJECT_DIR$/lunchLunchTests/DetailsTableViewControllerTest.m" />
-        <option value="$PROJECT_DIR$/lunchLunch/MainViewController.m" />
-        <option value="$PROJECT_DIR$/lunchLunch/DetailsTableViewController.m" />
+        <option value="$PROJECT_DIR$/lunchLunchTests/MockLoginProvider.h" />
+        <option value="$PROJECT_DIR$/lunchLunchTests/MockLoginProvider.m" />
+        <option value="$PROJECT_DIR$/lunchLunchTests/LoginViewControllerTest.m" />
+        <option value="$PROJECT_DIR$/lunchLunch/LoginViewController.m" />
+        <option value="$PROJECT_DIR$/lunchLunchTests/OldLunchProviderTest.m" />
+        <option value="$PROJECT_DIR$/lunchLunch/OldLunchProvider.h" />
+        <option value="$PROJECT_DIR$/lunchLunch/LunchProvider.h" />
+        <option value="$PROJECT_DIR$/lunchLunchTests/LunchProviderTest.m" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="22" />
+    <option name="x" value="119" />
+    <option name="y" value="96" />
     <option name="width" value="1613" />
     <option name="height" value="790" />
   </component>
@@ -205,6 +260,40 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Cidr.FilesView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lunchLunch" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$1$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lunchLunch" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$1$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lunchLunch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lunchLunch" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$1$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lunchLunch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lunchLunch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -271,113 +360,7 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Main" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lunchLunch" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lunchLunchTests" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="Login" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lunchLunch" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lunchLunchTests" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Details" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lunchLunch" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lunchLunchTests" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Supporting Files" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lunchLunch" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lunchLunchTests" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Model" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Person" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lunchLunch" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lunchLunchTests" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Model" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Lunch" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -412,24 +395,6 @@
               <option name="myItemId" value="lunchLunch" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Images.xcassets" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lunchLunch" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lunchLunch" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -463,11 +428,7 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Main" />
+              <option name="myItemId" value="Model" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -485,11 +446,7 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Login" />
+              <option name="myItemId" value="Controller" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -501,84 +458,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="lunchLunch" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lunchLunch" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Details" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lunchLunch" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lunchLunch" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Supporting Files" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lunchLunch" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Frameworks" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Cidr.FilesView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lunchLunch" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$1$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lunchLunch" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$1$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lunchLunch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lunchLunch" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$1$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lunchLunch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lunchLunch" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -663,13 +542,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1613" height="790" extended-state="0" />
+    <frame x="119" y="96" width="1613" height="790" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15945612" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.370319" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21946684" sideWeight="0.67128986" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21946684" sideWeight="0.629681" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25285715" sideWeight="0.4264524" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32880098" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -678,7 +558,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36893204" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32871014" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -699,120 +578,122 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lunchLunch/MainViewController.m">
+    <entry file="file://$PROJECT_DIR$/lunchLunchTests/LoginProviderTest.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="74" selection-start="1033" selection-end="1033" vertical-scroll-proportion="0.0" vertical-offset="585" max-vertical-offset="1560">
+        <state line="22" column="0" selection-start="378" selection-end="607" vertical-scroll-proportion="0.0" vertical-offset="178" max-vertical-offset="1320">
           <folding>
-            <element signature="e#144#174#0" expanded="true" />
+            <element signature="e#99#124#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lunchLunchTests/DetailsTableViewControllerTest.m">
+    <entry file="file://$PROJECT_DIR$/lunchLunchTests/LoginProviderFactoryTestHelper.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="479" selection-end="547" vertical-scroll-proportion="0.0" vertical-offset="147" max-vertical-offset="915">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lunchLunch/MainViewController.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="306" selection-end="306" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="345">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UINavigationController.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="52" selection-start="1817" selection-end="1817" vertical-scroll-proportion="0.0" vertical-offset="284" max-vertical-offset="1695">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lunchLunch/LoginViewController.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="693" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lunchLunch/DetailsTableViewController.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="58" selection-start="564" selection-end="564" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+        <state line="42" column="33" selection-start="1625" selection-end="1625" vertical-scroll-proportion="0.0" vertical-offset="293" max-vertical-offset="975">
           <folding>
-            <element signature="e#100#133#0" expanded="true" />
+            <element signature="e#100#142#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lunchLunch/DetailViewController.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="350" selection-end="350" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
-          <folding>
-            <element signature="e#100#133#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lunchLunch/LoginViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="61" selection-start="2111" selection-end="2111" vertical-scroll-proportion="0.0" vertical-offset="830" max-vertical-offset="1260">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lunchLunchTests/LoginViewControllerTest.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="487" selection-end="487" vertical-scroll-proportion="0.0" vertical-offset="840" max-vertical-offset="2235">
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lunchLunchTests/MainViewControllerTest.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="0" selection-start="1377" selection-end="1377" vertical-scroll-proportion="0.0" vertical-offset="592" max-vertical-offset="2505">
+        <state line="42" column="21" selection-start="1068" selection-end="1068" vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="2355">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lunchLunch/DetailViewController.m">
+    <entry file="file://$PROJECT_DIR$/lunchLunchTests/LunchProviderTestHelper.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="217" selection-end="217" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
+        <state line="9" column="0" selection-start="188" selection-end="265" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="915">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lunchLunchTests/DetailViewControllerTest.m">
+    <entry file="file://$PROJECT_DIR$/lunchLunchTests/MockLoginProvider.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="44" selection-start="355" selection-end="356" vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="765">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lunchLunchTests/DetailsTableViewControllerTest.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="15" selection-start="1647" selection-end="1647" vertical-scroll-proportion="0.0" vertical-offset="402" max-vertical-offset="1185">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lunchLunch/MainViewController.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="306" selection-end="306" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lunchLunch/MainViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="619" selection-end="619" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1455">
+        <state line="9" column="12" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
           <folding>
-            <element signature="e#144#174#0" expanded="true" />
+            <element signature="e#100#133#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lunchLunch/DetailsTableViewController.m">
+    <entry file="file://$PROJECT_DIR$/lunchLunchTests/MockLoginProvider.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="164" selection-start="971" selection-end="971" vertical-scroll-proportion="0.64935064" vertical-offset="0" max-vertical-offset="705">
+        <state line="16" column="26" selection-start="294" selection-end="294" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lunchLunchTests/LoginProviderFactoryTestHelper.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="33" selection-start="202" selection-end="202" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
+          <folding>
+            <element signature="e#100#133#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lunchLunchTests/LoginViewControllerTest.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="86" column="116" selection-start="2823" selection-end="2823" vertical-scroll-proportion="0.0" vertical-offset="900" max-vertical-offset="2160">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lunchLunch/LoginViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="60" column="1" selection-start="1611" selection-end="1611" vertical-scroll-proportion="0.0" vertical-offset="729" max-vertical-offset="1155">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lunchLunch/LunchRetrieverProtocol.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="426">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lunchLunch/LunchRetriever.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="810">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lunchLunch/LunchProvider.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="29" selection-start="204" selection-end="217" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lunchLunch/Lunch.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="117" selection-end="117" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lunchLunch/LunchProtocol.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="426">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lunchLunch/LunchProvider.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="11" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lunchLunchTests/LunchProviderTest.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="16" selection-start="285" selection-end="285" vertical-scroll-proportion="0.19248827" vertical-offset="83" max-vertical-offset="1290">
           <folding />
         </state>
       </provider>
