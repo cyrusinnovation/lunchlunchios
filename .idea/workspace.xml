@@ -5,46 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bcc6f4bf-bcc4-4bad-8c9a-f8bdc2847256" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunch/LunchParser.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunch/LunchParser.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunch/LunchParserProtocol.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunchTests/LunchParserTest.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunch/LunchProviderFactory.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunch/LunchProviderFactory.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunchTests/LunchProviderFactoryTest.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunchTests/LunchProviderFactoryTestHelper.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunchTests/LunchProviderFactoryTestHelper.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunch/LunchProviderProtocol.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunch/LunchReceiverProtocol.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunchTests/MockLunchParser.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunchTests/MockLunchParser.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunchTests/MockLunchProvider.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunchTests/MockLunchProvider.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunchTests/MockLunchReceiver.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunchTests/MockLunchReceiver.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunch/OldLunchProvider.h" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lunchLunchTests/LunchProviderTestHelper.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lunchLunchTests/LunchProviderTestHelper.m" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lunchLunch/LunchProvider.m" afterPath="$PROJECT_DIR$/lunchLunch/OldLunchProvider.m" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lunchLunchTests/LunchProviderTest.m" afterPath="$PROJECT_DIR$/lunchLunchTests/OldLunchProviderTest.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunch.xcodeproj/xcuserdata/Cyrus.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterPath="$PROJECT_DIR$/lunchLunch.xcodeproj/xcuserdata/Cyrus.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunch/LoginProvider.h" afterPath="$PROJECT_DIR$/lunchLunch/LoginProvider.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunch/LoginProvider.m" afterPath="$PROJECT_DIR$/lunchLunch/LoginProvider.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunch/LunchProvider.h" afterPath="$PROJECT_DIR$/lunchLunch/LunchProvider.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunch/LunchProvider.m" afterPath="$PROJECT_DIR$/lunchLunch/LunchProvider.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunchTests/LunchProviderTest.m" afterPath="$PROJECT_DIR$/lunchLunchTests/LunchProviderTest.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunch/MainViewController.h" afterPath="$PROJECT_DIR$/lunchLunch/MainViewController.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunch/MainViewController.m" afterPath="$PROJECT_DIR$/lunchLunch/MainViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunchTests/MainViewControllerTest.m" afterPath="$PROJECT_DIR$/lunchLunchTests/MainViewControllerTest.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunchTests/MockPersonParser.h" afterPath="$PROJECT_DIR$/lunchLunchTests/MockPersonParser.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunchTests/MockPersonParser.m" afterPath="$PROJECT_DIR$/lunchLunchTests/MockPersonParser.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunchTests/MockUITableView.h" afterPath="$PROJECT_DIR$/lunchLunchTests/MockUITableView.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunchTests/MockUITableView.m" afterPath="$PROJECT_DIR$/lunchLunchTests/MockUITableView.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunch/PersonParser.m" afterPath="$PROJECT_DIR$/lunchLunch/PersonParser.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunch/PersonParserProtocol.h" afterPath="$PROJECT_DIR$/lunchLunch/PersonParserProtocol.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunchTests/PersonParserTest.m" afterPath="$PROJECT_DIR$/lunchLunchTests/PersonParserTest.m" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lunchLunch/LunchRetriever.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lunchLunch/LunchRetriever.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lunchLunch/LunchRetrieverProtocol.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lunchLunch/OldLunchProvider.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lunchLunch/OldLunchProvider.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lunchLunchTests/LunchRetrieverTest.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lunchLunchTests/MockLunchRetriever.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lunchLunchTests/MockLunchRetriever.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lunchLunchTests/OldLunchProviderTest.m" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunch.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/lunchLunch.xcodeproj/project.pbxproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="lunchLunch.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -108,7 +78,7 @@
       <file leaf-file-name="MainViewController.h" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lunchLunch/MainViewController.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="11" selection-start="243" selection-end="243" vertical-scroll-proportion="0.4379562" vertical-offset="0" max-vertical-offset="411">
+            <state line="14" column="11" selection-start="243" selection-end="243" vertical-scroll-proportion="0.2777778" vertical-offset="0" max-vertical-offset="648">
               <folding />
             </state>
           </provider>
@@ -181,9 +151,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="22" />
-    <option name="width" value="1613" />
-    <option name="height" value="790" />
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -427,6 +396,10 @@
               <option name="myItemId" value="Model" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Person" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -619,7 +592,7 @@
     <property name="recentsLimit" value="5" />
     <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lunchLunch/MainViewController.m" />
-    <property name="FullScreen" value="false" />
+    <property name="FullScreen" value="true" />
     <property name="OBJC.PRESERVED_TARGET_SELECTION" value="lunchLunchTests" />
   </component>
   <component name="RunManager" selected="Application.lunchLunch">
@@ -692,19 +665,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1613" height="790" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32936507" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15945612" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36925286" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25496033" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24968554" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22264151" sideWeight="0.375" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18661043" sideWeight="0.5734127" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22264151" sideWeight="0.25431034" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18661043" sideWeight="0.09623016" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32880098" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1433869" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14285715" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -728,13 +701,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSString.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="24" selection-start="2363" selection-end="2383" vertical-scroll-proportion="0.0" vertical-offset="322" max-vertical-offset="6060">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lunchLunch/LunchProvider.m">
       <provider selected="true" editor-type-id="text-editor">
         <state line="38" column="81" selection-start="1410" selection-end="1410" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="1155">
@@ -839,7 +805,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lunchLunch/MainViewController.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="11" selection-start="243" selection-end="243" vertical-scroll-proportion="0.4379562" vertical-offset="0" max-vertical-offset="411">
+        <state line="14" column="11" selection-start="243" selection-end="243" vertical-scroll-proportion="0.2777778" vertical-offset="0" max-vertical-offset="648">
           <folding />
         </state>
       </provider>

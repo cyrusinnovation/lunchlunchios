@@ -10,8 +10,6 @@
 #import "LoginProvider.h"
 #import "PersonProtocol.h"
 #import "Person.h"
-#import "OldLunchProvider.h"
-#import "LunchRetriever.h"
 #import "SegueCommand.h"
 #import "CommandDispatcher.h"
 #import "DetailViewController.h"
