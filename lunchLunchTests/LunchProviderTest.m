@@ -1,83 +1,106 @@
 //
-// Created by Cyrus on 4/9/14.
+// Created by Cyrus on 4/18/14.
 // Copyright (c) 2014 Cyrus Innovation. All rights reserved.
 //
 
-
 #import <XCTest/XCTest.h>
+#import "LunchProviderProtocol.h"
 #import "LunchProvider.h"
-#import "MockLunchRetriever.h"
-#import "Lunch.h"
+#import "MockConnectionFactory.h"
+#import "MockLunchParser.h"
+#import "MockLunchReceiver.h"
+#import "MockPersonParser.h"
 #import "Person.h"
+#import "Lunch.h"
 
 @interface LunchProviderTest : XCTestCase
 @end
 
 @implementation LunchProviderTest {
 
+
+
 }
-- (void)testFindLunchesWillReturnLunchesThatThePersonIsAPartOf {
-    Person *personToFind = [[Person alloc] initWithFirstName:@"Person" lastName:@"to" email:@"find"];
-    Person *personEqualToPersonToFind = [[Person alloc] initWithFirstName:@"Person" lastName:@"to" email:@"find"];
-
-    Lunch *lunchToFind1 = [[Lunch alloc] initWithPerson1:personToFind person2:[[Person alloc] init] dateTime:[[NSDate alloc] init]];
-    Lunch *lunchToFind2 = [[Lunch alloc] initWithPerson1:personEqualToPersonToFind person2:[[Person alloc] init] dateTime:[[NSDate alloc] init]];
-    Lunch *lunchToFind3 = [[Lunch alloc] initWithPerson1:[[Person alloc] init] person2:personEqualToPersonToFind dateTime:[[NSDate alloc] init]];
-    Lunch *lunchToFind4 = [[Lunch alloc] initWithPerson1:[[Person alloc] init] person2:personToFind dateTime:[[NSDate alloc] init]];
-    Lunch *otherLunch1 = [[Lunch alloc] init];
-    Lunch *otherLunch2 = [[Lunch alloc] init];
-    Lunch *otherLunch3 = [[Lunch alloc] init];
-    Lunch *otherLunch4 = [[Lunch alloc] init];
-
-    NSArray *allLunches = [NSArray arrayWithObjects:otherLunch1, lunchToFind1, otherLunch2, otherLunch3, lunchToFind2, lunchToFind3, otherLunch4, lunchToFind4, nil];
-
-
-    MockLunchRetriever *mockLunchRetriever = [[MockLunchRetriever alloc] init];
-    [mockLunchRetriever setAllLunchesToReturn:allLunches];
-    LunchProvider *lunchProvider = [[LunchProvider alloc] initWithLunchRetriever:mockLunchRetriever];
-
-    NSArray *lunchesForPerson = [lunchProvider findLunchesFor:personToFind];
-    XCTAssertEqual(4, [lunchesForPerson count]);
-    XCTAssertEqualObjects(lunchToFind1, [lunchesForPerson objectAtIndex:0] );
-    XCTAssertEqualObjects(lunchToFind2, [lunchesForPerson objectAtIndex:1] );
-    XCTAssertEqualObjects(lunchToFind3, [lunchesForPerson objectAtIndex:2] );
-    XCTAssertEqualObjects(lunchToFind4, [lunchesForPerson objectAtIndex:3] );
+- (void)testIsANSURLConnectionDataDelegate {
+    XCTAssertTrue([LunchProvider conformsToProtocol:@protocol(NSURLConnectionDataDelegate)]);
+    XCTAssertTrue([LunchProvider conformsToProtocol:@protocol(LunchProviderProtocol)]);
 }
 
-- (void)testFindLunchesWillOrderFoundLunchesByDate {
-    Person *personToFind = [[Person alloc] initWithFirstName:@"Person" lastName:@"to" email:@"find"];
+-(void) testCanGetArgumentsFromInit{
+    MockLunchReceiver *receiver = [[MockLunchReceiver alloc] init];
+    MockConnectionFactory *factory = [[MockConnectionFactory alloc] init];
+    MockLunchParser *lunchParser = [[MockLunchParser alloc] init];
+    MockPersonParser *personParser = [[MockPersonParser alloc] init];
+    LunchProvider *provider =
+            [[LunchProvider alloc] initWithConnectionFactory:factory lunchParser:lunchParser personParser:personParser andLunchReceiver:receiver];
+    XCTAssertEqual(receiver, [provider getLunchReceiver]);
+    XCTAssertEqual(factory, [provider getConnectionFactory]);
+    XCTAssertEqual(personParser, [provider getPersonParser]);
+    XCTAssertEqual(lunchParser, [provider getLunchParser]);
+}
 
-    NSDateFormatter *dateMaker = [[NSDateFormatter alloc] init];
-    [dateMaker setDateFormat:@"MM/dd/yyyy"];
+- (void)testFindLunchesForPersonWillCreateConnectionUsingFactory {
+    MockLunchReceiver *receiver = [[MockLunchReceiver alloc] init];
+    MockConnectionFactory *factory = [[MockConnectionFactory alloc] init];
+    MockLunchParser *lunchParser = [[MockLunchParser alloc] init];
+    MockPersonParser *personParser = [[MockPersonParser alloc] init];
+    LunchProvider *provider =
+            [[LunchProvider alloc] initWithConnectionFactory:factory lunchParser:lunchParser personParser:personParser andLunchReceiver:receiver];
+    Person *person = [[Person alloc] initWithFirstName:@"Joe" lastName:@"Smith" email:@"JSmith@somethin.com"];
+    NSString *expectedJSON = @"IexpecttheParserToTurnThePersonIntoThis";
+    [personParser setPersonJSONToReturn:expectedJSON];
 
-    NSDate *earliestDate = [dateMaker dateFromString:@"4/22/2014"];
-    NSDate *latestDate = [dateMaker dateFromString:@"8/22/2014"];
-    NSDate *midDate = [dateMaker dateFromString:@"4/30/2014"];
+    [provider findLunchesFor:person];
 
+    XCTAssertEqualObjects(person, [personParser getPersonToStringify]);
 
+    NSString *expectedURL = [NSString stringWithFormat:@"http://localhost:3000/getLunches?person=%@", expectedJSON];
 
-    Lunch *latestLunchToFind = [[Lunch alloc] initWithPerson1:personToFind person2:[[Person alloc] init] dateTime:latestDate];
-    Lunch *earliestLunchToFind = [[Lunch alloc] initWithPerson1:personToFind person2:[[Person alloc] init] dateTime:earliestDate];
-    Lunch *middleLunchToFind = [[Lunch alloc] initWithPerson1:[[Person alloc] init] person2:personToFind dateTime:midDate];
-
-    NSArray *allLunches = [NSArray arrayWithObjects:latestLunchToFind, earliestLunchToFind, middleLunchToFind, nil];
-
-    MockLunchRetriever *mockLunchRetriever = [[MockLunchRetriever alloc] init];
-    [mockLunchRetriever setAllLunchesToReturn:allLunches];
-
-    LunchProvider *lunchProvider = [[LunchProvider alloc] initWithLunchRetriever:mockLunchRetriever];
-
-    NSArray *lunchesForPerson = [lunchProvider findLunchesFor:personToFind];
-    XCTAssertEqual(3, [lunchesForPerson count]);
-
-    XCTAssertNotNil([earliestLunchToFind getDateAndTime]);
-    XCTAssertNotNil([middleLunchToFind getDateAndTime]);
-    XCTAssertNotNil([latestLunchToFind getDateAndTime]);
+    XCTAssertEqualObjects(expectedURL, [factory getRequestURLPassedIn]);
+    XCTAssertEqual(provider, [factory getDelegatePassedIn]);
+}
 
 
-    XCTAssertEqualObjects([earliestLunchToFind getDateAndTime], [[lunchesForPerson objectAtIndex:0] getDateAndTime] );
-    XCTAssertEqualObjects([middleLunchToFind getDateAndTime], [[lunchesForPerson objectAtIndex:1] getDateAndTime] );
-    XCTAssertEqualObjects([latestLunchToFind getDateAndTime], [[lunchesForPerson objectAtIndex:2] getDateAndTime] );
+- (void)testDidFailWithErrorWillGiveEmptyLunchArrayToReceiver {
+    MockLunchReceiver *receiver = [[MockLunchReceiver alloc] init];
+    MockConnectionFactory *factory = [[MockConnectionFactory alloc] init];
+    MockLunchParser *lunchParser = [[MockLunchParser alloc] init];
+    MockPersonParser *personParser = [[MockPersonParser alloc] init];
+    LunchProvider *provider =
+            [[LunchProvider alloc] initWithConnectionFactory:factory lunchParser:lunchParser personParser:personParser andLunchReceiver:receiver];
+    [provider connection:nil didFailWithError:nil];
+    XCTAssertEqual(0, [[receiver getLunchesReceived] count]);
+
+}
+
+- (void)testConnectionDidFinishLoadingWillGivePersonParsedFromTheDataFromTheConnectionToThePersonReceiver {
+    MockLunchReceiver *receiver = [[MockLunchReceiver alloc] init];
+    MockConnectionFactory *factory = [[MockConnectionFactory alloc] init];
+    MockLunchParser *lunchParser = [[MockLunchParser alloc] init];
+    MockPersonParser *personParser = [[MockPersonParser alloc] init];
+    LunchProvider *provider =
+            [[LunchProvider alloc] initWithConnectionFactory:factory lunchParser:lunchParser personParser:personParser andLunchReceiver:receiver];
+
+    [provider connection:nil didReceiveResponse:nil];
+    NSArray * lunches =    [NSArray arrayWithObjects:[[Lunch alloc] init], [[Lunch alloc] init],[[Lunch alloc] init],nil];
+    [lunchParser setLunchesToReturn:lunches];
+
+    NSData *dataPacket1 = [[NSData alloc] initWithBase64EncodedString:@"dfushasiuhd" options:0];
+    NSData *dataPacket2 = [[NSData alloc] initWithBase64EncodedString:@"fgdfsa" options:0];
+    NSData *dataPacket3 = [[NSData alloc] initWithBase64EncodedString:@"fwghgads" options:0];
+    [provider connection:nil didReceiveData:dataPacket1];
+    [provider connection:nil didReceiveData:dataPacket2];
+    [provider connection:nil didReceiveData:dataPacket3];
+
+    NSMutableData *expectedData = [[NSMutableData alloc] init];
+    [expectedData appendData:dataPacket1];
+    [expectedData appendData:dataPacket2];
+    [expectedData appendData:dataPacket3];
+
+    [provider connectionDidFinishLoading:nil];
+
+    XCTAssertEqualObjects(expectedData, [lunchParser getLunchDataPassedIn]);
+    XCTAssertEqual(lunches, [receiver getLunchesReceived]);
 
 
 }

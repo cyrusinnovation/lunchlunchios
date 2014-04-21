@@ -12,4 +12,6 @@
 - (NSString *)getIdentifierForDequeue;
 
 - (NSIndexPath *)getIndexPathForDequeue;
+
+- (BOOL)wasReloadDataCalled;
 @end

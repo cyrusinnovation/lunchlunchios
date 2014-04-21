@@ -26,6 +26,4 @@
 
 - (NSObject <PersonReceiverProtocol> *)getPersonReceiver;
 
-- (void)findPersonByEmail:(NSString *)email;
-
 @end

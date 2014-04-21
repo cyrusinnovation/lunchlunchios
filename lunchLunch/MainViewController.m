@@ -10,11 +10,12 @@
 #import "LoginProvider.h"
 #import "PersonProtocol.h"
 #import "Person.h"
-#import "LunchProvider.h"
+#import "OldLunchProvider.h"
 #import "LunchRetriever.h"
 #import "SegueCommand.h"
 #import "CommandDispatcher.h"
 #import "DetailViewController.h"
+#import "LunchProviderFactory.h"
 
 @interface MainViewController ()
 
@@ -23,9 +24,6 @@
 @property(nonatomic, strong) NSArray *lunchesForPerson;
 
 - (NSString *)buildLunchString:(NSObject <LunchProtocol> *)lunch;
-
-
-
 - (NSString *)buildDateTimeString:(NSDate *)lunchTime;
 @end
 
@@ -36,8 +34,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    LunchProvider *provider = [[LunchProvider alloc] initWithLunchRetriever:[[LunchRetriever alloc] init]];
-    self.lunchesForPerson = [provider findLunchesFor:self.personLoggedIn];
+    NSObject <LunchProviderProtocol> *lunchProvider = [LunchProviderFactory buildLunchProvider:self];
+    [lunchProvider findLunchesFor:self.personLoggedIn];
 
 }
 
@@ -87,5 +85,11 @@
         controller.personLoggedIn = self.personLoggedIn;
     }
 }
+
+- (void)handleLunchesFound:(NSArray *)lunches {
+    self.lunchesForPerson = lunches;
+    [self.lunchTable reloadData];
+}
+
 
 @end

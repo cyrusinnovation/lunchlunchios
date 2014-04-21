@@ -26,14 +26,18 @@
     return SINGLETON;
 }
 
-- (NSObject <PersonProtocol> *)parsePerson:(NSData *)personJsonData {
+- (NSObject <PersonProtocol> *)parsePersonUsingJsonData:(NSData *)personJsonData {
     NSError *error;
     NSDictionary *personDictionary = [NSJSONSerialization
             JSONObjectWithData:personJsonData
-                       options:kNilOptions
+                       options:0
                          error:&error];
 
 
+    return [self processPersonDictionary:personDictionary];
+}
+
+- (NSObject <PersonProtocol> *)processPersonDictionary:(NSDictionary *)personDictionary {
     if ([self dictionaryHasAllKeys:personDictionary]) {
         return [[Person alloc] initWithFirstName:[personDictionary objectForKey:@"firstName"]
                                         lastName:[personDictionary objectForKey:@"lastName"]
@@ -43,6 +47,22 @@
         return [NullPerson singleton];
     }
 }
+
+- (NSObject <PersonProtocol> *)parsePersonUsingDictionary:(NSDictionary *)personJsonDictionary {
+
+    return [self processPersonDictionary:personJsonDictionary];
+}
+
+
+- (NSString *)buildPersonJSONString:(NSObject <PersonProtocol> *)person {
+    NSError *error;
+    NSDictionary *personDictionary = [NSDictionary dictionaryWithObjectsAndKeys:[person getFirstName], @"firstName", [person getLastName] ,@"lastName", [person getEmailAddress],@"email",nil];
+    NSData *personData = [NSJSONSerialization dataWithJSONObject:personDictionary options:0 error:&error];
+
+
+    return    [[NSString alloc] initWithData:personData encoding:NSUTF8StringEncoding] ;
+}
+
 
 - (BOOL)dictionaryHasAllKeys:(NSDictionary *)dictionary {
 

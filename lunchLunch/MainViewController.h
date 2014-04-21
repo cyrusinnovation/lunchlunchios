@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "PersonProtocol.h"
+#import "LunchReceiverProtocol.h"
 
-@class Person;
 
-@interface MainViewController:  UIViewController <UITableViewDelegate, UITableViewDataSource>
+
+@interface MainViewController:  UIViewController <UITableViewDelegate, UITableViewDataSource, LunchReceiverProtocol>
 @property (strong, nonatomic) IBOutlet UITableView *lunchTable;
 @property(nonatomic, strong) NSObject <PersonProtocol>  *personLoggedIn;
 @end

@@ -10,6 +10,7 @@
     id cellToReturn;
     NSString *identifierForDequeue;
     NSIndexPath *indexPathForDequeue;
+    BOOL reloadDataWasCalled;
 }
 - (id)dequeueReusableCellWithIdentifier:(NSString *)identifier forIndexPath:(NSIndexPath *)indexPath {
     identifierForDequeue = identifier;
@@ -25,6 +26,13 @@
 }
 -(NSIndexPath *) getIndexPathForDequeue{
     return indexPathForDequeue;
+}
+
+- (void)reloadData {
+    reloadDataWasCalled = YES;
+}
+-(BOOL) wasReloadDataCalled{
+    return reloadDataWasCalled;
 }
 
 @end

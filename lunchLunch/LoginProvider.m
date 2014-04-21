@@ -4,11 +4,7 @@
 //
 
 #import "LoginProvider.h"
-#import "Person.h"
 #import "NullPerson.h"
-#import "ConnectionFactoryProtocol.h"
-#import "PersonReceiverProtocol.h"
-#import "PersonParserProtocol.h"
 
 
 @implementation LoginProvider {
@@ -24,16 +20,6 @@
     }
     return self;
 }
--(NSObject <ConnectionFactoryProtocol>*) getConnectionFactory{
-    return connectionFactory;
-}
-
--(NSObject <PersonParserProtocol>*) getPersonParser{
-    return parser;
-}
--(NSObject <PersonReceiverProtocol>*) getPersonReceiver{
-    return receiver;
-}
 - (void)findPersonByEmail:(NSString *)email {
     NSString *loginURL = [NSString stringWithFormat:@"http://localhost:3000/login?email=%@", email];
     [connectionFactory buildAsynchronousRequestForURL:loginURL andDelegate:self];
@@ -48,13 +34,25 @@
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-    NSObject <PersonProtocol> *parsedPerson = [parser parsePerson:connectionData];
+    NSObject <PersonProtocol> *parsedPerson = [parser parsePersonUsingJsonData:connectionData];
     [receiver handlePersonFound:parsedPerson];
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
     [receiver handlePersonFound:[NullPerson singleton]];
 
+}
+
+
+-(NSObject <ConnectionFactoryProtocol>*) getConnectionFactory{
+    return connectionFactory;
+}
+
+-(NSObject <PersonParserProtocol>*) getPersonParser{
+    return parser;
+}
+-(NSObject <PersonReceiverProtocol>*) getPersonReceiver{
+    return receiver;
 }
 
 @end

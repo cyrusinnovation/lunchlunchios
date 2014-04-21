@@ -12,11 +12,15 @@
 #import "Person.h"
 #import "SwizzleHelper.h"
 #import "SegueCommand.h"
-#import "LunchProviderTestHelper.h"
+
 #import "Lunch.h"
 #import "MockUITableView.h"
 #import "CommandDispatcherTestHelper.h"
 #import "DetailViewController.h"
+#import "LunchReceiverProtocol.h"
+#import "LoginProviderFactoryTestHelper.h"
+#import "LunchProviderFactoryTestHelper.h"
+#import "MockLunchProvider.h"
 
 NSObject <PersonProtocol> *personToReturn;
 
@@ -30,14 +34,14 @@ NSObject <PersonProtocol> *personToReturn;
 - (void)setUp {
     [super setUp];
     self.viewController = [[MainViewController alloc] init];
-    [LunchProviderTestHelper swizzleGetLunchesForPerson];
+    [LunchProviderFactoryTestHelper swizzleBuildLunchProvider];
     [CommandDispatcherTestHelper swizzleExecute];
 
 
 }
 
 - (void)tearDown {
-    [LunchProviderTestHelper deswizzleGetLunchesForPersonAndClearFields];
+    [LunchProviderFactoryTestHelper deswizzleBuildLunchProvider];
     [CommandDispatcherTestHelper deswizzleExecuteAndClearLastCommandExecuted];
     self.viewController = nil;
     [super tearDown];
@@ -46,16 +50,31 @@ NSObject <PersonProtocol> *personToReturn;
 - (void)testWillUseLoggedInPersonToFindLunchesWhenViewDidLoad {
     Person *loggedInPerson = [[Person alloc] init];
     self.viewController.personLoggedIn = loggedInPerson;
+    MockLunchProvider *mockLunchProvider = [[MockLunchProvider alloc] init];
+
+    [LunchProviderFactoryTestHelper setLunchProviderToReturn:mockLunchProvider];
+    
     [self.viewController viewDidLoad];
-    XCTAssertEqual(loggedInPerson, [LunchProviderTestHelper getPersonUsedToFindLunches]);
+    XCTAssertEqual(self.viewController, [LunchProviderFactoryTestHelper getLunchReceiverUsedToBuildLunchProvider]);
+    XCTAssertEqual(loggedInPerson, [mockLunchProvider getPersonToFindLunchesFor]);
 
 }
-
+- (void)testIsALunchReceiver {
+    XCTAssertTrue([MainViewController conformsToProtocol:@protocol(LunchReceiverProtocol)]);
+}
 
 - (void)testUsesFoundListOfLunchesToProvideNumberOfRows {
-    [LunchProviderTestHelper setLunchesToReturn:@[[[Lunch alloc] init], [[Lunch alloc] init], [[Lunch alloc] init], [[Lunch alloc] init], [[Lunch alloc] init]]];
-    [self.viewController viewDidLoad];
+    [self.viewController handleLunchesFound:@[[[Lunch alloc] init], [[Lunch alloc] init], [[Lunch alloc] init], [[Lunch alloc] init], [[Lunch alloc] init]]];
+  
     XCTAssertEqual(5, [self.viewController tableView:nil numberOfRowsInSection:0]);
+}
+- (void)testHandleLunchesFoundWillTellTableToReload {
+    MockUITableView *mockTable = [[MockUITableView alloc] init];
+    self.viewController.lunchTable = mockTable;
+    
+    [self.viewController handleLunchesFound:@[[[Lunch alloc] init]]];
+
+    XCTAssertTrue([mockTable wasReloadDataCalled]);
 }
 
 - (void)testCellForRowAtIndexPathWillSetLunchFromThatCell {
@@ -72,7 +91,7 @@ NSObject <PersonProtocol> *personToReturn;
     Lunch *lunch = [[Lunch alloc] init];
 
     Lunch *lunchToUse = [[Lunch alloc] initWithPerson1:loggedInPerson person2:personTheLunchIsWith dateTime:date];
-    [LunchProviderTestHelper setLunchesToReturn:@[lunch, lunch, lunch, lunchToUse, lunch]];
+    [self.viewController handleLunchesFound:@[lunch, lunch, lunch, lunchToUse, lunch]];
     [self.viewController viewDidLoad];
 
     MockUITableView *tableView = [[MockUITableView alloc] init];
@@ -100,7 +119,7 @@ NSObject <PersonProtocol> *personToReturn;
     Lunch *lunch = [[Lunch alloc] init];
 
     Lunch *lunchToUse = [[Lunch alloc] initWithPerson1:personTheLunchIsWith person2:loggedInPerson dateTime:date];
-    [LunchProviderTestHelper setLunchesToReturn:@[lunch, lunch, lunch, lunch, lunchToUse]];
+    [self.viewController handleLunchesFound:@[lunch, lunch, lunch, lunch, lunchToUse]];
     [self.viewController viewDidLoad];
 
     MockUITableView *tableView = [[MockUITableView alloc] init];
@@ -141,7 +160,7 @@ NSObject <PersonProtocol> *personToReturn;
     Person *personLoggedIn = [[Person alloc] init];
     self.viewController.personLoggedIn  = personLoggedIn;
     Lunch *lunchToPassAlong = [[Lunch alloc] init];
-    [LunchProviderTestHelper setLunchesToReturn:@[[[Lunch alloc] init], [[Lunch alloc] init], [[Lunch alloc] init], lunchToPassAlong, [[Lunch alloc] init]]];
+    [self.viewController handleLunchesFound:@[[[Lunch alloc] init], [[Lunch alloc] init], [[Lunch alloc] init], lunchToPassAlong, [[Lunch alloc] init]]];
     [self.viewController viewDidLoad];
     NSIndexPath *indexPath = [NSIndexPath indexPathForItem:3 inSection:1];
     [self.viewController tableView:self.viewController.lunchTable didSelectRowAtIndexPath:indexPath];
