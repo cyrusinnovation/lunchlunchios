@@ -19,8 +19,8 @@
 }
 + (PersonParser *)singleton {
     static PersonParser *SINGLETON;
-    if(!SINGLETON){
-        SINGLETON = [[PersonParser alloc]init];
+    if (!SINGLETON) {
+        SINGLETON = [[PersonParser alloc] init];
 
     }
     return SINGLETON;
@@ -39,9 +39,10 @@
 
 - (NSObject <PersonProtocol> *)processPersonDictionary:(NSDictionary *)personDictionary {
     if ([self dictionaryHasAllKeys:personDictionary]) {
-        return [[Person alloc] initWithFirstName:[personDictionary objectForKey:@"firstName"]
-                                        lastName:[personDictionary objectForKey:@"lastName"]
-                                           email:[personDictionary objectForKey:@"email"]];
+        return [[Person alloc] initWithFirstNameInitWithId:[personDictionary objectForKey:@"_id"]
+                                                 firstName:[personDictionary objectForKey:@"firstName"]
+                                                  lastName:[personDictionary objectForKey:@"lastName"]
+                                                     email:[personDictionary objectForKey:@"email"]];
     }
     else {
         return [NullPerson singleton];
@@ -49,31 +50,29 @@
 }
 
 - (NSObject <PersonProtocol> *)parsePersonUsingDictionary:(NSDictionary *)personJsonDictionary {
-
     return [self processPersonDictionary:personJsonDictionary];
 }
 
 
 - (NSString *)buildPersonJSONString:(NSObject <PersonProtocol> *)person {
     NSError *error;
-    NSDictionary *personDictionary = [NSDictionary dictionaryWithObjectsAndKeys:[person getFirstName], @"firstName", [person getLastName] ,@"lastName", [person getEmailAddress],@"email",nil];
+    NSDictionary *personDictionary = [NSDictionary dictionaryWithObjectsAndKeys:[person getFirstName], @"firstName", [person getLastName], @"lastName", [person getEmailAddress], @"email",[person getId], @"_id", nil];
     NSData *personData = [NSJSONSerialization dataWithJSONObject:personDictionary options:0 error:&error];
 
 
-    return    [[NSString alloc] initWithData:personData encoding:NSUTF8StringEncoding] ;
+    return [[NSString alloc] initWithData:personData encoding:NSUTF8StringEncoding];
 }
 
 
 - (BOOL)dictionaryHasAllKeys:(NSDictionary *)dictionary {
 
-    return [self hasKey:dictionary key:@"firstName"] && [self hasKey:dictionary key:@"lastName"] &&[self hasKey:dictionary key:@"email"] ;
+    return [self hasKey:dictionary key:@"firstName"] && [self hasKey:dictionary key:@"lastName"] && [self hasKey:dictionary key:@"email"] && [self hasKey:dictionary key:@"_id"];
 }
 
 - (BOOL)hasKey:(NSDictionary *)dictionary key:(NSString *)key {
 
     return [[dictionary allKeys] containsObject:key];
 }
-
 
 
 @end

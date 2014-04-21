@@ -7,18 +7,26 @@
 
 
 @implementation Person {
-
+    NSString *firstName;
+    NSString *lastName;
+    NSString *email;
+    NSString *personId;
 }
 
-- (id)initWithFirstName:(NSString *)inFirstName lastName:(NSString *)inLastName email:(NSString *)inEmail {
+- (id)initWithFirstNameInitWithId:(NSString *)inID firstName:(NSString *)inFirstName lastName:(NSString *)inLastName email:(NSString *)inEmail {
     self = [super init];
     if (self = [super init]) {
         firstName = inFirstName;
         lastName = inLastName;
         email = inEmail;
+        personId = inID;
 
     }
     return self;
+}
+
+- (NSString *)getId {
+    return personId;
 }
 
 - (NSString *)getFirstName {
@@ -41,14 +49,15 @@
     if ([[other class] isEqual:[self class]]) {
         return [firstName isEqualToString:[other getFirstName]]
                 && [lastName isEqualToString:[other getLastName]]
-                && [email isEqualToString:[other getEmailAddress]];
+                && [email isEqualToString:[other getEmailAddress]]
+                && [personId isEqualToString:[other getId]];
     }
 
     return NO;
 }
 
 - (NSUInteger)hash {
-    return 7 * [firstName hash] * [lastName hash] * [email hash];
+    return 7 * [firstName hash] * [lastName hash] * [email hash] * [personId hash];
 }
 
 @end

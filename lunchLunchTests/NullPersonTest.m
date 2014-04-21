@@ -28,6 +28,6 @@
     XCTAssertEqualObjects(@"", [[NullPerson singleton] getFirstName]);
     XCTAssertEqualObjects(@"", [[NullPerson singleton] getLastName]);
     XCTAssertEqualObjects(@"", [[NullPerson singleton] getEmailAddress]);
-
+    XCTAssertEqualObjects(@"", [[NullPerson singleton] getId]);
 }
 @end

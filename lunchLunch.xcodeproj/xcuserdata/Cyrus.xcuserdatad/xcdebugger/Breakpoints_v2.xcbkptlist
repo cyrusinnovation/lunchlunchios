@@ -104,13 +104,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "lunchLunch/MainViewController.m"
-            timestampString = "419782420.773596"
+            timestampString = "419800394.276141"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
-            landmarkName = "@implementation MainViewController"
-            landmarkType = "3">
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "-buildDateTimeString:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -120,12 +120,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "lunchLunch/MainViewController.m"
-            timestampString = "419782420.773596"
+            timestampString = "419800394.276141"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "-buildLunchString:"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -141,7 +141,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "146"
             endingLineNumber = "146"
-            landmarkName = "-testWillFireSegueCommandWhenARowISelectedOnTheTable"
+            landmarkName = "-checkViewCellBuilt:cellToReturn:indexPath:expectedText:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -157,8 +157,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "148"
             endingLineNumber = "148"
-            landmarkName = "@implementation MainViewControllerTest"
-            landmarkType = "3">
+            landmarkName = "-checkViewCellBuilt:cellToReturn:indexPath:expectedText:"
+            landmarkType = "5">
             <Locations>
                <Location
                   shouldBeEnabled = "No"
@@ -212,11 +212,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "lunchLunch/MainViewController.m"
-            timestampString = "419782420.773596"
+            timestampString = "419800394.276141"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100">
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "@implementation MainViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -226,11 +228,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "lunchLunch/MainViewController.m"
-            timestampString = "419782420.773596"
+            timestampString = "419800394.276141"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94">
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "-prepareForSegue:sender:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -352,13 +356,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "lunchLunch/MainViewController.m"
-            timestampString = "419782420.773596"
+            timestampString = "419800394.276141"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
-            landmarkName = "@implementation MainViewController"
-            landmarkType = "3">
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "-prepareForSegue:sender:"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -503,6 +507,22 @@
             endingLineNumber = "32"
             landmarkName = "-parseLunches:"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "lunchLunch/DetailViewController.m"
+            timestampString = "419799284.029329"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "@implementation DetailViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

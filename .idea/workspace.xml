@@ -2,19 +2,47 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/lunchLunchTests/ConnectionFactoryTest.m" line="29" />
+    <bookmark url="file://$PROJECT_DIR$/lunchLunchTests/PersonParserTest.m" line="91" mnemonic="2" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bcc6f4bf-bcc4-4bad-8c9a-f8bdc2847256" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lunchLunch/LunchRetriever.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lunchLunch/LunchRetriever.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lunchLunch/LunchRetrieverProtocol.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lunchLunch/OldLunchProvider.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lunchLunch/OldLunchProvider.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lunchLunchTests/LunchRetrieverTest.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lunchLunchTests/MockLunchRetriever.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lunchLunchTests/MockLunchRetriever.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lunchLunchTests/OldLunchProviderTest.m" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunch/BuddyDetailViewController.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunch/BuddyDetailViewController.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunchTests/BuddyDetailViewControllerTest.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunch/BuddyFinder.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunch/BuddyFinder.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunch/BuddyFinderFactory.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunch/BuddyFinderFactory.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunchTests/BuddyFinderFactoryTest.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunchTests/BuddyFinderFactoryTestHelper.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunchTests/BuddyFinderFactoryTestHelper.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunch/BuddyFinderProtocol.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunchTests/BuddyFinderTest.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunchTests/FindBuddyViewControllerTest.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunch/FoundBuddyViewController.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunch/FoundBuddyViewController.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunchTests/MockBuddyFinder.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunchTests/MockBuddyFinder.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunch.xcodeproj/xcuserdata/Cyrus.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterPath="$PROJECT_DIR$/lunchLunch.xcodeproj/xcuserdata/Cyrus.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunchTests/DetailsTableViewControllerTest.m" afterPath="$PROJECT_DIR$/lunchLunchTests/DetailsTableViewControllerTest.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunch/LoginProvider.h" afterPath="$PROJECT_DIR$/lunchLunch/LoginProvider.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunch/LoginProvider.m" afterPath="$PROJECT_DIR$/lunchLunch/LoginProvider.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunchTests/LunchParserTest.m" afterPath="$PROJECT_DIR$/lunchLunchTests/LunchParserTest.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunchTests/LunchProviderTest.m" afterPath="$PROJECT_DIR$/lunchLunchTests/LunchProviderTest.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunch/en.lproj/MainStoryBoard.storyboard" afterPath="$PROJECT_DIR$/lunchLunch/en.lproj/MainStoryBoard.storyboard" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunch/MainViewController.h" afterPath="$PROJECT_DIR$/lunchLunch/MainViewController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunch/MainViewController.m" afterPath="$PROJECT_DIR$/lunchLunch/MainViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunchTests/MainViewControllerTest.m" afterPath="$PROJECT_DIR$/lunchLunchTests/MainViewControllerTest.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunch/NullPerson.m" afterPath="$PROJECT_DIR$/lunchLunch/NullPerson.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunchTests/NullPersonTest.m" afterPath="$PROJECT_DIR$/lunchLunchTests/NullPersonTest.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunch/Person.h" afterPath="$PROJECT_DIR$/lunchLunch/Person.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunch/Person.m" afterPath="$PROJECT_DIR$/lunchLunch/Person.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunch/PersonParser.m" afterPath="$PROJECT_DIR$/lunchLunch/PersonParser.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunchTests/PersonParserTest.m" afterPath="$PROJECT_DIR$/lunchLunchTests/PersonParserTest.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunch/PersonProtocol.h" afterPath="$PROJECT_DIR$/lunchLunch/PersonProtocol.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunchTests/PersonTest.m" afterPath="$PROJECT_DIR$/lunchLunchTests/PersonTest.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunch.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/lunchLunch.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="lunchLunch.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,77 +65,99 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LunchProviderFactoryTest.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lunchLunchTests/LunchProviderFactoryTest.m">
+      <file leaf-file-name="DetailViewControllerTest.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lunchLunchTests/DetailViewControllerTest.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="42" selection-start="836" selection-end="836" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
+            <state line="29" column="0" selection-start="405" selection-end="583" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DetailViewController.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lunchLunch/DetailViewController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="0" selection-start="217" selection-end="568" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FoundBuddyViewController.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lunchLunch/FoundBuddyViewController.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="0" selection-start="316" selection-end="379" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BuddyDetailViewControllerTest.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lunchLunchTests/BuddyDetailViewControllerTest.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="119" selection-start="364" selection-end="364" vertical-scroll-proportion="0.0" vertical-offset="87" max-vertical-offset="825">
               <folding>
-                <element signature="e#102#127#0" expanded="true" />
+                <element signature="e#101#126#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PersonParserTest.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lunchLunchTests/PersonParserTest.m">
+      <file leaf-file-name="FoundBuddyViewController.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lunchLunch/FoundBuddyViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="2" selection-start="1815" selection-end="1815" vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="1575">
+            <state line="12" column="16" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PersonParserProtocol.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lunchLunch/PersonParserProtocol.h">
+      <file leaf-file-name="BuddyDetailViewController.m" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lunchLunch/BuddyDetailViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="10" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
+            <state line="30" column="57" selection-start="668" selection-end="668" vertical-scroll-proportion="0.62240666" vertical-offset="0" max-vertical-offset="723">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MockPersonParser.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lunchLunchTests/MockPersonParser.m">
+      <file leaf-file-name="BuddyDetailViewController.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lunchLunch/BuddyDetailViewController.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="516" selection-end="516" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainViewController.h" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lunchLunch/MainViewController.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="11" selection-start="243" selection-end="243" vertical-scroll-proportion="0.2777778" vertical-offset="0" max-vertical-offset="648">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MockUITableView.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lunchLunchTests/MockUITableView.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="19" selection-start="815" selection-end="815" vertical-scroll-proportion="0.0" vertical-offset="234" max-vertical-offset="645">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MockUITableView.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lunchLunchTests/MockUITableView.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="15" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainViewControllerTest.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lunchLunchTests/MainViewControllerTest.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="76" column="51" selection-start="2489" selection-end="2489" vertical-scroll-proportion="0.0" vertical-offset="948" max-vertical-offset="2790">
+            <state line="12" column="48" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
               <folding>
-                <element signature="e#148#173#0" expanded="true" />
+                <element signature="e#152#175#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FindBuddyViewControllerTest.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lunchLunchTests/FindBuddyViewControllerTest.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="91" selection-start="973" selection-end="973" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="810">
+              <folding>
+                <element signature="e#101#126#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DetailsTableViewControllerTest.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lunchLunchTests/DetailsTableViewControllerTest.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="0" selection-start="444" selection-end="1670" vertical-scroll-proportion="0.0" vertical-offset="237" max-vertical-offset="1185">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BuddyFinderFactoryTest.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lunchLunchTests/BuddyFinderFactoryTest.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="0" selection-start="396" selection-end="396" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
+              <folding>
+                <element signature="e#100#125#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -131,22 +181,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/lunchLunchTests/LunchProviderFactoryTest.h" />
-        <option value="$PROJECT_DIR$/lunchLunchTests/LunchProviderFactoryTest.m" />
-        <option value="$PROJECT_DIR$/lunchLunch/LunchProviderFactory.m" />
-        <option value="$PROJECT_DIR$/lunchLunchTests/MockLunchProvider.h" />
-        <option value="$PROJECT_DIR$/lunchLunchTests/MockLunchProvider.m" />
-        <option value="$PROJECT_DIR$/lunchLunch/MainViewController.h" />
-        <option value="$PROJECT_DIR$/lunchLunchTests/LunchProviderFactoryTestHelper.m" />
-        <option value="$PROJECT_DIR$/lunchLunchTests/LunchProviderFactoryTestHelper.h" />
-        <option value="$PROJECT_DIR$/lunchLunch/LunchProvider.m" />
-        <option value="$PROJECT_DIR$/lunchLunchTests/PersonParserTest.m" />
-        <option value="$PROJECT_DIR$/lunchLunch/PersonParser.m" />
-        <option value="$PROJECT_DIR$/lunchLunchTests/LunchParserTest.m" />
-        <option value="$PROJECT_DIR$/lunchLunchTests/MockPersonParser.m" />
-        <option value="$PROJECT_DIR$/lunchLunchTests/MockUITableView.m" />
+        <option value="$PROJECT_DIR$/lunchLunchTests/BuddyFinderFactoryTestHelper.h" />
+        <option value="$PROJECT_DIR$/lunchLunchTests/MockBuddyFinder.h" />
+        <option value="$PROJECT_DIR$/lunchLunchTests/MockBuddyFinder.m" />
+        <option value="$PROJECT_DIR$/lunchLunchTests/BuddyFinderFactoryTestHelper.m" />
+        <option value="$PROJECT_DIR$/lunchLunch/FindBuddyViewController.h" />
         <option value="$PROJECT_DIR$/lunchLunchTests/MainViewControllerTest.m" />
+        <option value="$PROJECT_DIR$/lunchLunch/MainViewController.h" />
         <option value="$PROJECT_DIR$/lunchLunch/MainViewController.m" />
+        <option value="$PROJECT_DIR$/lunchLunch/BuddyDetailViewController.h" />
+        <option value="$PROJECT_DIR$/lunchLunchTests/FindBuddyViewControllerTest.m" />
+        <option value="$PROJECT_DIR$/lunchLunch/FindBuddyViewController.m" />
+        <option value="$PROJECT_DIR$/lunchLunch/FoundBuddyViewController.m" />
+        <option value="$PROJECT_DIR$/lunchLunchTests/BuddyDetailsViewControllerTest.h" />
+        <option value="$PROJECT_DIR$/lunchLunchTests/BuddyDetailsViewControllerTest.m" />
+        <option value="$PROJECT_DIR$/lunchLunchTests/BuddyDetailViewControllerTest.m" />
+        <option value="$PROJECT_DIR$/lunchLunch/BuddyDetailViewController.m" />
       </list>
     </option>
   </component>
@@ -345,11 +395,141 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FindBuddy" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lunchLunch" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lunchLunchTests" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Details" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lunchLunch" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lunchLunchTests" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Model" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="WebServiceCommunication" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lunchLunch" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lunchLunchTests" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Model" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebServiceCommunication" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Person" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lunchLunch" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lunchLunchTests" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Model" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebServiceCommunication" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Person" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Login" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lunchLunch" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lunchLunchTests" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Model" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebServiceCommunication" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Person" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FindBuddy" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -469,6 +649,112 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lunchLunch" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lunchLunch" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Main" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lunchLunch" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lunchLunch" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Login" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lunchLunch" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lunchLunch" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FindBuddy" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lunchLunch" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lunchLunch" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Details" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lunchLunch" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lunchLunch" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Model" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
@@ -500,6 +786,66 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Person" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lunchLunch" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lunchLunch" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Model" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebServiceCommunication" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Person" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Login" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lunchLunch" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lunchLunch" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Model" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebServiceCommunication" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Person" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FindBuddy" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -666,15 +1012,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32936507" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936507" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15945612" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25496033" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25496033" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24968554" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18661043" sideWeight="0.5734127" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18661043" sideWeight="0.63789684" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18661043" sideWeight="0.09623016" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18661043" sideWeight="0.10714286" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32880098" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14285715" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -701,111 +1047,126 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lunchLunch/LunchProvider.m">
+    <entry file="file://$PROJECT_DIR$/lunchLunchTests/BuddyFinderFactoryTestHelper.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="81" selection-start="1410" selection-end="1410" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="1155">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lunchLunchTests/LunchProviderFactoryTestHelper.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="36" selection-start="404" selection-end="404" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="1020">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lunchLunchTests/LunchProviderTest.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1575">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lunchLunchTests/LunchParserTest.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="112" selection-start="3856" selection-end="3856" vertical-scroll-proportion="0.0" vertical-offset="577" max-vertical-offset="1740">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lunchLunch/PersonParser.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="0" selection-start="1455" selection-end="1455" vertical-scroll-proportion="0.0" vertical-offset="292" max-vertical-offset="1230">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lunchLunch/PersonParserProtocol.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="10" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lunchLunchTests/MockPersonParser.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="516" selection-end="516" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lunchLunchTests/PersonParserTest.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="2" selection-start="1815" selection-end="1815" vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="1575">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lunchLunchTests/LunchProviderFactoryTest.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="42" selection-start="836" selection-end="836" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
+        <state line="59" column="27" selection-start="2114" selection-end="2114" vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="1110">
           <folding>
-            <element signature="e#102#127#0" expanded="true" />
+            <element signature="e#100#124#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lunchLunchTests/MockUITableView.h">
+    <entry file="file://$PROJECT_DIR$/lunchLunchTests/LoginProviderFactoryTestHelper.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="15" selection-start="150" selection-end="150" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
+        <state line="12" column="0" selection-start="259" selection-end="501" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lunchLunchTests/MockUITableView.m">
+    <entry file="file://$PROJECT_DIR$/lunchLunchTests/BuddyFinderFactoryTestHelper.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="19" selection-start="815" selection-end="815" vertical-scroll-proportion="0.0" vertical-offset="234" max-vertical-offset="645">
+        <state line="11" column="39" selection-start="213" selection-end="241" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lunchLunchTests/MainViewControllerTest.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="51" selection-start="2489" selection-end="2489" vertical-scroll-proportion="0.0" vertical-offset="948" max-vertical-offset="2790">
+        <state line="198" column="48" selection-start="8170" selection-end="8170" vertical-scroll-proportion="0.0" vertical-offset="2637" max-vertical-offset="3495">
           <folding>
             <element signature="e#148#173#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lunchLunch/MainViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="33" selection-start="3112" selection-end="3112" vertical-scroll-proportion="2.7518249" vertical-offset="84" max-vertical-offset="1380">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lunchLunchTests/MockPersonParser.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="17" selection-start="186" selection-end="186" vertical-scroll-proportion="0.2919708" vertical-offset="0" max-vertical-offset="411">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lunchLunch/MainViewController.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="11" selection-start="243" selection-end="243" vertical-scroll-proportion="0.2777778" vertical-offset="0" max-vertical-offset="648">
+        <state line="19" column="27" selection-start="613" selection-end="613" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lunchLunch/MainViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="92" column="42" selection-start="3434" selection-end="3434" vertical-scroll-proportion="0.0" vertical-offset="822" max-vertical-offset="1575">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lunchLunchTests/BuddyFinderFactoryTest.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="396" selection-end="396" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
+          <folding>
+            <element signature="e#100#125#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lunchLunch/DetailViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="217" selection-end="568" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lunchLunch/FoundBuddyViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="316" selection-end="379" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lunchLunch/FoundBuddyViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="16" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lunchLunchTests/DetailViewControllerTest.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="0" selection-start="405" selection-end="583" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lunchLunchTests/DetailsTableViewControllerTest.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="0" selection-start="444" selection-end="1670" vertical-scroll-proportion="0.0" vertical-offset="237" max-vertical-offset="1185">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lunchLunchTests/BuddyDetailViewControllerTest.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="119" selection-start="364" selection-end="364" vertical-scroll-proportion="0.0" vertical-offset="87" max-vertical-offset="825">
+          <folding>
+            <element signature="e#101#126#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lunchLunch/BuddyDetailViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="48" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+          <folding>
+            <element signature="e#152#175#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lunchLunchTests/FindBuddyViewControllerTest.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="91" selection-start="973" selection-end="973" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="810">
+          <folding>
+            <element signature="e#101#126#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lunchLunch/BuddyDetailViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="57" selection-start="668" selection-end="668" vertical-scroll-proportion="0.62240666" vertical-offset="0" max-vertical-offset="723">
           <folding />
         </state>
       </provider>

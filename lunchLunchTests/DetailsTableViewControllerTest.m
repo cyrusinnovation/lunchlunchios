@@ -43,7 +43,7 @@
     NSDate *date = [dateMaker dateFromString:@"5/12/2103 14:30"];
 
     self.viewController.personLoggedIn = loggedInPerson;
-    Person *lunchBuddy = [[Person alloc] initWithFirstName:@"Stag" lastName:@"Bulkhead" email:@""];
+    Person *lunchBuddy = [[Person alloc] initWithFirstNameInitWithId:nil firstName:@"Stag" lastName:@"Bulkhead" email:@""];
 
 
     self.viewController.lunch = [[Lunch alloc] initWithPerson1:loggedInPerson person2:lunchBuddy dateTime:date];
@@ -64,7 +64,7 @@
     NSDate *date = [dateMaker dateFromString:@"11/01/2103 11:30"];
 
     self.viewController.personLoggedIn = loggedInPerson;
-    Person *lunchBuddy = [[Person alloc] initWithFirstName:@"Bulk" lastName:@"Vanderhuge" email:@""];
+    Person *lunchBuddy = [[Person alloc] initWithFirstNameInitWithId:nil firstName:@"Bulk" lastName:@"Vanderhuge" email:@""];
 
 
     self.viewController.lunch = [[Lunch alloc] initWithPerson1:lunchBuddy person2:loggedInPerson dateTime:date];

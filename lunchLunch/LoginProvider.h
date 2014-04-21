@@ -13,9 +13,6 @@
 
 
 @interface LoginProvider : NSObject<NSURLConnectionDataDelegate, LoginProviderProtocol> {
-    NSObject <ConnectionFactoryProtocol> *connectionFactory;
-    NSObject<PersonReceiverProtocol>* receiver;
-    NSObject<PersonParserProtocol> * parser;
 }
 
 - (id)initWithConnectionFactory:(NSObject <ConnectionFactoryProtocol> *)factory personParser:(NSObject <PersonParserProtocol>*) parser andPersonReceiver:(NSObject<PersonReceiverProtocol>*) personReceiver;

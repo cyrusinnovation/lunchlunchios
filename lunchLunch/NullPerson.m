@@ -34,4 +34,7 @@
 }
 
 
+- (NSString *)getId {
+    return @"";
+}
 @end

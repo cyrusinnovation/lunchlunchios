@@ -1,20 +1,24 @@
 //
-// Created by Cyrus on 4/2/14.
+// Created by Cyrus on 4/21/14.
 // Copyright (c) 2014 Cyrus Innovation. All rights reserved.
 //
 
-#import "LoginProvider.h"
+#import "BuddyFinder.h"
 #import "NullPerson.h"
 
 
-@implementation LoginProvider {
-
-    NSMutableData *connectionData;
-
+@implementation BuddyFinder {
     NSObject <ConnectionFactoryProtocol> *connectionFactory;
     NSObject<PersonReceiverProtocol>* receiver;
     NSObject<PersonParserProtocol> * parser;
+    NSMutableData* connectionData;
 }
+- (void)findBuddyFor:(NSObject <PersonProtocol> *)person {
+    NSString *personString = [[parser buildPersonJSONString:person] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString *url = [NSString stringWithFormat:@"http://localhost:3000/findBuddy?person=%@", personString];
+    [connectionFactory buildAsynchronousRequestForURL:url andDelegate:self];
+}
+
 - (id)initWithConnectionFactory:(NSObject <ConnectionFactoryProtocol> *)factory personParser:(NSObject <PersonParserProtocol> *)personParser andPersonReceiver:(NSObject <PersonReceiverProtocol> *)personReceiver {
     self = [super init];
     if (self) {
@@ -23,10 +27,6 @@
         parser = personParser;
     }
     return self;
-}
-- (void)findPersonByEmail:(NSString *)email {
-    NSString *loginURL = [NSString stringWithFormat:@"http://localhost:3000/login?email=%@", email];
-    [connectionFactory buildAsynchronousRequestForURL:loginURL andDelegate:self];
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
@@ -47,16 +47,17 @@
 
 }
 
+- (NSObject <PersonReceiverProtocol> *)getPersonReceiver {
+    return receiver;
+}
 
--(NSObject <ConnectionFactoryProtocol>*) getConnectionFactory{
+- (NSObject <ConnectionFactoryProtocol> *)getConnectionFactory {
     return connectionFactory;
 }
 
--(NSObject <PersonParserProtocol>*) getPersonParser{
+- (NSObject <PersonParserProtocol> *)getPersonParser {
     return parser;
 }
--(NSObject <PersonReceiverProtocol>*) getPersonReceiver{
-    return receiver;
-}
+
 
 @end

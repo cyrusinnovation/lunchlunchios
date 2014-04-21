@@ -14,6 +14,9 @@
 #import "CommandDispatcher.h"
 #import "DetailViewController.h"
 #import "LunchProviderFactory.h"
+#import "FoundBuddyViewController.h"
+#import "BuddyFinderProtocol.h"
+#import "BuddyFinderFactory.h"
 
 @interface MainViewController ()
 
@@ -26,7 +29,6 @@
 @end
 
 @implementation MainViewController {
-
 
 }
 
@@ -75,6 +77,10 @@
     SegueCommand *segueCommand = [[SegueCommand alloc] initForViewController:self segueIdentifier:@"seeDetails"];
     [[CommandDispatcher singleton] executeCommand:segueCommand];
 }
+- (IBAction)findBuddyClicked:(id)sender{
+    NSObject <BuddyFinderProtocol> *buddyFinder = [BuddyFinderFactory buildBuddyFinder:self];
+    [buddyFinder findBuddyFor: self.personLoggedIn];
+}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"seeDetails"]) {
@@ -82,11 +88,21 @@
         controller.lunch = self.detailedLunch;
         controller.personLoggedIn = self.personLoggedIn;
     }
+    if ([segue.identifier isEqualToString:@"findBuddy"]) {
+        FoundBuddyViewController *controller = (FoundBuddyViewController *) segue.destinationViewController;
+        controller.buddy = self.buddyFound;
+    }
 }
 
 - (void)handleLunchesFound:(NSArray *)lunches {
     self.lunchesForPerson = lunches;
     [self.lunchTable reloadData];
+}
+
+- (void)handlePersonFound:(NSObject <PersonProtocol> *)person {
+    self.buddyFound = person;
+    SegueCommand *segueCommand = [[SegueCommand alloc] initForViewController:self segueIdentifier:@"findBuddy"];
+    [[CommandDispatcher singleton] executeCommand:segueCommand];
 }
 
 

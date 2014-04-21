@@ -46,7 +46,7 @@
     MockPersonParser *personParser = [[MockPersonParser alloc] init];
     LunchProvider *provider =
             [[LunchProvider alloc] initWithConnectionFactory:factory lunchParser:lunchParser personParser:personParser andLunchReceiver:receiver];
-    Person *person = [[Person alloc] initWithFirstName:@"Joe" lastName:@"Smith" email:@"JSmith@somethin.com"];
+    Person *person = [[Person alloc] initWithFirstNameInitWithId:nil firstName:@"Joe" lastName:@"Smith" email:@"JSmith@somethin.com"];
     NSString *expectedJSON = @"IexpecttheParserToTurnThePersonIntoThis";
     [personParser setPersonJSONToReturn:expectedJSON];
 

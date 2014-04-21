@@ -21,6 +21,9 @@
 #import "LoginProviderFactoryTestHelper.h"
 #import "LunchProviderFactoryTestHelper.h"
 #import "MockLunchProvider.h"
+#import "FoundBuddyViewController.h"
+#import "BuddyFinderFactoryTestHelper.h"
+#import "MockBuddyFinder.h"
 
 NSObject <PersonProtocol> *personToReturn;
 
@@ -35,6 +38,7 @@ NSObject <PersonProtocol> *personToReturn;
     [super setUp];
     self.viewController = [[MainViewController alloc] init];
     [LunchProviderFactoryTestHelper swizzleBuildLunchProvider];
+    [BuddyFinderFactoryTestHelper swizzleBuildBuddyFinder];
     [CommandDispatcherTestHelper swizzleExecute];
 
 
@@ -42,6 +46,7 @@ NSObject <PersonProtocol> *personToReturn;
 
 - (void)tearDown {
     [LunchProviderFactoryTestHelper deswizzleBuildLunchProvider];
+    [BuddyFinderFactoryTestHelper deswizzleBuildBuddyFinder];
     [CommandDispatcherTestHelper deswizzleExecuteAndClearLastCommandExecuted];
     self.viewController = nil;
     [super tearDown];
@@ -61,6 +66,9 @@ NSObject <PersonProtocol> *personToReturn;
 }
 - (void)testIsALunchReceiver {
     XCTAssertTrue([MainViewController conformsToProtocol:@protocol(LunchReceiverProtocol)]);
+}
+- (void)testIsAPersonReceiver {
+    XCTAssertTrue([MainViewController conformsToProtocol:@protocol(PersonReceiverProtocol)]);
 }
 
 - (void)testUsesFoundListOfLunchesToProvideNumberOfRows {
@@ -85,7 +93,7 @@ NSObject <PersonProtocol> *personToReturn;
     [dateMaker setDateFormat:@"MM/dd/yyyy HH:mm"];
     NSDate *date = [dateMaker dateFromString:@"5/12/2103 14:30"];
 
-    Person *personTheLunchIsWith = [[Person alloc] initWithFirstName:@"Bob" lastName:@"Soomy" email:@""];
+    Person *personTheLunchIsWith = [[Person alloc] initWithFirstNameInitWithId:nil firstName:@"Bob" lastName:@"Soomy" email:@""];
     self.viewController.personLoggedIn = loggedInPerson;
 
     Lunch *lunch = [[Lunch alloc] init];
@@ -113,7 +121,7 @@ NSObject <PersonProtocol> *personToReturn;
     [dateMaker setDateFormat:@"MM/dd/yyyy HH:mm"];
     NSDate *date = [dateMaker dateFromString:@"12/2/2103 11:30"];
 
-    Person *personTheLunchIsWith = [[Person alloc] initWithFirstName:@"Abdi" lastName:@"LaRue" email:@""];
+    Person *personTheLunchIsWith = [[Person alloc] initWithFirstNameInitWithId:nil firstName:@"Abdi" lastName:@"LaRue" email:@""];
     self.viewController.personLoggedIn = loggedInPerson;
 
     Lunch *lunch = [[Lunch alloc] init];
@@ -142,7 +150,6 @@ NSObject <PersonProtocol> *personToReturn;
 
 - (void)testWillFireSegueCommandWhenARowISelectedOnTheTable {
 
-
     XCTAssertNil([CommandDispatcherTestHelper getLastCommandExecuted]);
     NSIndexPath *indexPath = [NSIndexPath indexPathForItem:3 inSection:1];
     [self.viewController tableView:self.viewController.lunchTable didSelectRowAtIndexPath:indexPath];
@@ -151,10 +158,51 @@ NSObject <PersonProtocol> *personToReturn;
     XCTAssertEqualObjects(@"seeDetails", [command getSegueIdentifier]);
     XCTAssertEqualObjects(self.viewController, [command getViewController]);
 
+}
+
+-(void) testWillFindBuddyForLoggedInPersonWhenButtonIsClicked{
+    Person *loggedInPerson = [[Person alloc] init];
+    self.viewController.personLoggedIn = loggedInPerson;
+    MockBuddyFinder *buddyFinder = [[MockBuddyFinder alloc] init];
+
+    [BuddyFinderFactoryTestHelper setBuddyFinderToReturn:buddyFinder];
+
+    [self.viewController findBuddyClicked:nil];
+    XCTAssertEqual(self.viewController, [BuddyFinderFactoryTestHelper getPersonReceiverUsedToBuildBuddyFinder]);
+    XCTAssertEqual(loggedInPerson, [buddyFinder getPersonUsedToFindBuddy]);
+
 
 }
 
-- (void)testWhenARowIsSelectedTheLunchBePassedAlongToViewControllerOnTheSegue {
+- (void)testWillFireSegueCommandWhenABuddyIsFound {
+
+    XCTAssertNil([CommandDispatcherTestHelper getLastCommandExecuted]);
+    [self.viewController handlePersonFound:[[Person alloc] init] ];
+
+    XCTAssertTrue([[CommandDispatcherTestHelper getLastCommandExecuted] isKindOfClass:[SegueCommand class]]);
+    SegueCommand *command = (SegueCommand *) [CommandDispatcherTestHelper getLastCommandExecuted];
+    XCTAssertEqualObjects(@"findBuddy", [command getSegueIdentifier]);
+    XCTAssertEqualObjects(self.viewController, [command getViewController]);
+
+}
+
+- (void)testPersonFoundIsPassedAlongWithTheFindBuddySegue {
+
+    XCTAssertNil([CommandDispatcherTestHelper getLastCommandExecuted]);
+
+
+    Person *personFound = [[Person alloc] init];
+    [self.viewController handlePersonFound:personFound];
+    FoundBuddyViewController *destinationViewController = [[FoundBuddyViewController alloc] init];
+    UIStoryboardSegue *segue = [[UIStoryboardSegue alloc] initWithIdentifier:@"findBuddy" source:self.viewController destination:destinationViewController];
+
+    XCTAssertNil(destinationViewController.buddy);
+    [self.viewController prepareForSegue:segue sender:self.viewController];
+
+    XCTAssertEqual(personFound, destinationViewController.buddy);
+}
+
+- (void)testWhenARowIsSelectedTheLunchBePassedAlongToViewControllerOnTheSeeDetailsSegue {
 
     XCTAssertNil([CommandDispatcherTestHelper getLastCommandExecuted]);
     Person *personLoggedIn = [[Person alloc] init];
@@ -174,7 +222,6 @@ NSObject <PersonProtocol> *personToReturn;
 
     XCTAssertEqual(lunchToPassAlong, destinationViewController.lunch);
     XCTAssertEqual(personLoggedIn, destinationViewController.personLoggedIn);
-
 }
 
 @end

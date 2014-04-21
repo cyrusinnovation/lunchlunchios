@@ -6,8 +6,12 @@
 #import <Foundation/Foundation.h>
 
 @protocol PersonProtocol <NSObject>
- -(NSString *) getFirstName;
- -(NSString *) getLastName;
- -(NSString *) getEmailAddress;
+- (NSString *)getId;
+
+- (NSString *)getFirstName;
+
+- (NSString *)getLastName;
+
+- (NSString *)getEmailAddress;
 
 @end

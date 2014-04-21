@@ -33,13 +33,13 @@
 - (void)testParseLunches {
 
 
-    Person *expectedPerson1 = [[Person alloc] initWithFirstName:@"Jimmy" lastName:@"Jazz" email:@"jimjazz@gmail.com"];
-    Person *expectedPerson2 = [[Person alloc] initWithFirstName:@"Janie" lastName:@"Jones" email:@"janiej@yahoo.com"];
-    Person *expectedPerson3 = [[Person alloc] initWithFirstName:@"Sean" lastName:@"Flynn" email:@"sflynn@prodigy.net"];
+    Person *expectedPerson1 = [[Person alloc] initWithFirstNameInitWithId:@"2t23f" firstName:@"Jimmy" lastName:@"Jazz" email:@"jimjazz@gmail.com"];
+    Person *expectedPerson2 = [[Person alloc] initWithFirstNameInitWithId:@"dfsgg" firstName:@"Janie" lastName:@"Jones" email:@"janiej@yahoo.com"];
+    Person *expectedPerson3 = [[Person alloc] initWithFirstNameInitWithId:@"3253" firstName:@"Sean" lastName:@"Flynn" email:@"sflynn@prodigy.net"];
 
     NSDictionary *person1Dictionary = [self buildPersonDictionary:expectedPerson1];
-    NSDictionary *person2Dictionary =  [self buildPersonDictionary:expectedPerson2];
-    NSDictionary *person3Dictionary =  [self buildPersonDictionary:expectedPerson3];
+    NSDictionary *person2Dictionary = [self buildPersonDictionary:expectedPerson2];
+    NSDictionary *person3Dictionary = [self buildPersonDictionary:expectedPerson3];
 
     NSString *dateString1 = @"2017-11-07T12:30:00.000Z";
     NSDictionary *lunch1Dictionary = [NSDictionary dictionaryWithObjectsAndKeys:person1Dictionary, @"person1", person2Dictionary, @"person2", dateString1, @"dateTime", nil];
@@ -60,27 +60,29 @@
 }
 
 - (NSDictionary *)buildPersonDictionary:(Person *)person {
-    return [NSDictionary dictionaryWithObjectsAndKeys:[person getFirstName],@"firstName",[person getLastName],@"lastName", [person getEmailAddress],@"email",nil ];
+    return [NSDictionary dictionaryWithObjectsAndKeys:[person getId], @"_id", [person getFirstName], @"firstName", [person getLastName], @"lastName", [person getEmailAddress], @"email", nil ];
 }
 
 - (void)testParseLunches_WillIgnoreAnyIncompleteLunchEntries {
 
 
-    Person *person1 = [[Person alloc] initWithFirstName:@"Jimmy" lastName:@"Jazz" email:@"jimjazz@gmail.com"];
-    Person *person2 = [[Person alloc] initWithFirstName:@"Janie" lastName:@"Jones" email:@"janiej@yahoo.com"];
+    Person *person1 = [[Person alloc] initWithFirstNameInitWithId:@"adsa" firstName:@"Jimmy" lastName:@"Jazz" email:@"jimjazz@gmail.com"];
+    Person *person2 = [[Person alloc] initWithFirstNameInitWithId:@"t635" firstName:@"Janie" lastName:@"Jones" email:@"janiej@yahoo.com"];
 
     NSDictionary *person1Dictionary = [self buildPersonDictionary:person1];
     NSDictionary *person2Dictionary = [self buildPersonDictionary:person2];
 
-    NSDictionary *personMissingFirstName = [NSDictionary dictionaryWithObjectsAndKeys:@"Yo", @"lastName", @"Bobobob@mal.com",@"email", nil];
-    NSDictionary *personMissingLastName  = [NSDictionary dictionaryWithObjectsAndKeys:@"Joe", @"firstName", @"Bobobob@mal.com",@"email", nil];
-    NSDictionary *personMissingEmail =      [NSDictionary dictionaryWithObjectsAndKeys:@"Jobra", @"firstName", @"Smith",@"lastName", nil];
+    NSDictionary *personMissingFirstName = [NSDictionary dictionaryWithObjectsAndKeys:@"Yo", @"lastName", @"Bobobob@mal.com", @"email", @"432", @"_id", nil];
+    NSDictionary *personMissingLastName = [NSDictionary dictionaryWithObjectsAndKeys:@"Joe", @"firstName", @"Bobobob@mal.com", @"email", @"432", @"_id", nil];
+    NSDictionary *personMissingEmail = [NSDictionary dictionaryWithObjectsAndKeys:@"Jobra", @"firstName", @"Smith", @"lastName", @"432", @"_id", nil];
+    NSDictionary *personMissingId = [NSDictionary dictionaryWithObjectsAndKeys:@"Jobra", @"firstName", @"Smith", @"lastName", @"email@mcgee.com", @"email", nil];
 
     NSString *dateString1 = @"2017-11-07T12:30:00.000Z";
     NSDictionary *goodLunchDictionary = [NSDictionary dictionaryWithObjectsAndKeys:person1Dictionary, @"person1", person2Dictionary, @"person2", dateString1, @"dateTime", nil];
     NSDictionary *noFirstNameDictionary = [NSDictionary dictionaryWithObjectsAndKeys:person1Dictionary, @"person1", personMissingFirstName, @"person2", dateString1, @"dateTime", nil];
     NSDictionary *noLastNameDictionary = [NSDictionary dictionaryWithObjectsAndKeys:person1Dictionary, @"person1", personMissingLastName, @"person2", dateString1, @"dateTime", nil];
     NSDictionary *noEmailDictionary = [NSDictionary dictionaryWithObjectsAndKeys:person1Dictionary, @"person1", personMissingEmail, @"person2", dateString1, @"dateTime", nil];
+    NSDictionary *noIdDictionary = [NSDictionary dictionaryWithObjectsAndKeys:person1Dictionary, @"person1", personMissingId, @"person2", dateString1, @"dateTime", nil];
     NSDictionary *badDateFormatDictionary = [NSDictionary dictionaryWithObjectsAndKeys:person1Dictionary, @"person1", person2Dictionary, @"person2", @"thiswillnotbeadatetime", @"dateTime", nil];
 
     NSDictionary *noPerson1Dictionary = [NSDictionary dictionaryWithObjectsAndKeys:person2Dictionary, @"person2", dateString1, @"dateTime", nil];
@@ -89,7 +91,7 @@
 
 
     NSArray *arrayOfLunchDictionaries = [NSArray arrayWithObjects:goodLunchDictionary, noFirstNameDictionary, noLastNameDictionary,
-                                                                  noEmailDictionary, badDateFormatDictionary, noPerson1Dictionary,
+                                                                  noEmailDictionary, badDateFormatDictionary,noIdDictionary, noPerson1Dictionary,
                                                                   noPerson2Dictionary, noDateTimeDictionary, nil];
 
     NSData *data = [NSJSONSerialization dataWithJSONObject:arrayOfLunchDictionaries options:NSJSONWritingPrettyPrinted error:nil];
