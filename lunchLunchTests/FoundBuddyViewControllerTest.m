@@ -14,6 +14,10 @@
 #import "Lunch.h"
 #import "MockNavigationController.h"
 
+#import "MockUIAlertView.h"
+#import "DisplayHandlerFactoryTestHelper.h"
+#import "MockDisplayHandler.h"
+
 @interface FoundBuddyViewControllerTest : XCTestCase
 @property(nonatomic, strong) FoundBuddyViewController *viewController;
 @end
@@ -27,17 +31,22 @@
     [super setUp];
     self.viewController = [[FoundBuddyViewController alloc] init];
     [LunchCreatorFactoryTestHelper swizzleBuildLunchCreator];
+    [DisplayHandlerFactoryTestHelper swizzleBuildDisplayHandler];
+
 
 }
 
 - (void)tearDown {
     [LunchCreatorFactoryTestHelper deswizzleBuildLunchCreator];
+    [DisplayHandlerFactoryTestHelper deswizzleBuildDisplayHandler];
     self.viewController = nil;
     [super tearDown];
 }
--(void) testIsLunchReceiver{
+
+- (void)testIsLunchReceiver {
     XCTAssertTrue([FoundBuddyViewController conformsToProtocol:@protocol(LunchCreationHandler)]);
 }
+
 - (void)testWillPassPropertiesToDetailsTableViewControllerOnSegue {
     Person *buddyFound = [[Person alloc] init];
     self.viewController.buddy = buddyFound;
@@ -49,7 +58,7 @@
 }
 
 
--(void)testCreateLunch{
+- (void)testCreateLunch {
     BuddyDetailViewController *destinationViewController = [[BuddyDetailViewController alloc] init];
     UIStoryboardSegue *segue = [[UIStoryboardSegue alloc] initWithIdentifier:@"buddyDetails" source:self.viewController destination:destinationViewController];
 
@@ -69,7 +78,7 @@
     XCTAssertEqual(self.viewController, [LunchCreatorFactoryTestHelper getLunchCreationHandlerUsedToBuildLunchCreator]);
 
     XCTAssertTrue( [[lunchCreator getLunchCreated] isKindOfClass:[Lunch class]]);
-    Lunch* actualLunch = (Lunch*)[lunchCreator getLunchCreated];
+    Lunch *actualLunch = (Lunch *) [lunchCreator getLunchCreated];
     XCTAssertEqual(loggedInPerson, [actualLunch getPerson1]);
     XCTAssertEqual(buddyFound, [actualLunch getPerson2]);
     XCTAssertEqual(expectedDate, [actualLunch getDateAndTime]);
@@ -77,7 +86,33 @@
 
 }
 
--(void) testHandleLunchCreated{
+- (void)testCreateLunchWillShowAlertIfNoDateIsSelected {
+    BuddyDetailViewController *destinationViewController = [[BuddyDetailViewController alloc] init];
+    UIStoryboardSegue *segue = [[UIStoryboardSegue alloc] initWithIdentifier:@"buddyDetails" source:self.viewController destination:destinationViewController];
+
+
+    Person *buddyFound = [[Person alloc] init];
+    Person *loggedInPerson = [[Person alloc] init];
+    self.viewController.buddy = buddyFound;
+    self.viewController.personLoggedIn = loggedInPerson;
+
+    destinationViewController.date = nil;
+    MockLunchCreator *lunchCreator = [[MockLunchCreator alloc] init];
+    [LunchCreatorFactoryTestHelper setLunchCreatorToReturn:lunchCreator];
+
+    MockDisplayHandler *displayHandler = [[MockDisplayHandler alloc] init];
+    [DisplayHandlerFactoryTestHelper setDisplayHandlerToBuild:displayHandler];
+
+    [self.viewController prepareForSegue:segue sender:self.viewController];
+
+    [self.viewController createLunch:self.viewController];
+
+    XCTAssertNil( [lunchCreator getLunchCreated]);
+    XCTAssertEqualObjects(@"Please enter a date to schedule your lunch", [displayHandler getErrorMessageShown]);
+
+}
+
+- (void)testHandleLunchCreated {
     MockNavigationController *navController = [[MockNavigationController alloc] init];
     [navController pushViewController:self.viewController animated:true];
 
@@ -88,5 +123,18 @@
 
 }
 
+- (void)testHandleLunchCreationError {
+
+    Person *buddyFound = [[Person alloc] init];
+    Person *loggedInPerson = [[Person alloc] init];
+    self.viewController.buddy = buddyFound;
+    self.viewController.personLoggedIn = loggedInPerson;
+    MockDisplayHandler *displayHandler = [[MockDisplayHandler alloc] init];
+    [DisplayHandlerFactoryTestHelper setDisplayHandlerToBuild:displayHandler];
+
+    [self.viewController handleLunchCreationFailed];
+
+    XCTAssertTrue([displayHandler wasShowCommunicationErrorCalled]);
+}
 
 @end

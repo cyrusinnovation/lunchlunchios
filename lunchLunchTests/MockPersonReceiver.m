@@ -10,11 +10,21 @@
 @implementation MockPersonReceiver {
 
     NSObject <PersonProtocol> *personPassedIn;
+    bool handlePersonFoundErrorCalled;
 }
 - (void)handlePersonFound:(NSObject <PersonProtocol> *)person {
     personPassedIn = person;
 }
--(NSObject<PersonProtocol> *) getPersonPassedIn{
+
+- (void)handlePersonFoundError {
+    handlePersonFoundErrorCalled = true;
+}
+
+- (BOOL)wasHandlePersonErrorCalled {
+    return handlePersonFoundErrorCalled;
+}
+
+- (NSObject <PersonProtocol> *)getPersonPassedIn {
     return personPassedIn;
 }
 

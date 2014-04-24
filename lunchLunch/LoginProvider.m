@@ -12,8 +12,8 @@
     NSMutableData *connectionData;
 
     NSObject <ConnectionFactoryProtocol> *connectionFactory;
-    NSObject<PersonReceiverProtocol>* receiver;
-    NSObject<PersonParserProtocol> * parser;
+    NSObject <PersonReceiverProtocol> *receiver;
+    NSObject <PersonParserProtocol> *parser;
 }
 - (id)initWithConnectionFactory:(NSObject <ConnectionFactoryProtocol> *)factory personParser:(NSObject <PersonParserProtocol> *)personParser andPersonReceiver:(NSObject <PersonReceiverProtocol> *)personReceiver {
     self = [super init];
@@ -24,6 +24,7 @@
     }
     return self;
 }
+
 - (void)findPersonByEmail:(NSString *)email {
     NSString *loginURL = [NSString stringWithFormat:@"http://localhost:3000/login?email=%@", email];
     [connectionFactory buildAsynchronousGetRequestForURL:loginURL andDelegate:self];
@@ -43,19 +44,18 @@
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
-    [receiver handlePersonFound:[NullPerson singleton]];
-
+    [receiver handlePersonFoundError];
 }
 
-
--(NSObject <ConnectionFactoryProtocol>*) getConnectionFactory{
+- (NSObject <ConnectionFactoryProtocol> *)getConnectionFactory {
     return connectionFactory;
 }
 
--(NSObject <PersonParserProtocol>*) getPersonParser{
+- (NSObject <PersonParserProtocol> *)getPersonParser {
     return parser;
 }
--(NSObject <PersonReceiverProtocol>*) getPersonReceiver{
+
+- (NSObject <PersonReceiverProtocol> *)getPersonReceiver {
     return receiver;
 }
 

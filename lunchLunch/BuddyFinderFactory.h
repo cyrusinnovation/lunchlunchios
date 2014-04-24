@@ -4,9 +4,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PersonReceiverProtocol.h"
+#import "BuddyFinderProtocol.h"
 
-@protocol BuddyFinderProtocol;
-@protocol PersonReceiverProtocol;
 
 
 @interface BuddyFinderFactory : NSObject

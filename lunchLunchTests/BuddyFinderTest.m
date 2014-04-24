@@ -56,7 +56,7 @@
     XCTAssertEqual(finder, [factory getDelegatePassedInForGet]);
 }
 
-- (void)testDidFailWithErrorWillGiveNullPersonToReceiver {
+- (void)testDidFailWithErrorCallErrorOnReceiver {
 
     MockPersonReceiver *receiver = [[MockPersonReceiver alloc] init];
     MockConnectionFactory *factory = [[MockConnectionFactory alloc] init];
@@ -64,7 +64,7 @@
     BuddyFinder *finder =
             [[BuddyFinder alloc] initWithConnectionFactory:factory personParser:parser andPersonReceiver:receiver];
     [finder connection:nil didFailWithError:nil];
-    XCTAssertEqual([NullPerson singleton], [receiver getPersonPassedIn]);
+    XCTAssertTrue([receiver wasHandlePersonErrorCalled]);
 }
 
 - (void)testConnectionDidFinishLoadingWillGivePersonParsedFromTheDataFromTheConnectionToThePersonReceiver {

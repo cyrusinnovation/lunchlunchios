@@ -13,8 +13,8 @@
 
 #import "NullPerson.h"
 #import "MainViewController.h"
-#import "Person.h"
 #import "LoginProviderFactory.h"
+#import "DisplayHandlerFactory.h"
 
 @interface LoginViewController ()
 @property(nonatomic) NSObject <PersonProtocol> *personFound;
@@ -43,7 +43,7 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
     NSString *emailToFind = self.emailTextField.text;
-    NSObject <LoginProviderProtocol> *loginProvider = [LoginProviderFactory buildLoginProvider: self];
+    NSObject <LoginProviderProtocol> *loginProvider = [LoginProviderFactory buildLoginProvider:self];
     [loginProvider findPersonByEmail:emailToFind];
     return YES;
 }
@@ -51,14 +51,18 @@
 - (void)handlePersonFound:(NSObject <PersonProtocol> *)person {
     self.personFound = person;
     if (![self.personFound isEqual:[NullPerson singleton]]) {
-        self.errorLabel.text = nil;
         SegueCommand *segueCommand = [[SegueCommand alloc] initForViewController:self segueIdentifier:@"loginSuccess"];
         [[CommandDispatcher singleton] executeCommand:segueCommand];
     }
     else {
-        self.errorLabel.text = @"Email does not exist";
+        [[DisplayHandlerFactory buildDisplayHandler] showErrorWithMessage:@"The email you entered does not exist, please try again"];
     }
 }
+
+- (void)handlePersonFoundError {
+    [[DisplayHandlerFactory buildDisplayHandler] showCommunicationError];
+}
+
 
 - (IBAction)backgroundTap:(id)sender {
     [self.view endEditing:true];
@@ -69,8 +73,8 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"loginSuccess"]) {
-        UINavigationController * controller = segue.destinationViewController;
-        MainViewController *mainViewController = (MainViewController*)[controller topViewController];
+        UINavigationController *controller = segue.destinationViewController;
+        MainViewController *mainViewController = (MainViewController *) [controller topViewController];
         mainViewController.personLoggedIn = self.personFound;
     }
 }

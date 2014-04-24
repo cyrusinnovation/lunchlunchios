@@ -43,7 +43,7 @@
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
-    [receiver handlePersonFound:[NullPerson singleton]];
+    [receiver handlePersonFoundError];
 
 }
 

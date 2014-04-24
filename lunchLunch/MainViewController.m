@@ -17,6 +17,7 @@
 #import "FoundBuddyViewController.h"
 #import "BuddyFinderProtocol.h"
 #import "BuddyFinderFactory.h"
+#import "DisplayHandlerFactory.h"
 
 @interface MainViewController ()
 
@@ -109,6 +110,10 @@
     self.buddyFound = person;
     SegueCommand *segueCommand = [[SegueCommand alloc] initForViewController:self segueIdentifier:@"findBuddy"];
     [[CommandDispatcher singleton] executeCommand:segueCommand];
+}
+
+- (void)handlePersonFoundError {
+    [[DisplayHandlerFactory buildDisplayHandler] showCommunicationError];
 }
 
 

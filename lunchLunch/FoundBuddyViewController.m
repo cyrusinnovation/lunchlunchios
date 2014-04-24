@@ -11,6 +11,8 @@
 #import "BuddyDetailViewController.h"
 #import "Lunch.h"
 #import "LunchCreatorFactory.h"
+#import "AlertBuilder.h"
+#import "DisplayHandlerFactory.h"
 
 @interface FoundBuddyViewController ()
 
@@ -21,15 +23,12 @@
 }
 
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
 }
 
 
-
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
 
@@ -40,11 +39,16 @@
         controller.buddy = self.buddy;
     }
 }
-- (IBAction)createLunch:(id)sender {
-    Lunch *lunch = [[Lunch alloc] initWithPerson1:self.personLoggedIn person2:self.buddy dateTime:   buddyDetailViewController.date];
-    NSObject <LunchCreatorProtocol> *lunchCreator = [LunchCreatorFactory buildLunchCreator:self];
-    [lunchCreator createLunch:lunch];
 
+- (IBAction)createLunch:(id)sender {
+    if (buddyDetailViewController.date != nil) {
+        Lunch *lunch = [[Lunch alloc] initWithPerson1:self.personLoggedIn person2:self.buddy dateTime:buddyDetailViewController.date];
+        NSObject <LunchCreatorProtocol> *lunchCreator = [LunchCreatorFactory buildLunchCreator:self];
+        [lunchCreator createLunch:lunch];
+    }
+    else {
+        [[DisplayHandlerFactory buildDisplayHandler] showErrorWithMessage:@"Please enter a date to schedule your lunch"];
+    }
 }
 
 - (void)handleLunchCreated {
@@ -53,7 +57,7 @@
 }
 
 - (void)handleLunchCreationFailed {
-
+    [[DisplayHandlerFactory buildDisplayHandler] showCommunicationError];
 }
 
 

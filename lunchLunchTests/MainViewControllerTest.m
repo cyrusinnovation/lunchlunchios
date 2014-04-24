@@ -17,13 +17,15 @@
 #import "MockUITableView.h"
 #import "CommandDispatcherTestHelper.h"
 #import "DetailViewController.h"
-#import "LunchReceiverProtocol.h"
-#import "LoginProviderFactoryTestHelper.h"
 #import "LunchProviderFactoryTestHelper.h"
 #import "MockLunchProvider.h"
 #import "FoundBuddyViewController.h"
 #import "BuddyFinderFactoryTestHelper.h"
 #import "MockBuddyFinder.h"
+
+#import "MockUIAlertView.h"
+#import "DisplayHandlerFactoryTestHelper.h"
+#import "MockDisplayHandler.h"
 
 NSObject <PersonProtocol> *personToReturn;
 
@@ -32,7 +34,9 @@ NSObject <PersonProtocol> *personToReturn;
 @property(nonatomic, strong) MainViewController *viewController;
 @end
 
-@implementation MainViewControllerTest
+@implementation MainViewControllerTest {
+    MockDisplayHandler *mockDisplayHandler;
+}
 
 - (void)setUp {
     [super setUp];
@@ -41,13 +45,15 @@ NSObject <PersonProtocol> *personToReturn;
     [BuddyFinderFactoryTestHelper swizzleBuildBuddyFinder];
     [CommandDispatcherTestHelper swizzleExecute];
 
-
+    mockDisplayHandler = [[MockDisplayHandler alloc] init];
+    [DisplayHandlerFactoryTestHelper setDisplayHandlerToBuild:mockDisplayHandler];
 }
 
 - (void)tearDown {
     [LunchProviderFactoryTestHelper deswizzleBuildLunchProvider];
     [BuddyFinderFactoryTestHelper deswizzleBuildBuddyFinder];
     [CommandDispatcherTestHelper deswizzleExecuteAndClearLastCommandExecuted];
+    [DisplayHandlerFactoryTestHelper deswizzleBuildDisplayHandler];
     self.viewController = nil;
     [super tearDown];
 }
@@ -62,7 +68,6 @@ NSObject <PersonProtocol> *personToReturn;
     [self.viewController viewWillAppear:true];
     XCTAssertEqual(self.viewController, [LunchProviderFactoryTestHelper getLunchReceiverUsedToBuildLunchProvider]);
     XCTAssertEqual(loggedInPerson, [mockLunchProvider getPersonToFindLunchesFor]);
-
 }
 - (void)testIsALunchReceiver {
     XCTAssertTrue([MainViewController conformsToProtocol:@protocol(LunchReceiverProtocol)]);
@@ -226,4 +231,9 @@ NSObject <PersonProtocol> *personToReturn;
     XCTAssertEqual(personLoggedIn, destinationViewController.personLoggedIn);
 }
 
+
+- (void)testHandlePersonFoundError {
+    [self.viewController handlePersonFoundError];
+    XCTAssertTrue([mockDisplayHandler wasShowCommunicationErrorCalled]);
+}
 @end

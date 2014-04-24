@@ -4,9 +4,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PersonProtocol.h"
 
-@protocol PersonProtocol;
 
 @protocol PersonReceiverProtocol <NSObject>
 - (void)handlePersonFound:(NSObject <PersonProtocol> *)person;
+- (void)handlePersonFoundError;
 @end

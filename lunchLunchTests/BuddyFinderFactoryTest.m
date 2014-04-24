@@ -17,7 +17,7 @@
 
 }
 
-- (void)testWillBuddyFinderWithCorrectInitArguments {
+- (void)testWillBuildBuddyFinderWithCorrectInitArguments {
     MockPersonReceiver *receiver = [[MockPersonReceiver alloc] init];
     NSObject <BuddyFinderProtocol> *provider = [BuddyFinderFactory buildBuddyFinder:receiver];
     XCTAssertTrue([provider isKindOfClass:[BuddyFinder class]]);

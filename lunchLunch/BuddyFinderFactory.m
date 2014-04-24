@@ -4,8 +4,6 @@
 //
 
 #import "BuddyFinderFactory.h"
-#import "BuddyFinderProtocol.h"
-#import "PersonReceiverProtocol.h"
 #import "BuddyFinder.h"
 #import "ConnectionFactory.h"
 #import "PersonParser.h"

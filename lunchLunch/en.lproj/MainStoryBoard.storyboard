@@ -41,13 +41,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dir-7n-CwE">
-                                <rect key="frame" x="20" y="216" width="280" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -58,7 +51,6 @@
                     <navigationItem key="navigationItem" id="sv9-JG-wrk"/>
                     <connections>
                         <outlet property="emailTextField" destination="QDo-eH-LpP" id="N1s-dJ-2af"/>
-                        <outlet property="errorLabel" destination="dir-7n-CwE" id="GFB-wh-E0r"/>
                         <segue destination="lS4-TA-0x7" kind="modal" identifier="loginSuccess" modalTransitionStyle="crossDissolve" id="rOO-OU-z2A"/>
                     </connections>
                 </viewController>

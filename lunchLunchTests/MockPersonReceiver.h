@@ -7,5 +7,7 @@
 #import "PersonReceiverProtocol.h"
 
 @interface MockPersonReceiver : NSObject<PersonReceiverProtocol>
+- (BOOL)wasHandlePersonErrorCalled;
+
 - (NSObject <PersonProtocol> *)getPersonPassedIn;
 @end

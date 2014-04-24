@@ -20,6 +20,10 @@
 #import "LoginProviderFactoryTestHelper.h"
 #import "MockLoginProvider.h"
 
+#import "MockUIAlertView.h"
+#import "DisplayHandlerFactoryTestHelper.h"
+#import "MockDisplayHandler.h"
+
 
 @interface LoginViewControllerTest : XCTestCase
 
@@ -28,7 +32,7 @@
 @end
 
 @implementation LoginViewControllerTest {
-
+    MockDisplayHandler *mockDisplayHandler;
 }
 
 
@@ -40,14 +44,20 @@
     [LoginProviderFactoryTestHelper swizzleBuildLoginProvider];
     self.loginProvider = [[MockLoginProvider alloc] init];
     [LoginProviderFactoryTestHelper setLoginProviderToReturn:self.loginProvider];
+    [DisplayHandlerFactoryTestHelper swizzleBuildDisplayHandler];
+
+    mockDisplayHandler = [[MockDisplayHandler alloc] init];
+    [DisplayHandlerFactoryTestHelper setDisplayHandlerToBuild:mockDisplayHandler];
     self.viewController.emailTextField = [[UITextField alloc] init];
-    self.viewController.errorLabel = [[UILabel alloc] init];
+
 
 }
 
 - (void)tearDown {
     [CommandDispatcherTestHelper deswizzleExecuteAndClearLastCommandExecuted];
     [LoginProviderFactoryTestHelper deswizzleBuildLoginProvider];
+    [DisplayHandlerFactoryTestHelper deswizzleBuildDisplayHandler];
+
     self.viewController = nil;
     self.loginProvider = nil;
     [super tearDown];
@@ -101,32 +111,24 @@
 
 - (void)testHandlePersonFoundWhenANullPersonIsRetrievedWillNotFireSegueCommand {
 
-
     XCTAssertNil([CommandDispatcherTestHelper getLastCommandExecuted]);
-
 
     [self.viewController handlePersonFound:[NullPerson singleton]];
     XCTAssertNil([CommandDispatcherTestHelper getLastCommandExecuted]);
 
-
 }
 
-- (void)testHandlePersonFoundWhenANullPersonIsRetrievedWillShowErrorText {
-    XCTAssertNil(self.viewController.errorLabel.text);
-
+- (void)testHandlePersonFoundWhenANullPersonIsRetrievedWillShowErrorAlert {
     [self.viewController handlePersonFound:[NullPerson singleton]];
 
-    XCTAssertEqualObjects(@"Email does not exist", self.viewController.errorLabel.text);
+    XCTAssertEqualObjects(@"The email you entered does not exist, please try again", [mockDisplayHandler getErrorMessageShown]);
 }
 
-- (void)testHandlePersonFoundItWillClearErrorTextWhenAPersonIsRetrieved {
-    MockView *mockView = [[MockView alloc] init];
-    self.viewController.view = mockView;
+- (void)testHandlePersonFoundError {
+    [self.viewController handlePersonFoundError];
 
-    self.viewController.errorLabel.text = @"You got an error yo";
 
-    [self.viewController handlePersonFound:[[Person alloc] init]];
-    XCTAssertNil(self.viewController.errorLabel.text);
+    XCTAssertTrue( [mockDisplayHandler wasShowCommunicationErrorCalled]);
 }
 
 - (void)testHandlePersonFound_WhenAPersonIsRetrievedItWillBePassedAlongToViewControllerOnTheSegue {

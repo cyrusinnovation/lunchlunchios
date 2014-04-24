@@ -25,7 +25,7 @@
     XCTAssertTrue([LoginProvider conformsToProtocol:@protocol(LoginProviderProtocol)]);
 }
 
--(void) testCanGetArgumentsFromInit{
+- (void)testCanGetArgumentsFromInit {
     MockPersonReceiver *receiver = [[MockPersonReceiver alloc] init];
     MockConnectionFactory *factory = [[MockConnectionFactory alloc] init];
     MockPersonParser *parser = [[MockPersonParser alloc] init];
@@ -36,6 +36,7 @@
     XCTAssertEqual(parser, [provider getPersonParser]);
 
 }
+
 - (void)testFindPersonByEmailWillCreateConnectionUsingFactory {
     MockConnectionFactory *connectionFactory = [[MockConnectionFactory alloc] init];
     LoginProvider *provider =
@@ -48,12 +49,12 @@
     XCTAssertEqual(provider, [connectionFactory getDelegatePassedInForGet]);
 }
 
-- (void)testDidFailWithErrorWillGiveNullPersonToReceiver {
+- (void)testDidFailWithErrorWillCallErrorOnPersonReciever {
     MockPersonReceiver *receiver = [[MockPersonReceiver alloc] init];
     LoginProvider *provider =
             [[LoginProvider alloc] initWithConnectionFactory:[[MockConnectionFactory alloc] init] personParser:[[MockPersonParser alloc] init] andPersonReceiver:receiver];
     [provider connection:nil didFailWithError:nil];
-    XCTAssertEqual([NullPerson singleton], [receiver getPersonPassedIn]);
+    XCTAssertTrue([receiver wasHandlePersonErrorCalled]);
 }
 
 - (void)testConnectionDidFinishLoadingWillGivePersonParsedFromTheDataFromTheConnectionToThePersonReceiver {
