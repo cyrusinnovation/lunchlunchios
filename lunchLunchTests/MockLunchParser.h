@@ -8,6 +8,10 @@
 
 
 @interface MockLunchParser : NSObject    <LunchParserProtocol>
+- (void)setLunchDataToReturn:(NSData *)data;
+
+- (NSObject <LunchProtocol> *)getLunchPassedToBuildJSON;
+
 - (void)setLunchesToReturn:(NSArray *)lunches;
 
 - (NSData *)getLunchDataPassedIn;

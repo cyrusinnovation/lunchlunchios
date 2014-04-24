@@ -53,11 +53,9 @@
     [super tearDown];
 }
 
-- (void)testIsUITextFieldDelegate {
+- (void)testProtocols {
     XCTAssertTrue([LoginViewController conformsToProtocol:@protocol(UITextFieldDelegate)]);
-    XCTAssertTrue([LoginViewController conformsToProtocol:@protocol(PersonReceiverProtocol
-
-    )]);
+    XCTAssertTrue([LoginViewController conformsToProtocol:@protocol(PersonReceiverProtocol)]);
 }
 
 - (void)testTextFieldShouldReturnResignsToFirstResponder {

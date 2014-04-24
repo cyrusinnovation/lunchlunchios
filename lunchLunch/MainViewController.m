@@ -34,6 +34,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     NSObject <LunchProviderProtocol> *lunchProvider = [LunchProviderFactory buildLunchProvider:self];
     [lunchProvider findLunchesFor:self.personLoggedIn];
 
@@ -91,6 +96,7 @@
     if ([segue.identifier isEqualToString:@"findBuddy"]) {
         FoundBuddyViewController *controller = (FoundBuddyViewController *) segue.destinationViewController;
         controller.buddy = self.buddyFound;
+        controller.personLoggedIn = self.personLoggedIn;
     }
 }
 

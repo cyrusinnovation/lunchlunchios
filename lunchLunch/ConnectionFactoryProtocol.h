@@ -6,5 +6,6 @@
 #import <Foundation/Foundation.h>
 
 @protocol ConnectionFactoryProtocol <NSObject>
-- (NSURLConnection *)buildAsynchronousRequestForURL: (NSString *) requestURL andDelegate:(id<NSURLConnectionDataDelegate>) delegate;
+- (NSURLConnection *)buildAsynchronousGetRequestForURL:(NSString *)requestURL andDelegate:(id<NSURLConnectionDataDelegate>) delegate;
+-(NSURLConnection*)postData:(NSData *)data toURL:(NSString *)url withDelegate:(id<NSURLConnectionDataDelegate>) delegate;
 @end

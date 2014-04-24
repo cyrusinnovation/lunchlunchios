@@ -7,19 +7,39 @@
 
 
 @implementation MockConnectionFactory {
-    id<NSURLConnectionDataDelegate> delegatePassedIn;
-    NSString * requestURLPassedIn;
+    id<NSURLConnectionDataDelegate> delegatePassedInForGet;
+    NSString *requestURLPassedInForGet;
+    id <NSURLConnectionDataDelegate> delegatePassedInToPost;
+    NSData *dataPassedInToPost;
+    NSString *requestURLPassedInForPost;
 }
-- (NSURLConnection *)buildAsynchronousRequestForURL:(NSString *)requestURL andDelegate:(id <NSURLConnectionDataDelegate>)delegate {
-    requestURLPassedIn = requestURL;
-    delegatePassedIn = delegate;
+- (NSURLConnection *)buildAsynchronousGetRequestForURL:(NSString *)requestURL andDelegate:(id <NSURLConnectionDataDelegate>)delegate {
+    requestURLPassedInForGet = requestURL;
+    delegatePassedInForGet = delegate;
     return nil;
 }
 
--(NSString *) getRequestURLPassedIn{
-    return requestURLPassedIn;
+- (NSURLConnection *)postData:(NSData *)data toURL:(NSString *)url withDelegate:(id <NSURLConnectionDataDelegate>)delegate {
+    requestURLPassedInForPost = url;
+    dataPassedInToPost = data;
+    delegatePassedInToPost = delegate;
+    return nil;
 }
--(id<NSURLConnectionDataDelegate>) getDelegatePassedIn{
-    return delegatePassedIn;
+
+-(NSString *)getRequestURLPassedInForPost {
+    return requestURLPassedInForPost;
+}
+-(id<NSURLConnectionDataDelegate>)getDelegatePassedInForPost {
+    return delegatePassedInToPost;
+}
+-(NSData *) getDataPassedInToPost{
+    return dataPassedInToPost;
+}
+
+-(NSString *)getRequestURLPassedInForGet {
+    return requestURLPassedInForGet;
+}
+-(id<NSURLConnectionDataDelegate>)getDelegatePassedInForGet {
+    return delegatePassedInForGet;
 }
 @end

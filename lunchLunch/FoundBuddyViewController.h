@@ -9,7 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "PersonProtocol.h"
 #import "PersonReceiverProtocol.h"
+#import "LunchReceiverProtocol.h"
+#import "LunchCreationHandler.h"
 
-@interface FoundBuddyViewController : UIViewController<PersonReceiverProtocol>
+@interface FoundBuddyViewController : UIViewController <LunchCreationHandler>
+@property(nonatomic, strong) NSObject <PersonProtocol>  *personLoggedIn;
 @property(nonatomic, strong) NSObject <PersonProtocol>  *buddy;
+
+- (IBAction)createLunch:(id)sender;
 @end

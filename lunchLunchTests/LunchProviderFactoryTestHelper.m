@@ -9,7 +9,7 @@
 #import "LunchReceiverProtocol.h"
 
 
-NSObject<LunchReceiverProtocol> *lunchReceiverUsedToBuildLoginProvider;
+NSObject<LunchReceiverProtocol> *lunchReceiverUsedToBuild;
 
 NSObject<LunchProviderProtocol> *lunchProviderToReturn;
 
@@ -43,18 +43,18 @@ NSObject<LunchProviderProtocol> *lunchProviderToReturn;
     Method mockMethod = [SwizzleHelper findInstanceMethod:mockMethodClass withSelector:mockGetLunchesSelector];
 
     [SwizzleHelper deswizzleMethodFunctionality:originalMethod awayFromMockMethod:mockMethod];
-    lunchReceiverUsedToBuildLoginProvider= nil;
+    lunchReceiverUsedToBuild = nil;
     lunchProviderToReturn =  nil;
 }
 
 - (NSObject <LunchProviderProtocol> *)mockBuildLunchProvider:(NSObject <LunchReceiverProtocol> *)lunchReceiver {
-    lunchReceiverUsedToBuildLoginProvider = lunchReceiver;
+    lunchReceiverUsedToBuild = lunchReceiver;
     return lunchProviderToReturn;
 }
 
 
 + (NSObject <LunchReceiverProtocol> *)getLunchReceiverUsedToBuildLunchProvider {
-    return lunchReceiverUsedToBuildLoginProvider;
+    return lunchReceiverUsedToBuild;
 }
 
 + (void)setLunchProviderToReturn:(NSObject <LunchProviderProtocol> *)providerToReturn {

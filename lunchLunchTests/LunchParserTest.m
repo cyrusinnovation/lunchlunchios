@@ -59,10 +59,6 @@
 
 }
 
-- (NSDictionary *)buildPersonDictionary:(Person *)person {
-    return [NSDictionary dictionaryWithObjectsAndKeys:[person getId], @"_id", [person getFirstName], @"firstName", [person getLastName], @"lastName", [person getEmailAddress], @"email", nil ];
-}
-
 - (void)testParseLunches_WillIgnoreAnyIncompleteLunchEntries {
 
 
@@ -102,6 +98,9 @@
 
 }
 
+- (NSDictionary *)buildPersonDictionary:(Person *)person {
+    return [NSDictionary dictionaryWithObjectsAndKeys:[person getId], @"_id", [person getFirstName], @"firstName", [person getLastName], @"lastName", [person getEmailAddress], @"email", nil ];
+}
 
 - (void)checkLunchAtIndex:(Person *)expectedPerson1 expectedPerson2:(Person *)expectedPerson2 dateString:(NSString *)dateString allLunches:(NSArray *)allLunches index:(int)index {
     XCTAssertTrue([allLunches[index] isKindOfClass:[Lunch class]]);
@@ -113,6 +112,33 @@
     XCTAssertEqualObjects(expectedPerson2, [lunch getPerson2]);
     XCTAssertEqualObjects([dateMaker dateFromString:dateString], [lunch getDateAndTime]);
 }
+
+
+- (void)testBuildLunchJSON {
+    Person *person1 = [[Person alloc] initWithFirstNameInitWithId:@"2t23f" firstName:@"Kevin" lastName:@"Murphy" email:@"tservo@sol.net"];
+    Person *person2 = [[Person alloc] initWithFirstNameInitWithId:@"dfsgg" firstName:@"Bill" lastName:@"Corbett" email:@"crow@sol.net"];
+    NSDate *theNotToDistantFuture = [NSDate distantFuture];
+    Lunch *lunch = [[Lunch alloc] initWithPerson1:person1 person2:person2 dateTime:theNotToDistantFuture];
+
+
+    NSDictionary *person1Dictionary = [NSDictionary dictionaryWithObjectsAndKeys:[person1 getFirstName], @"firstName", [person1 getLastName], @"lastName", [person1 getEmailAddress], @"email", [person1 getId], @"_id", nil ];
+    NSDictionary *person2Dictionary = [NSDictionary dictionaryWithObjectsAndKeys:[person2 getFirstName], @"firstName", [person2 getLastName], @"lastName", [person2 getEmailAddress], @"email", [person2 getId], @"_id", nil ];
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-dd-MM'T'HH:mm:ss.SSSZ"];
+    NSString *jsonDate = [formatter stringFromDate:theNotToDistantFuture];
+    
+
+    NSDictionary *lunchDictionary = [NSDictionary dictionaryWithObjectsAndKeys:person1Dictionary, @"person1", person2Dictionary, @"person2", jsonDate, @"dateTime", nil];
+    NSDictionary *expectedDictionary = [NSDictionary dictionaryWithObjectsAndKeys:lunchDictionary, @"lunch", nil];
+    NSData *expectedData = [NSJSONSerialization dataWithJSONObject:expectedDictionary options:NSJSONWritingPrettyPrinted error:nil];
+
+    NSData *data = [[LunchParser singleton] buildLunchJSONData:lunch];
+    XCTAssertEqualObjects(expectedData, data);
+
+}
+
+
 
 
 @end

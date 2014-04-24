@@ -52,14 +52,14 @@ NSObject <PersonProtocol> *personToReturn;
     [super tearDown];
 }
 
-- (void)testWillUseLoggedInPersonToFindLunchesWhenViewDidLoad {
+- (void)testWillUseLoggedInPersonToFindLunchesWhenViewWillAppear {
     Person *loggedInPerson = [[Person alloc] init];
     self.viewController.personLoggedIn = loggedInPerson;
     MockLunchProvider *mockLunchProvider = [[MockLunchProvider alloc] init];
 
     [LunchProviderFactoryTestHelper setLunchProviderToReturn:mockLunchProvider];
     
-    [self.viewController viewDidLoad];
+    [self.viewController viewWillAppear:true];
     XCTAssertEqual(self.viewController, [LunchProviderFactoryTestHelper getLunchReceiverUsedToBuildLunchProvider]);
     XCTAssertEqual(loggedInPerson, [mockLunchProvider getPersonToFindLunchesFor]);
 
@@ -186,10 +186,11 @@ NSObject <PersonProtocol> *personToReturn;
 
 }
 
-- (void)testPersonFoundIsPassedAlongWithTheFindBuddySegue {
+- (void)testPersonFoundAndPersonLoggedInArePassedAlongWithTheFindBuddySegue {
 
     XCTAssertNil([CommandDispatcherTestHelper getLastCommandExecuted]);
-
+    Person *personLoggedIn = [[Person alloc] init];
+    self.viewController.personLoggedIn = personLoggedIn;
 
     Person *personFound = [[Person alloc] init];
     [self.viewController handlePersonFound:personFound];
@@ -200,6 +201,7 @@ NSObject <PersonProtocol> *personToReturn;
     [self.viewController prepareForSegue:segue sender:self.viewController];
 
     XCTAssertEqual(personFound, destinationViewController.buddy);
+    XCTAssertEqual(personLoggedIn, destinationViewController.personLoggedIn);
 }
 
 - (void)testWhenARowIsSelectedTheLunchBePassedAlongToViewControllerOnTheSeeDetailsSegue {

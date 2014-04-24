@@ -10,8 +10,9 @@
 
 }
 
-- (NSURLConnection *)buildAsynchronousRequestForURL:(NSString *)requestURL andDelegate:(id <NSURLConnectionDataDelegate>)delegate {
-    NSURL * url = [[NSURL alloc] initWithString:requestURL];
+- (NSURLConnection *)buildAsynchronousGetRequestForURL:(NSString *)requestURL andDelegate:(id <NSURLConnectionDataDelegate>)delegate {
+
+    NSURL * url = [NSURL URLWithString:requestURL];
     NSURLRequest * request = [NSURLRequest requestWithURL:url ];
 
     NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:delegate];
@@ -19,6 +20,25 @@
 
     return connection;
 }
+
+- (NSURLConnection *)postData:(NSData *)data toURL:(NSString *)requestUrl withDelegate:(id <NSURLConnectionDataDelegate>)delegate {
+    NSURL * url = [NSURL URLWithString:requestUrl];
+
+    NSString *postLength = [NSString stringWithFormat:@"%d", [data length]];
+    NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:url];
+//    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+//    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [request setHTTPMethod:@"POST"];
+    [request setHTTPBody:data];
+
+    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+
+    NSURLConnection* connection =[[NSURLConnection alloc] initWithRequest:request delegate:delegate];
+
+    return connection;
+}
+
 
 + (ConnectionFactory *)singleton {
     static ConnectionFactory *SINGLETON;

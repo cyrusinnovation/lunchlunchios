@@ -5,10 +5,8 @@
 
 #import <objc/runtime.h>
 #import "BuddyFinderFactoryTestHelper.h"
-#import "PersonReceiverProtocol.h"
-#import "BuddyFinderProtocol.h"
 #import "BuddyFinderFactory.h"
-#import "SwizzleHelper.h"
+
 
 
 NSObject<PersonReceiverProtocol> *personReceiverUsedToBuildBuddyFinder;
@@ -19,27 +17,27 @@ NSObject <BuddyFinderProtocol> *finderToReturn;
 
 }
 + (void)swizzleBuildBuddyFinder {
-    SEL mockGetLunchesSelector = @selector(mockBuildBuddyFinder:);
+    SEL mockSelector = @selector(mockBuildBuddyFinder:);
     SEL originalSelector = @selector(buildBuddyFinder:);
 
     Class originalClass = [BuddyFinderFactory class];
     Class mockMethodClass = [self class];
 
     Method originalMethod = [SwizzleHelper findClassMethod:originalClass withSelector:originalSelector];
-    Method mockMethod = [SwizzleHelper findInstanceMethod:mockMethodClass withSelector:mockGetLunchesSelector];
+    Method mockMethod = [SwizzleHelper findInstanceMethod:mockMethodClass withSelector:mockSelector];
 
     [SwizzleHelper swizzleMethodFunctionality:originalMethod withMockMethod:mockMethod];
 }
 
 + (void)deswizzleBuildBuddyFinder {
-    SEL mockGetLunchesSelector = @selector(mockBuildLoginProvider:);
-    SEL originalSelector = @selector(buildLoginProvider:);
+    SEL mockSelector = @selector(mockBuildBuddyFinder:);
+    SEL originalSelector = @selector(buildBuddyFinder:);
 
     Class originalClass = [BuddyFinderFactory class];
     Class mockMethodClass = [self class];
 
     Method originalMethod = [SwizzleHelper findClassMethod:originalClass withSelector:originalSelector];
-    Method mockMethod = [SwizzleHelper findInstanceMethod:mockMethodClass withSelector:mockGetLunchesSelector];
+    Method mockMethod = [SwizzleHelper findInstanceMethod:mockMethodClass withSelector:mockSelector];
 
     [SwizzleHelper deswizzleMethodFunctionality:originalMethod awayFromMockMethod:mockMethod];
     personReceiverUsedToBuildBuddyFinder= nil;
@@ -47,7 +45,7 @@ NSObject <BuddyFinderProtocol> *finderToReturn;
 }
 
 
-- (NSObject <BuddyFinderProtocol> *)mockBuildBuddyFinder:(NSObject <BuddyFinderProtocol> *)personReciever {
+- (NSObject <BuddyFinderProtocol> *)mockBuildBuddyFinder:(NSObject <PersonReceiverProtocol> *)personReciever {
     personReceiverUsedToBuildBuddyFinder = personReciever;
     return finderToReturn;
 }

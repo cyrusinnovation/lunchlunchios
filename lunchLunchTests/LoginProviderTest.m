@@ -44,8 +44,8 @@
     [provider findPersonByEmail:email];
 
     NSString *expectedURL = [NSString stringWithFormat:@"http://localhost:3000/login?email=%@", email];
-    XCTAssertEqualObjects(expectedURL, [connectionFactory getRequestURLPassedIn]);
-    XCTAssertEqual(provider, [connectionFactory getDelegatePassedIn]);
+    XCTAssertEqualObjects(expectedURL, [connectionFactory getRequestURLPassedInForGet]);
+    XCTAssertEqual(provider, [connectionFactory getDelegatePassedInForGet]);
 }
 
 - (void)testDidFailWithErrorWillGiveNullPersonToReceiver {

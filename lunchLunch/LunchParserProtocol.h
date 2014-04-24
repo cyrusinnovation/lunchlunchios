@@ -8,4 +8,5 @@
 
 @protocol LunchParserProtocol <NSObject>
 -(NSArray *) parseLunches:(NSData * ) lunchJSONData;
+-(NSData *) buildLunchJSONData : (NSObject<LunchProtocol>* )lunch;
 @end

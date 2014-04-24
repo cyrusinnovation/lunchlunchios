@@ -26,7 +26,7 @@
 }
 - (void)findPersonByEmail:(NSString *)email {
     NSString *loginURL = [NSString stringWithFormat:@"http://localhost:3000/login?email=%@", email];
-    [connectionFactory buildAsynchronousRequestForURL:loginURL andDelegate:self];
+    [connectionFactory buildAsynchronousGetRequestForURL:loginURL andDelegate:self];
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {

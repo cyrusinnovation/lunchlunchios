@@ -56,8 +56,8 @@
 
     NSString *expectedURL = [NSString stringWithFormat:@"http://localhost:3000/getLunches?person=%@", expectedJSON];
 
-    XCTAssertEqualObjects(expectedURL, [factory getRequestURLPassedIn]);
-    XCTAssertEqual(provider, [factory getDelegatePassedIn]);
+    XCTAssertEqualObjects(expectedURL, [factory getRequestURLPassedInForGet]);
+    XCTAssertEqual(provider, [factory getDelegatePassedInForGet]);
 }
 
 

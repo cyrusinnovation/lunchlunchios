@@ -12,7 +12,10 @@
     NSObject <PersonProtocol> *personToReturn;
     NSObject <PersonProtocol> *personToStringfy;
     NSString *personJSONToReturn;
+
 }
+
+
 - (NSObject <PersonProtocol> *)parsePersonUsingJsonData:(NSData *)personJsonData {
     personDataPassedIn = personJsonData;
     return personToReturn;

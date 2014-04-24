@@ -13,12 +13,14 @@
 @implementation LunchProvider {
 
     NSObject <ConnectionFactoryProtocol> *connectionFactory;
-    id personParser;
+    NSObject <PersonParserProtocol>* personParser;
     NSObject <LunchParserProtocol> *lunchParser;
     NSObject <LunchReceiverProtocol> *lunchReceiver;
     NSMutableData *connectionData;
 }
-- (id)initWithConnectionFactory:(NSObject <ConnectionFactoryProtocol> *)factory lunchParser:(NSObject <LunchParserProtocol> *)lunchParserForInit personParser:(NSObject <PersonParserProtocol> *)personParserForInit andLunchReceiver:(NSObject <LunchReceiverProtocol> *)receiver {
+- (id)initWithConnectionFactory:(NSObject <ConnectionFactoryProtocol> *)factory
+                    lunchParser:(NSObject <LunchParserProtocol> *)lunchParserForInit
+                   personParser:(NSObject <PersonParserProtocol> *)personParserForInit andLunchReceiver:(NSObject <LunchReceiverProtocol> *)receiver {
     self = [super init];
     if (self) {
         connectionFactory = factory;
@@ -33,7 +35,7 @@
 - (void)findLunchesFor:(NSObject <PersonProtocol> *)person {
     NSString *personString = [[personParser buildPersonJSONString:person] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSString *url = [NSString stringWithFormat:@"http://localhost:3000/getLunches?person=%@", personString];
-    [connectionFactory buildAsynchronousRequestForURL:url andDelegate:self];
+    [connectionFactory buildAsynchronousGetRequestForURL:url andDelegate:self];
 
 }
 

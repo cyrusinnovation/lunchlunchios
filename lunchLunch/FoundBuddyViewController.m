@@ -9,45 +9,51 @@
 #import "PersonReceiverProtocol.h"
 #import "FoundBuddyViewController.h"
 #import "BuddyDetailViewController.h"
+#import "Lunch.h"
+#import "LunchCreatorFactory.h"
 
 @interface FoundBuddyViewController ()
 
 @end
 
-@implementation FoundBuddyViewController
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+@implementation FoundBuddyViewController {
+    BuddyDetailViewController *buddyDetailViewController;
 }
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
+
+
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
-
-- (void)handlePersonFound:(NSObject <PersonProtocol> *)person {
-
-}
-
-
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"buddyDetails"]) {
         BuddyDetailViewController *controller = (BuddyDetailViewController *) segue.destinationViewController;
+        buddyDetailViewController = controller;
         controller.buddy = self.buddy;
     }
+}
+- (IBAction)createLunch:(id)sender {
+    Lunch *lunch = [[Lunch alloc] initWithPerson1:self.personLoggedIn person2:self.buddy dateTime:   buddyDetailViewController.date];
+    NSObject <LunchCreatorProtocol> *lunchCreator = [LunchCreatorFactory buildLunchCreator:self];
+    [lunchCreator createLunch:lunch];
+
+}
+
+- (void)handleLunchCreated {
+    [[self navigationController] popViewControllerAnimated:true];
+
+}
+
+- (void)handleLunchCreationFailed {
+
 }
 
 

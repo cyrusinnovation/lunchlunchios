@@ -9,6 +9,8 @@
 
 
 @interface PersonParser ()
+- (NSObject <PersonProtocol> *)processPersonDictionary:(NSDictionary *)personDictionary;
+
 - (BOOL)dictionaryHasAllKeys:(NSDictionary *)dictionary;
 
 - (BOOL)hasKey:(NSDictionary *)dictionary key:(NSString *)key;
@@ -37,6 +39,25 @@
     return [self processPersonDictionary:personDictionary];
 }
 
+
+- (NSObject <PersonProtocol> *)parsePersonUsingDictionary:(NSDictionary *)personJsonDictionary {
+    return [self processPersonDictionary:personJsonDictionary];
+}
+
+
+- (NSString *)buildPersonJSONString:(NSObject <PersonProtocol> *)person {
+    NSError *error;
+    NSDictionary *personDictionary = [NSDictionary dictionaryWithObjectsAndKeys:[person getFirstName], @"firstName",
+                                                                                [person getLastName], @"lastName",
+                                                                                [person getEmailAddress], @"email",
+                                                                                [person getId], @"_id", nil];
+
+    NSData *personData = [NSJSONSerialization dataWithJSONObject:personDictionary options:0 error:&error];
+
+    return [[NSString alloc] initWithData:personData encoding:NSUTF8StringEncoding];
+}
+
+
 - (NSObject <PersonProtocol> *)processPersonDictionary:(NSDictionary *)personDictionary {
     if ([self dictionaryHasAllKeys:personDictionary]) {
         return [[Person alloc] initWithFirstNameInitWithId:[personDictionary objectForKey:@"_id"]
@@ -49,21 +70,6 @@
     }
 }
 
-- (NSObject <PersonProtocol> *)parsePersonUsingDictionary:(NSDictionary *)personJsonDictionary {
-    return [self processPersonDictionary:personJsonDictionary];
-}
-
-
-- (NSString *)buildPersonJSONString:(NSObject <PersonProtocol> *)person {
-    NSError *error;
-    NSDictionary *personDictionary = [NSDictionary dictionaryWithObjectsAndKeys:[person getFirstName], @"firstName", [person getLastName], @"lastName", [person getEmailAddress], @"email",[person getId], @"_id", nil];
-    NSData *personData = [NSJSONSerialization dataWithJSONObject:personDictionary options:0 error:&error];
-
-
-    return [[NSString alloc] initWithData:personData encoding:NSUTF8StringEncoding];
-}
-
-
 - (BOOL)dictionaryHasAllKeys:(NSDictionary *)dictionary {
 
     return [self hasKey:dictionary key:@"firstName"] && [self hasKey:dictionary key:@"lastName"] && [self hasKey:dictionary key:@"email"] && [self hasKey:dictionary key:@"_id"];
@@ -73,6 +79,5 @@
 
     return [[dictionary allKeys] containsObject:key];
 }
-
 
 @end

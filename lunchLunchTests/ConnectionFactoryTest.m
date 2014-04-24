@@ -28,10 +28,9 @@
     ConnectionFactory *factory = [ConnectionFactory singleton];
     NSString *expectedURL = @"someplace/stuff/dobo";
     MockNSURLConnectionDelegate *delegate = [[MockNSURLConnectionDelegate alloc]init];
-    NSURLConnection *connection = [factory buildAsynchronousRequestForURL:expectedURL andDelegate:delegate];
+    NSURLConnection *connection = [factory buildAsynchronousGetRequestForURL:expectedURL andDelegate:delegate];
 
     XCTAssertTrue([[connection currentRequest] isKindOfClass:[NSURLRequest class]]);
-
 
     NSURLRequest *request = [connection currentRequest];
     XCTAssertEqualObjects(@"GET",  [request HTTPMethod]);
@@ -40,8 +39,31 @@
     NSURL *requestURL = [request URL];
     XCTAssertEqual(expectedURL, [requestURL absoluteString]);
 
+}
 
+-(void) testPostData{
+    ConnectionFactory *factory = [ConnectionFactory singleton];
+    NSString *expectedURL = @"someplace/stuff/dobo";
+    MockNSURLConnectionDelegate *delegate = [[MockNSURLConnectionDelegate alloc]init];
 
+    NSDictionary * dictionary = [NSDictionary dictionaryWithObjectsAndKeys:@"some", @"key1", @"stuff", @"key2", @"123",@"key3",nil];
+    NSData *data = [NSJSONSerialization dataWithJSONObject:dictionary options:NSJSONWritingPrettyPrinted error:nil];
+
+    NSURLConnection *connection = [factory postData:data toURL:expectedURL withDelegate:delegate];
+
+    XCTAssertTrue([[connection currentRequest] isKindOfClass:[NSMutableURLRequest class]]);
+
+    NSURLRequest *request = [connection currentRequest];
+    XCTAssertEqualObjects(@"POST",  [request HTTPMethod]);
+    XCTAssertEqualObjects(@"application/json",  [[request allHTTPHeaderFields] objectForKey:@"Content-Type"]);
+    NSString *expectedDataLength = [NSString stringWithFormat:@"%d", [data length]];
+
+    XCTAssertEqualObjects(expectedDataLength,  [[request allHTTPHeaderFields] objectForKey:@"Content-Length"]);
+    XCTAssertEqualObjects(data, [request HTTPBody]);
+    XCTAssertTrue([[request URL] isKindOfClass:[NSURL class]]);
+
+    NSURL *requestURL = [request URL];
+    XCTAssertEqual(expectedURL, [requestURL absoluteString]);
 
 }
 @end

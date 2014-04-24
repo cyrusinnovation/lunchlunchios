@@ -52,8 +52,8 @@
 
     NSString *expectedURL = [NSString stringWithFormat:@"http://localhost:3000/findBuddy?person=%@", expectedJSON];
 
-    XCTAssertEqualObjects(expectedURL, [factory getRequestURLPassedIn]);
-    XCTAssertEqual(finder, [factory getDelegatePassedIn]);
+    XCTAssertEqualObjects(expectedURL, [factory getRequestURLPassedInForGet]);
+    XCTAssertEqual(finder, [factory getDelegatePassedInForGet]);
 }
 
 - (void)testDidFailWithErrorWillGiveNullPersonToReceiver {

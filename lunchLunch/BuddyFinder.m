@@ -16,7 +16,7 @@
 - (void)findBuddyFor:(NSObject <PersonProtocol> *)person {
     NSString *personString = [[parser buildPersonJSONString:person] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSString *url = [NSString stringWithFormat:@"http://localhost:3000/findBuddy?person=%@", personString];
-    [connectionFactory buildAsynchronousRequestForURL:url andDelegate:self];
+    [connectionFactory buildAsynchronousGetRequestForURL:url andDelegate:self];
 }
 
 - (id)initWithConnectionFactory:(NSObject <ConnectionFactoryProtocol> *)factory personParser:(NSObject <PersonParserProtocol> *)personParser andPersonReceiver:(NSObject <PersonReceiverProtocol> *)personReceiver {

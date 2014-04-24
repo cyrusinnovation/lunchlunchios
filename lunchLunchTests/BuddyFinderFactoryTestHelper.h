@@ -4,10 +4,9 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@protocol PersonReceiverProtocol;
-@protocol BuddyFinderProtocol;
-
+#import "PersonReceiverProtocol.h"
+#import "BuddyFinderProtocol.h"
+#import "SwizzleHelper.h"
 
 @interface BuddyFinderFactoryTestHelper : NSObject
 + (void)swizzleBuildBuddyFinder;
