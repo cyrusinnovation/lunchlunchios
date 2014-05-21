@@ -42,7 +42,7 @@
     MockPersonParser *parser = [[MockPersonParser alloc] init];
     BuddyFinder *finder =
             [[BuddyFinder alloc] initWithConnectionFactory:factory personParser:parser andPersonReceiver:receiver];
-    Person *person = [[Person alloc] initWithFirstNameInitWithId:@"iasdasfas" firstName:@"Joe" lastName:@"Smith" email:@"JSmith@somethin.com"];
+    Person *person = [[Person alloc] initWithId:@"iasdasfas" firstName:@"Joe" lastName:@"Smith" email:@"JSmith@somethin.com"];
     NSString *expectedJSON = @"IexpecttheParserToTurnThePersonIntoThis";
     [parser setPersonJSONToReturn:expectedJSON];
 

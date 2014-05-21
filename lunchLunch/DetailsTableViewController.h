@@ -15,4 +15,9 @@
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *dateLabel;
 @property (strong, nonatomic) IBOutlet UILabel *timeLabel;
+
+@property (strong, nonatomic) IBOutlet UILabel *locationNameLabel;
+@property (strong, nonatomic) IBOutlet UILabel *locationAddressLabel;
+@property (strong, nonatomic) IBOutlet UILabel *locationZipCodeLabel;
+
 @end

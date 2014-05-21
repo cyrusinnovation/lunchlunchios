@@ -26,6 +26,12 @@
     self.nameLabel.text = [NSString stringWithFormat:@"%@ %@", [lunchBuddy getFirstName], [lunchBuddy getLastName]];
     self.dateLabel.text = [dateFormatter stringFromDate:[self.lunch getDateAndTime]];
     self.timeLabel.text = [timeFormatter stringFromDate:[self.lunch getDateAndTime]];
+
+    NSObject <LocationProtocol> *location = [self.lunch getLocation];
+    self.locationNameLabel.text = [location getName];
+    self.locationZipCodeLabel.text = [location getZipCode];
+    self.locationAddressLabel.text = [location getAddress];
+
 }
 
 

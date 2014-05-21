@@ -11,7 +11,7 @@
 {
 
 }
-- (id)initWithFirstNameInitWithId:(NSString *)id firstName:(NSString *)string lastName:(NSString *)name email:(NSString *)email;
+- (id)initWithId:(NSString *)id firstName:(NSString *)string lastName:(NSString *)name email:(NSString *)email;
 - (BOOL)isEqual:(id)other;
 - (NSUInteger)hash ;
 @end

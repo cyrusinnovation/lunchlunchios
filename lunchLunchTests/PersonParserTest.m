@@ -86,7 +86,7 @@
     NSString *lastName = @"Montoya";
     NSString *email = @"rmon@gcpd.com";
     NSString *personId = @"sdf1389djf";
-    Person *person = [[Person alloc] initWithFirstNameInitWithId:personId firstName:firstName lastName:lastName email:email];
+    Person *person = [[Person alloc] initWithId:personId firstName:firstName lastName:lastName email:email];
 
     NSArray *values = [NSArray arrayWithObjects:firstName, lastName, email,personId, nil];
     NSArray *keys = [NSArray arrayWithObjects:@"firstName", @"lastName", @"email",@"_id", nil];

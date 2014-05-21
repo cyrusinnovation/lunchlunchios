@@ -24,7 +24,7 @@
     NSString *expectedLastName = @"Vanderhuge";
     NSString *expectedEmail = @"bvhuge@angelfire.com";
     NSString *expectedId = @"232353253fsdf";
-    Person *dude = [[Person alloc] initWithFirstNameInitWithId:expectedId firstName:expectedFirstName lastName:expectedLastName email:expectedEmail];
+    Person *dude = [[Person alloc] initWithId:expectedId firstName:expectedFirstName lastName:expectedLastName email:expectedEmail];
     XCTAssertEqualObjects(expectedFirstName, [dude getFirstName]);
     XCTAssertEqualObjects(expectedLastName, [dude getLastName]);
     XCTAssertEqualObjects(expectedEmail, [dude getEmailAddress]);
@@ -36,12 +36,12 @@
     NSString *originalLastName = @"Vanderhuge";
     NSString *originalEmail = @"bvhuge@angelfire.com";
     NSString *originalId= @"4634dsf";
-    Person *originalPerson = [[Person alloc] initWithFirstNameInitWithId:originalId firstName:originalFirstName lastName:originalLastName email:originalEmail];
-    Person *equalDude = [[Person alloc] initWithFirstNameInitWithId:originalId firstName:originalFirstName lastName:originalLastName email:originalEmail];
-    Person *notEqualDifferentFirstName = [[Person alloc] initWithFirstNameInitWithId:originalId firstName:@"Brohauser" lastName:originalLastName email:originalEmail];
-    Person *notEqualDifferentLastName = [[Person alloc] initWithFirstNameInitWithId:originalId firstName:originalFirstName lastName:@"Adsaon" email:originalEmail];
-    Person *notEqualDifferentEmail = [[Person alloc] initWithFirstNameInitWithId:originalId firstName:originalFirstName lastName:originalLastName email:@"someother@someemail.com"];
-    Person *notEqualsDifferentId =  [[Person alloc] initWithFirstNameInitWithId:@"DIFFERENT!!!!" firstName:originalFirstName lastName:originalLastName email:originalEmail];
+    Person *originalPerson = [[Person alloc] initWithId:originalId firstName:originalFirstName lastName:originalLastName email:originalEmail];
+    Person *equalDude = [[Person alloc] initWithId:originalId firstName:originalFirstName lastName:originalLastName email:originalEmail];
+    Person *notEqualDifferentFirstName = [[Person alloc] initWithId:originalId firstName:@"Brohauser" lastName:originalLastName email:originalEmail];
+    Person *notEqualDifferentLastName = [[Person alloc] initWithId:originalId firstName:originalFirstName lastName:@"Adsaon" email:originalEmail];
+    Person *notEqualDifferentEmail = [[Person alloc] initWithId:originalId firstName:originalFirstName lastName:originalLastName email:@"someother@someemail.com"];
+    Person *notEqualsDifferentId = [[Person alloc] initWithId:@"DIFFERENT!!!!" firstName:originalFirstName lastName:originalLastName email:originalEmail];
 
     NSArray *notEqualObjects = [NSArray arrayWithObjects:notEqualDifferentFirstName, notEqualDifferentLastName, notEqualDifferentEmail, notEqualsDifferentId, nil];
 
@@ -53,8 +53,5 @@
         XCTAssertFalse([originalPerson isEqual:notEqualObject]);
         XCTAssertNotEqual([originalPerson hash], [notEqualObject hash]);
     }
-
-
-
 }
 @end

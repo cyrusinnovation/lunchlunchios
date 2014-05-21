@@ -17,6 +17,7 @@
 #import "MockUIAlertView.h"
 #import "DisplayHandlerFactoryTestHelper.h"
 #import "MockDisplayHandler.h"
+#import "NullLocation.h"
 
 @interface FoundBuddyViewControllerTest : XCTestCase
 @property(nonatomic, strong) FoundBuddyViewController *viewController;
@@ -82,6 +83,7 @@
     XCTAssertEqual(loggedInPerson, [actualLunch getPerson1]);
     XCTAssertEqual(buddyFound, [actualLunch getPerson2]);
     XCTAssertEqual(expectedDate, [actualLunch getDateAndTime]);
+    XCTAssertEqual([NullLocation singleton], [actualLunch getLocation]);
 
 
 }

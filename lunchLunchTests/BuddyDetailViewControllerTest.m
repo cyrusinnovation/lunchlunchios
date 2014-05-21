@@ -37,7 +37,7 @@
     NSString *firstName = @"Brock";
     NSString *lastName = @"Thickneck";
     NSString *email = @"BThick@mstk.net";
-    Person *buddyFound = [[Person alloc] initWithFirstNameInitWithId:@"346234" firstName:firstName lastName:lastName email:email];
+    Person *buddyFound = [[Person alloc] initWithId:@"346234" firstName:firstName lastName:lastName email:email];
 
     self.viewController.buddy = buddyFound;
 

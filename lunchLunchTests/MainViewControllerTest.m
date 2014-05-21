@@ -98,12 +98,12 @@ NSObject <PersonProtocol> *personToReturn;
     [dateMaker setDateFormat:@"MM/dd/yyyy HH:mm"];
     NSDate *date = [dateMaker dateFromString:@"5/12/2103 14:30"];
 
-    Person *personTheLunchIsWith = [[Person alloc] initWithFirstNameInitWithId:nil firstName:@"Bob" lastName:@"Soomy" email:@""];
+    Person *personTheLunchIsWith = [[Person alloc] initWithId:nil firstName:@"Bob" lastName:@"Soomy" email:@""];
     self.viewController.personLoggedIn = loggedInPerson;
 
     Lunch *lunch = [[Lunch alloc] init];
 
-    Lunch *lunchToUse = [[Lunch alloc] initWithPerson1:loggedInPerson person2:personTheLunchIsWith dateTime:date];
+    Lunch *lunchToUse = [[Lunch alloc] initWithPerson1:loggedInPerson person2:personTheLunchIsWith dateTime:date andLocation:nil ];
     [self.viewController handleLunchesFound:@[lunch, lunch, lunch, lunchToUse, lunch]];
     [self.viewController viewDidLoad];
 
@@ -126,12 +126,12 @@ NSObject <PersonProtocol> *personToReturn;
     [dateMaker setDateFormat:@"MM/dd/yyyy HH:mm"];
     NSDate *date = [dateMaker dateFromString:@"12/2/2103 11:30"];
 
-    Person *personTheLunchIsWith = [[Person alloc] initWithFirstNameInitWithId:nil firstName:@"Abdi" lastName:@"LaRue" email:@""];
+    Person *personTheLunchIsWith = [[Person alloc] initWithId:nil firstName:@"Abdi" lastName:@"LaRue" email:@""];
     self.viewController.personLoggedIn = loggedInPerson;
 
     Lunch *lunch = [[Lunch alloc] init];
 
-    Lunch *lunchToUse = [[Lunch alloc] initWithPerson1:personTheLunchIsWith person2:loggedInPerson dateTime:date];
+    Lunch *lunchToUse = [[Lunch alloc] initWithPerson1:personTheLunchIsWith person2:loggedInPerson dateTime:date andLocation:nil ];
     [self.viewController handleLunchesFound:@[lunch, lunch, lunch, lunch, lunchToUse]];
     [self.viewController viewDidLoad];
 

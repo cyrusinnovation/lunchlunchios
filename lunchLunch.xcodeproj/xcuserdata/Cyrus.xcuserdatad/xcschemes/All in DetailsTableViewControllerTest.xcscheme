@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   version = "1.3">
+   <BuildAction>
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForRunning = "YES"
+            buildForTesting = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6EC2088D18EC8DCA006AE8D0"
+               BuildableName = "lunchLunchTests.xctest"
+               BlueprintName = "lunchLunchTests"
+               ReferencedContainer = "container:lunchLunch.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      buildConfiguration = "Debug">
+      <Testables>
+         <TestableReference>
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6EC2088D18EC8DCA006AE8D0"
+               BuildableName = "lunchLunchTests.xctest"
+               BlueprintName = "lunchLunchTests"
+               ReferencedContainer = "container:lunchLunch.xcodeproj">
+            </BuildableReference>
+            <SkippedTests>
+               <Test
+                  Identifier = "AlertBuilderTest">
+               </Test>
+               <Test
+                  Identifier = "BuddyDetailViewControllerTest">
+               </Test>
+               <Test
+                  Identifier = "BuddyFinderFactoryTest">
+               </Test>
+               <Test
+                  Identifier = "BuddyFinderTest">
+               </Test>
+               <Test
+                  Identifier = "CommandDispatcherTest">
+               </Test>
+               <Test
+                  Identifier = "ConnectionFactoryTest">
+               </Test>
+               <Test
+                  Identifier = "DetailViewControllerTest">
+               </Test>
+               <Test
+                  Identifier = "DisplayHandlerFactoryTest">
+               </Test>
+               <Test
+                  Identifier = "DisplayHandlerTest">
+               </Test>
+               <Test
+                  Identifier = "FoundBuddyViewControllerTest">
+               </Test>
+               <Test
+                  Identifier = "LocationTest">
+               </Test>
+               <Test
+                  Identifier = "LoginProviderFactoryTest">
+               </Test>
+               <Test
+                  Identifier = "LoginProviderTest">
+               </Test>
+               <Test
+                  Identifier = "LoginViewControllerTest">
+               </Test>
+               <Test
+                  Identifier = "LunchCreatorFactoryTest">
+               </Test>
+               <Test
+                  Identifier = "LunchCreatorTest">
+               </Test>
+               <Test
+                  Identifier = "LunchParserTest">
+               </Test>
+               <Test
+                  Identifier = "LunchProviderFactoryTest">
+               </Test>
+               <Test
+                  Identifier = "LunchProviderTest">
+               </Test>
+               <Test
+                  Identifier = "LunchTest">
+               </Test>
+               <Test
+                  Identifier = "MainViewControllerTest">
+               </Test>
+               <Test
+                  Identifier = "NullLocationTest">
+               </Test>
+               <Test
+                  Identifier = "NullPersonTest">
+               </Test>
+               <Test
+                  Identifier = "PersonParserTest">
+               </Test>
+               <Test
+                  Identifier = "PersonTest">
+               </Test>
+               <Test
+                  Identifier = "SegueCommandTest">
+               </Test>
+            </SkippedTests>
+         </TestableReference>
+      </Testables>
+   </TestAction>
+   <LaunchAction
+      useCustomWorkingDirectory = "NO">
+   </LaunchAction>
+</Scheme>

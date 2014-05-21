@@ -7,6 +7,8 @@
 #import "PersonParser.h"
 #import "Lunch.h"
 #import "NullPerson.h"
+#import "LocationParser.h"
+#import "NullLocation.h"
 
 
 @interface LunchParser ()
@@ -24,7 +26,6 @@
                        options:0
                          error:&error];
 
-
     NSDateFormatter *dateMaker = [[NSDateFormatter alloc] init];
     [dateMaker setDateFormat:@"yyyy-dd-MM'T'HH:mm:ss.SSSZ"];
 
@@ -35,9 +36,12 @@
             PersonParser *personParser = [PersonParser singleton];
             NSObject <PersonProtocol> *person1 = [personParser parsePersonUsingDictionary:[lunchDictionary objectForKey:@"person1"]];
             NSObject <PersonProtocol> *person2 = [personParser parsePersonUsingDictionary:[lunchDictionary objectForKey:@"person2"]];
+            NSObject <LocationProtocol> *location = [[LocationParser singleton] parseLocationUsingDictionary:[lunchDictionary objectForKey:@"location"]];
+
             NSDate *date = [dateMaker dateFromString:[lunchDictionary objectForKey:@"dateTime"]];
+
             if (person1 != [NullPerson singleton] && person2 != [NullPerson singleton] && date != nil) {
-                [lunches addObject:[[Lunch alloc] initWithPerson1:person1 person2:person2 dateTime:date]];
+                [lunches addObject:[[Lunch alloc] initWithPerson1:person1 person2:person2 dateTime:date andLocation:location ]];
             }
         }
     }

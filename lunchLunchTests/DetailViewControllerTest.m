@@ -33,7 +33,7 @@
     self.viewController.personLoggedIn = loggedInPerson;
 
 
-    Lunch *lunch = [[[Lunch alloc] initWithPerson1:loggedInPerson person2:[[Person alloc] init] dateTime:[NSDate alloc]] init];
+    Lunch *lunch = [[[Lunch alloc] initWithPerson1:loggedInPerson person2:[[Person alloc] init] dateTime:[NSDate alloc] andLocation:nil ] init];
     self.viewController.lunch = lunch;
     DetailsTableViewController *destinationViewController = [[DetailsTableViewController alloc] init];
     UIStoryboardSegue *segue = [[UIStoryboardSegue alloc] initWithIdentifier:@"detailsTable" source:self.viewController destination:destinationViewController];

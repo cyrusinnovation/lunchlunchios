@@ -6,11 +6,13 @@
 #import <Foundation/Foundation.h>
 #import "LunchProtocol.h"
 
-
 @interface Lunch : NSObject <LunchProtocol> {
     NSObject <PersonProtocol> *person1;
     NSObject <PersonProtocol> *person2;
     NSDate *dateTime;
+    NSObject <LocationProtocol> *location;
 }
-- (id)initWithPerson1:(NSObject <PersonProtocol> *)person1In person2:(NSObject <PersonProtocol> *)person2In dateTime:(NSDate *)timeIn;
+- (id)initWithPerson1:(NSObject <PersonProtocol> *)person1In
+              person2:(NSObject <PersonProtocol> *)person2In
+             dateTime:(NSDate *)timeIn andLocation:(NSObject <LocationProtocol> *)location;
 @end

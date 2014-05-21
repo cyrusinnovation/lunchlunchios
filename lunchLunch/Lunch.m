@@ -4,16 +4,21 @@
 //
 
 #import "Lunch.h"
+#import "LocationProtocol.h"
 
 @implementation Lunch {
 
 }
-- (id)initWithPerson1:(NSObject <PersonProtocol> *)person1In person2:(NSObject <PersonProtocol> *)person2In dateTime:(NSDate *)timeIn {
+- (id)initWithPerson1:(NSObject <PersonProtocol> *)person1In
+              person2:(NSObject <PersonProtocol> *)person2In
+             dateTime:(NSDate *)timeIn
+          andLocation:(NSObject <LocationProtocol> *)locationIn {
     self = [super init];
-    if(self){
-        person1  =person1In;
+    if (self) {
+        person1 = person1In;
         person2 = person2In;
         dateTime = timeIn;
+        location = locationIn;
     }
 
     return self;
@@ -33,5 +38,10 @@
 - (NSDate *)getDateAndTime {
     return dateTime;
 }
+
+- (NSObject <LocationProtocol> *)getLocation {
+    return location;
+}
+
 
 @end

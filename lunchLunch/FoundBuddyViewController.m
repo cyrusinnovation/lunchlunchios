@@ -13,6 +13,7 @@
 #import "LunchCreatorFactory.h"
 #import "AlertBuilder.h"
 #import "DisplayHandlerFactory.h"
+#import "NullLocation.h"
 
 @interface FoundBuddyViewController ()
 
@@ -42,7 +43,7 @@
 
 - (IBAction)createLunch:(id)sender {
     if (buddyDetailViewController.date != nil) {
-        Lunch *lunch = [[Lunch alloc] initWithPerson1:self.personLoggedIn person2:self.buddy dateTime:buddyDetailViewController.date];
+        Lunch *lunch = [[Lunch alloc] initWithPerson1:self.personLoggedIn person2:self.buddy dateTime:buddyDetailViewController.date andLocation:[NullLocation singleton] ];
         NSObject <LunchCreatorProtocol> *lunchCreator = [LunchCreatorFactory buildLunchCreator:self];
         [lunchCreator createLunch:lunch];
     }

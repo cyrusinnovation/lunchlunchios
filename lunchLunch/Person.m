@@ -13,7 +13,7 @@
     NSString *personId;
 }
 
-- (id)initWithFirstNameInitWithId:(NSString *)inID firstName:(NSString *)inFirstName lastName:(NSString *)inLastName email:(NSString *)inEmail {
+- (id)initWithId:(NSString *)inID firstName:(NSString *)inFirstName lastName:(NSString *)inLastName email:(NSString *)inEmail {
     self = [super init];
     if (self = [super init]) {
         firstName = inFirstName;

@@ -60,10 +60,10 @@
 
 - (NSObject <PersonProtocol> *)processPersonDictionary:(NSDictionary *)personDictionary {
     if ([self dictionaryHasAllKeys:personDictionary]) {
-        return [[Person alloc] initWithFirstNameInitWithId:[personDictionary objectForKey:@"_id"]
-                                                 firstName:[personDictionary objectForKey:@"firstName"]
-                                                  lastName:[personDictionary objectForKey:@"lastName"]
-                                                     email:[personDictionary objectForKey:@"email"]];
+        return [[Person alloc] initWithId:[personDictionary objectForKey:@"_id"]
+                                firstName:[personDictionary objectForKey:@"firstName"]
+                                 lastName:[personDictionary objectForKey:@"lastName"]
+                                    email:[personDictionary objectForKey:@"email"]];
     }
     else {
         return [NullPerson singleton];
