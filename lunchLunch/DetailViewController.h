@@ -13,6 +13,5 @@
 @property(nonatomic, strong) NSObject <LunchProtocol>  *lunch;
 @property(nonatomic, strong) NSObject <PersonProtocol>  *personLoggedIn;
 
-
-
+- (IBAction)findLunchLocationPushed:(id)sender;
 @end

@@ -6,12 +6,14 @@
 //  Copyright (c) 2014 Cyrus Innovation. All rights reserved.
 //
 
+#import <GoogleMaps/GoogleMaps.h>
 #import "AppDelegate.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [GMSServices provideAPIKey:@"AIzaSyAO4vV7OAnizLHY8gYLSuKTwhA1Fu0PCLI"];
 //    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
 //    self.window.backgroundColor = [UIColor whiteColor];
