@@ -19,14 +19,13 @@
 @implementation LunchProviderTest {
 
 
-
 }
 - (void)testIsANSURLConnectionDataDelegate {
     XCTAssertTrue([LunchProvider conformsToProtocol:@protocol(NSURLConnectionDataDelegate)]);
     XCTAssertTrue([LunchProvider conformsToProtocol:@protocol(LunchProviderProtocol)]);
 }
 
--(void) testCanGetArgumentsFromInit{
+- (void)testCanGetArgumentsFromInit {
     MockLunchReceiver *receiver = [[MockLunchReceiver alloc] init];
     MockConnectionFactory *factory = [[MockConnectionFactory alloc] init];
     MockLunchParser *lunchParser = [[MockLunchParser alloc] init];
@@ -82,7 +81,7 @@
             [[LunchProvider alloc] initWithConnectionFactory:factory lunchParser:lunchParser personParser:personParser andLunchReceiver:receiver];
 
     [provider connection:nil didReceiveResponse:nil];
-    NSArray * lunches =    [NSArray arrayWithObjects:[[Lunch alloc] init], [[Lunch alloc] init],[[Lunch alloc] init],nil];
+    NSArray *lunches = [NSArray arrayWithObjects:[[Lunch alloc] init], [[Lunch alloc] init], [[Lunch alloc] init], nil];
     [lunchParser setLunchesToReturn:lunches];
 
     NSData *dataPacket1 = [[NSData alloc] initWithBase64EncodedString:@"dfushasiuhd" options:0];

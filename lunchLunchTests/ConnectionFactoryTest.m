@@ -56,7 +56,7 @@
     NSURLRequest *request = [connection currentRequest];
     XCTAssertEqualObjects(@"POST",  [request HTTPMethod]);
     XCTAssertEqualObjects(@"application/json",  [[request allHTTPHeaderFields] objectForKey:@"Content-Type"]);
-    NSString *expectedDataLength = [NSString stringWithFormat:@"%d", [data length]];
+    NSString *expectedDataLength = [NSString stringWithFormat:@"%lu", (unsigned long)[data length]];
 
     XCTAssertEqualObjects(expectedDataLength,  [[request allHTTPHeaderFields] objectForKey:@"Content-Length"]);
     XCTAssertEqualObjects(data, [request HTTPBody]);

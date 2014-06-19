@@ -78,7 +78,5 @@
 
     XCTAssertEqualObjects(expectedData, [parser getPersonDataPassedIn]);
     XCTAssertEqual(expectedPerson, [receiver getPersonPassedIn]);
-
-
 }
 @end

@@ -24,10 +24,8 @@
 - (NSURLConnection *)postData:(NSData *)data toURL:(NSString *)requestUrl withDelegate:(id <NSURLConnectionDataDelegate>)delegate {
     NSURL * url = [NSURL URLWithString:requestUrl];
 
-    NSString *postLength = [NSString stringWithFormat:@"%d", [data length]];
+    NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[data length]];
     NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:url];
-//    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-//    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [request setHTTPMethod:@"POST"];
     [request setHTTPBody:data];
 

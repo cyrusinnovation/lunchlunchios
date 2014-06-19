@@ -5,8 +5,9 @@
 
 #import <Foundation/Foundation.h>
 #import "LocationProtocol.h"
+#import "DirectionHandlerProtocol.h"
 
 
-@interface LocationMapViewController : UIViewController
+@interface LocationMapViewController : UIViewController<DirectionHandlerProtocol>
 @property(nonatomic, strong) NSObject <LocationProtocol>  *location;
 @end
