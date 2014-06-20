@@ -32,22 +32,40 @@
 
 
 - (void)findDirectionsTo:(NSObject <LocationProtocol> *)location fromOrigin:(CLLocation *)origin {
+
+    if([[UIApplication sharedApplication] canOpenURL:
+            [NSURL URLWithString:@"comgooglemaps-x-callback://"]]){
+        [self openGoogleMapsApp:location origin:origin];
+    }   else {
+        [self openGoogleMapsInSafari:location origin:origin];
+    }
+}
+
+- (void)openGoogleMapsInSafari:(NSObject <LocationProtocol> *)location origin:(CLLocation *)origin {
+    NSString *escapedUrlString = [self buildMapURL:location origin:origin withBaseURL:@"http://maps.google.com/maps?" andTransitMode:@"&dirflg=r"];
+    [connectionFactory openURL:escapedUrlString];
+}
+- (void)openGoogleMapsApp:(NSObject <LocationProtocol> *)location origin:(CLLocation *)origin {
+    NSString *escapedUrlString = [self buildMapURL:location origin:origin withBaseURL:@"comgooglemaps-x-callback://?" andTransitMode:@"&directionsmode=transit"];
+    [connectionFactory openURL:escapedUrlString];
+}
+
+
+- (NSString *)buildMapURL:(NSObject <LocationProtocol> *)location origin:(CLLocation *)origin withBaseURL:(NSString*) baseUrl andTransitMode:(NSString *) transitString{
     double latitude = origin.coordinate.latitude;
     double longitude= origin.coordinate.longitude;
     NSMutableString *mapAPIURL = [[NSMutableString alloc] init];
-    [mapAPIURL appendString:@"http://maps.google.com/maps?"];
+    [mapAPIURL appendString:baseUrl];
     [mapAPIURL appendFormat:@"&saddr=%f,%f", latitude, longitude];
     [mapAPIURL appendString:@"&daddr="];
     [mapAPIURL appendString:[location getAddress]];
     [mapAPIURL appendString:@","];
     [mapAPIURL appendString:[location getZipCode]];
-    [mapAPIURL appendString:@"&dirflg=r"];
-    NSString*escapedUrlString = [mapAPIURL
-            stringByAddingPercentEscapesUsingEncoding: NSASCIIStringEncoding];
-    [connectionFactory openURL:escapedUrlString];
+    [mapAPIURL appendString:transitString];
+    NSString *escapedUrlString = [mapAPIURL
+                stringByAddingPercentEscapesUsingEncoding:NSASCIIStringEncoding];
+    return escapedUrlString;
 }
-
-
 
 
 @end

@@ -12,6 +12,12 @@
 
 + (void)deswizzleOpenURL;
 
++ (void)swizzleCanOpenURL;
++ (void)deswizzleCanOpenURL;
+
 + (NSURL *)getURLOpened;
 
++ (void)setCanOpenURL:(bool)canOpen;
+
++ (NSURL *)getUrlChecked;
 @end
