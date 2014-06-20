@@ -37,6 +37,11 @@
     return connection;
 }
 
+- (void)openURL:(NSString *)url {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
+
+}
+
 
 + (ConnectionFactory *)singleton {
     static ConnectionFactory *SINGLETON;

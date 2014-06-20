@@ -9,11 +9,16 @@
 #import "NullLocation.h"
 #import "SegueCommand.h"
 #import "CommandDispatcher.h"
-#import "LocationMapViewController.h"
+#import "ShowMapCommand.h"
+#import "DirectionsProviderFactory.h"
 
 
 @implementation DetailViewController {
 
+    CLLocationManager *locationManager;
+}
+- (void)viewDidLoad {
+    locationManager = [[CLLocationManager alloc] init];
 }
 
 
@@ -23,19 +28,34 @@
         controller.personLoggedIn = self.personLoggedIn;
         controller.lunch = self.lunch;
     }
-    if([segue.identifier isEqualToString:@"showMapView"]){
-        LocationMapViewController *controller = (LocationMapViewController *) segue.destinationViewController;
-        controller.location = [self.lunch getLocation];
-    }
+
 }
+
 - (IBAction)findLunchLocationPushed:(id)sender {
     if ([[self.lunch getLocation] isEqual:[NullLocation singleton]]) {
         NSObject <DisplayHandlerProtocol> *displayHandler = [DisplayHandlerFactory buildDisplayHandler];
         [displayHandler showErrorWithMessage:@"This Lunch does not have a Location associate with it."];
     }
     else {
-        [[CommandDispatcher singleton] executeCommand:[[SegueCommand alloc] initForViewController:self segueIdentifier:@"showMapView"]];
+        
+        ShowMapCommand *command = [[ShowMapCommand alloc] initWithLocationManager:locationManager andDelegate:self];
+        [[CommandDispatcher singleton] executeCommand:command];
     }
 }
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+    NSObject <DirectionsProviderProtocol> *directionProvider = [DirectionsProviderFactory buildDirectionProvider];
+    [directionProvider findDirectionsTo:[self.lunch getLocation] fromOrigin:[locations lastObject]];
+    [manager stopUpdatingLocation];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
+    NSObject <DisplayHandlerProtocol> *displayHandler = [DisplayHandlerFactory buildDisplayHandler];
+    [displayHandler showErrorWithMessage: @"There was an error determining your location, make sure location services are turned on"];
+    [manager stopUpdatingLocation];
+}
+
+
+
 
 @end

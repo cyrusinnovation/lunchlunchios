@@ -18,4 +18,6 @@
 - (NSString *)getRequestURLPassedInForGet;
 
 - (id <NSURLConnectionDataDelegate>)getDelegatePassedInForGet;
+
+-(NSString *) getURLOpened;
 @end

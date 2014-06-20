@@ -9,12 +9,25 @@
 #import "ConnectionFactoryProtocol.h"
 #import "ConnectionFactory.h"
 #import "MockNSURLConnectionDelegate.h"
+#import "UIApplicationTestHelper.h"
 
 @interface ConnectionFactoryTest : XCTestCase
 @end
 @implementation ConnectionFactoryTest {
 
 }
+- (void)setUp {
+    [super setUp];
+    [UIApplicationTestHelper swizzleOpenURL];
+
+}
+
+- (void)tearDown {
+    [UIApplicationTestHelper deswizzleOpenURL];
+    [super tearDown];
+}
+
+
 - (void)testIsOfCorrectProtocol {
     XCTAssertTrue([ConnectionFactory conformsToProtocol:@protocol(ConnectionFactoryProtocol)]);
 }
@@ -23,6 +36,8 @@
     XCTAssertNotNil([ConnectionFactory singleton]);
     XCTAssertEqual([ConnectionFactory singleton], [ConnectionFactory singleton]);
 }
+
+
 
 -(void) testBuildAsynchronousConnectionForRequest{
     ConnectionFactory *factory = [ConnectionFactory singleton];
@@ -64,6 +79,14 @@
 
     NSURL *requestURL = [request URL];
     XCTAssertEqual(expectedURL, [requestURL absoluteString]);
+}
+-(void) testOpenURL{
+    ConnectionFactory *factory = [ConnectionFactory singleton];
+    NSString *expectedURL = @"go/here/jerk";
+
+    [factory openURL:expectedURL];
+
+    XCTAssertEqualObjects(expectedURL,[[UIApplicationTestHelper getURLOpened] absoluteString] );
 
 }
 @end

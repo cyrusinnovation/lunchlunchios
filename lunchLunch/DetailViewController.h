@@ -9,7 +9,7 @@
 
 
 
-@interface DetailViewController : UIViewController
+@interface DetailViewController : UIViewController<CLLocationManagerDelegate>
 @property(nonatomic, strong) NSObject <LunchProtocol>  *lunch;
 @property(nonatomic, strong) NSObject <PersonProtocol>  *personLoggedIn;
 

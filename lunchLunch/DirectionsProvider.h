@@ -6,13 +6,11 @@
 #import <Foundation/Foundation.h>
 #import "DirectionsProviderProtocol.h"
 #import "ConnectionFactoryProtocol.h"
-#import "DirectionHandlerProtocol.h"
 
 
-@interface DirectionsProvider : NSObject<NSURLConnectionDataDelegate, DirectionsProviderProtocol>
+@interface DirectionsProvider : NSObject< DirectionsProviderProtocol>
 @property(nonatomic, strong) NSMutableData *connectionData;
 
-- (id)initWithConnectionFactory:(NSObject <ConnectionFactoryProtocol> *)factory andDirectionHandler:(NSObject <DirectionHandlerProtocol> *)handler;
+- (id)initWithConnectionFactory:(NSObject <ConnectionFactoryProtocol> *)factory;
 -(NSObject<ConnectionFactoryProtocol> *) getConnectionFactory;
--(NSObject<DirectionHandlerProtocol> *) getDirectionHandler;
 @end
