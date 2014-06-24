@@ -4,6 +4,7 @@
 //
 
 #import "DetailsTableViewController.h"
+#import "NullLocation.h"
 
 
 @interface DetailsTableViewController ()
@@ -32,6 +33,7 @@
     self.locationZipCodeLabel.text = [location getZipCode];
     self.locationAddressLabel.text = [location getAddress];
 
+
 }
 
 
@@ -42,6 +44,12 @@
     return [lunch getPerson1];
 
 }
+
+- (IBAction)backgroundTap:(id)sender {
+    [self.view endEditing:true];
+}
+
+
 
 @end
 

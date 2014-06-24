@@ -20,6 +20,10 @@
     return SINGLETON;
 }
 
+- (NSString *)getId {
+    return @"";
+}
+
 - (NSString *)getName {
     return @"";
 }

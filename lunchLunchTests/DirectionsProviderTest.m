@@ -45,7 +45,7 @@
             [[DirectionsProvider alloc] initWithConnectionFactory:factory];
     NSString *address = @"2592 Someplace st";
     NSString *zipCode = @"41923";
-    Location *destination = [[Location alloc] initWithName:@"name" address:address andZipCode:zipCode];
+    Location *destination = [[Location alloc] initWithId:nil name:@"name" address:address andZipCode:zipCode];
     double latitude = 3523.2;
     double longitude = 345.5;
     CLLocation *origin = [[CLLocation alloc] initWithLatitude:latitude longitude:longitude];
@@ -78,7 +78,7 @@
             [[DirectionsProvider alloc] initWithConnectionFactory:factory];
     NSString *address = @"2592 Someplace st";
     NSString *zipCode = @"41923";
-    Location *destination = [[Location alloc] initWithName:@"name" address:address andZipCode:zipCode];
+    Location *destination = [[Location alloc] initWithId:nil name:@"name" address:address andZipCode:zipCode];
     double latitude = 3523.2;
     double longitude = 345.5;
     CLLocation *origin = [[CLLocation alloc] initWithLatitude:latitude longitude:longitude];

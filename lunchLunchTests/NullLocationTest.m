@@ -24,6 +24,7 @@
 }
 -(void)testEmptyStringGets{
     XCTAssertEqualObjects(@"", [[NullLocation singleton] getName]);
+    XCTAssertEqualObjects(@"", [[NullLocation singleton] getId]);
     XCTAssertEqualObjects(@"", [[NullLocation singleton] getAddress]);
     XCTAssertEqualObjects(@"", [[NullLocation singleton] getZipCode]);
 }

@@ -19,6 +19,7 @@
 #import "DirectionProviderFactoryTestHelper.h"
 #import "MockDirectionsProvider.h"
 #import "MockCLLocationManager.h"
+#import "LocationSelectionController.h"
 
 
 @interface DetailViewControllerTest : XCTestCase
@@ -58,7 +59,7 @@
     self.viewController.personLoggedIn = loggedInPerson;
 
 
-    Lunch *lunch = [[[Lunch alloc] initWithPerson1:loggedInPerson person2:[[Person alloc] init] dateTime:[NSDate alloc] andLocation:nil] init];
+    Lunch *lunch = [[[Lunch alloc] initWithId:nil person1:loggedInPerson person2:[[Person alloc] init] dateTime:[NSDate alloc] andLocation:nil] init];
     self.viewController.lunch = lunch;
     DetailsTableViewController *destinationViewController = [[DetailsTableViewController alloc] init];
     UIStoryboardSegue *segue = [[UIStoryboardSegue alloc] initWithIdentifier:@"detailsTable" source:self.viewController destination:destinationViewController];
@@ -71,9 +72,53 @@
     XCTAssertEqual(loggedInPerson, destinationViewController.personLoggedIn);
 }
 
+
+- (void)testWillPassLunchToLocationSelectionControllerOnSegue {
+    Person *loggedInPerson = [[Person alloc] init];
+
+    self.viewController.personLoggedIn = loggedInPerson;
+
+
+    Lunch *lunch = [[[Lunch alloc] initWithId:nil person1:loggedInPerson person2:[[Person alloc] init] dateTime:[NSDate alloc] andLocation:nil] init];
+    self.viewController.lunch = lunch;
+    LocationSelectionController *destinationViewController = [[LocationSelectionController alloc] init];
+    UIStoryboardSegue *segue = [[UIStoryboardSegue alloc] initWithIdentifier:@"specifyLocation" source:self.viewController destination:destinationViewController];
+
+    XCTAssertNil(destinationViewController.lunch);
+    [self.viewController prepareForSegue:segue sender:self.viewController];
+
+    XCTAssertEqual(lunch, destinationViewController.lunch);
+}
+- (void)testViewDidWillSetFindLunchLocationButtonTextToFindLunchLocationIfALocationIsSpecified {
+
+    MockDisplayHandler *mockDisplayHandler = [[MockDisplayHandler alloc] init];
+    [DisplayHandlerFactoryTestHelper setDisplayHandlerToBuild:mockDisplayHandler];
+    Lunch *lunch = [[Lunch alloc] initWithId:nil person1:[[Person alloc] init] person2:[[Person alloc] init] dateTime:[NSDate alloc] andLocation:[[Location alloc] init] ];
+    self.viewController.lunch = lunch;
+    UIButton *locationButton = [[UIButton alloc] init];
+    self.viewController.lunchLocationButton = locationButton;
+
+    [self.viewController viewDidLoad];
+    XCTAssertEqualObjects(@"Find Lunch Location", [locationButton titleForState: UIControlStateNormal]);
+}
+
+- (void)testViewDidWillSetFindLunchLocationButtonTextToSpecifyLunchLocationIfNoLocationIsSpecified {
+
+    MockDisplayHandler *mockDisplayHandler = [[MockDisplayHandler alloc] init];
+    [DisplayHandlerFactoryTestHelper setDisplayHandlerToBuild:mockDisplayHandler];
+    Lunch *lunch = [[Lunch alloc] initWithId:nil person1:[[Person alloc] init] person2:[[Person alloc] init] dateTime:[NSDate alloc] andLocation:[NullLocation singleton]];
+    self.viewController.lunch = lunch;
+    UIButton *locationButton = [[UIButton alloc] init];
+    self.viewController.lunchLocationButton = locationButton;
+
+    [self.viewController viewDidLoad];
+    XCTAssertEqualObjects(@"Set Lunch Location", [locationButton titleForState: UIControlStateNormal]);
+}
+
+
 - (void)testFindLunchLocationButton {
     [self.viewController viewDidLoad];
-    Lunch *lunch = [[[Lunch alloc] initWithPerson1:[[Person alloc] init] person2:[[Person alloc] init] dateTime:[NSDate alloc] andLocation:[[Location alloc] init]] init];
+    Lunch *lunch = [[[Lunch alloc] initWithId:nil person1:[[Person alloc] init] person2:[[Person alloc] init] dateTime:[NSDate alloc] andLocation:[[Location alloc] init]] init];
     self.viewController.lunch = lunch;
     [self.viewController findLunchLocationPushed:nil];
 
@@ -83,24 +128,25 @@
     XCTAssertTrue([[command getLocationManager] isKindOfClass:[CLLocationManager class]]);
 }
 
-
-- (void)testFindLunchLocationButtonWillShowMessageAndNotFireCommandIfThereIsNoLocationForThatLunch {
-
-    MockDisplayHandler *mockDisplayHandler = [[MockDisplayHandler alloc] init];
-    [DisplayHandlerFactoryTestHelper setDisplayHandlerToBuild:mockDisplayHandler];
-    Lunch *lunch = [[Lunch alloc] initWithPerson1:[[Person alloc] init] person2:[[Person alloc] init] dateTime:[NSDate alloc] andLocation:[NullLocation singleton]];
+- (void)testSetLunchLocationButton_WhenLocationIsNull {
+    [self.viewController viewDidLoad];
+    Lunch *lunch = [[[Lunch alloc] initWithId:nil person1:[[Person alloc] init] person2:[[Person alloc] init] dateTime:[NSDate alloc] andLocation:[NullLocation singleton] ] init];
     self.viewController.lunch = lunch;
     [self.viewController findLunchLocationPushed:nil];
 
-    XCTAssertNil([CommandDispatcherTestHelper getLastCommandExecuted]);
-    XCTAssertEqualObjects(@"This Lunch does not have a Location associate with it.", [mockDisplayHandler getErrorMessageShown]);
+    XCTAssertTrue([[CommandDispatcherTestHelper getLastCommandExecuted] isKindOfClass:[SegueCommand class]]);
+    SegueCommand *command = (SegueCommand *) [CommandDispatcherTestHelper getLastCommandExecuted];
+    XCTAssertEqualObjects(@"specifyLocation", [command getSegueIdentifier]);
+    XCTAssertEqualObjects(self.viewController, [command getViewController]);
 }
+
+
 
 
 - (void)testLocationDidUpdateToLocationWillShowMap {
     Location *lunchLocation = [[Location alloc] init];
 
-    Lunch *lunch = [[[Lunch alloc] initWithPerson1:[[Person alloc] init] person2:[[Person alloc] init] dateTime:[NSDate alloc] andLocation:lunchLocation] init];
+    Lunch *lunch = [[[Lunch alloc] initWithId:nil person1:[[Person alloc] init] person2:[[Person alloc] init] dateTime:[NSDate alloc] andLocation:lunchLocation] init];
     self.viewController.lunch = lunch;
     MockDirectionsProvider *directionsProvider = [[MockDirectionsProvider alloc] init];
     [DirectionProviderFactoryTestHelper setDirectionProviderToReturn:directionsProvider];
@@ -118,7 +164,7 @@
 
     MockDisplayHandler *mockDisplayHandler = [[MockDisplayHandler alloc] init];
     [DisplayHandlerFactoryTestHelper setDisplayHandlerToBuild:mockDisplayHandler];
-    Lunch *lunch = [[Lunch alloc] initWithPerson1:[[Person alloc] init] person2:[[Person alloc] init] dateTime:[NSDate alloc] andLocation:[NullLocation singleton]];
+    Lunch *lunch = [[Lunch alloc] initWithId:nil person1:[[Person alloc] init] person2:[[Person alloc] init] dateTime:[NSDate alloc] andLocation:[NullLocation singleton]];
     self.viewController.lunch = lunch;
     MockCLLocationManager *locationManager = [[MockCLLocationManager alloc] init];
     [self.viewController locationManager:locationManager didFailWithError:nil];

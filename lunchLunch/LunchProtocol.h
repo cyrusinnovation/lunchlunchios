@@ -8,6 +8,8 @@
 
 
 @protocol LunchProtocol <NSObject>
+- (NSString *) getId;
+
 - (NSObject <PersonProtocol> *)getPerson1;
 
 - (NSObject <PersonProtocol> *)getPerson2;

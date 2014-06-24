@@ -72,7 +72,7 @@
 
 }
 
-- (void)testConnectionDidFinishLoadingWillGivePersonParsedFromTheDataFromTheConnectionToThePersonReceiver {
+- (void)testConnectionDidFinishLoadingWillGiveLunchParsedFromTheDataFromTheConnectionToTheLunchReceiver {
     MockLunchReceiver *receiver = [[MockLunchReceiver alloc] init];
     MockConnectionFactory *factory = [[MockConnectionFactory alloc] init];
     MockLunchParser *lunchParser = [[MockLunchParser alloc] init];
@@ -100,8 +100,6 @@
 
     XCTAssertEqualObjects(expectedData, [lunchParser getLunchDataPassedIn]);
     XCTAssertEqual(lunches, [receiver getLunchesReceived]);
-
-
 }
 
 @end

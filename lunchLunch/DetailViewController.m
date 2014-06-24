@@ -11,6 +11,7 @@
 #import "CommandDispatcher.h"
 #import "ShowMapCommand.h"
 #import "DirectionsProviderFactory.h"
+#import "LocationSelectionController.h"
 
 
 @implementation DetailViewController {
@@ -19,6 +20,12 @@
 }
 - (void)viewDidLoad {
     locationManager = [[CLLocationManager alloc] init];
+    if([[self.lunch getLocation] isEqual:[NullLocation singleton] ]){
+        [self.lunchLocationButton setTitle:@"Set Lunch Location" forState:UIControlStateNormal];
+    }
+    else {
+        [self.lunchLocationButton setTitle:@"Find Lunch Location" forState:UIControlStateNormal];
+    }
 }
 
 
@@ -28,16 +35,20 @@
         controller.personLoggedIn = self.personLoggedIn;
         controller.lunch = self.lunch;
     }
+    if([segue.identifier isEqualToString:@"specifyLocation"]){
+        LocationSelectionController *controller = (LocationSelectionController *) segue.destinationViewController;
+        controller.lunch = self.lunch;
+
+    }
 
 }
 
 - (IBAction)findLunchLocationPushed:(id)sender {
     if ([[self.lunch getLocation] isEqual:[NullLocation singleton]]) {
-        NSObject <DisplayHandlerProtocol> *displayHandler = [DisplayHandlerFactory buildDisplayHandler];
-        [displayHandler showErrorWithMessage:@"This Lunch does not have a Location associate with it."];
+        SegueCommand *command = [[SegueCommand alloc] initForViewController:self segueIdentifier:@"specifyLocation"];
+        [[CommandDispatcher singleton] executeCommand:command];
     }
     else {
-        
         ShowMapCommand *command = [[ShowMapCommand alloc] initWithLocationManager:locationManager andDelegate:self];
         [[CommandDispatcher singleton] executeCommand:command];
     }

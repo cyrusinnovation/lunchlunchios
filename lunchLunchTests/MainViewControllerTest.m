@@ -103,7 +103,7 @@ NSObject <PersonProtocol> *personToReturn;
     
     Lunch *lunch = [[Lunch alloc] init];
     
-    Lunch *lunchToUse = [[Lunch alloc] initWithPerson1:loggedInPerson person2:personTheLunchIsWith dateTime:date andLocation:nil ];
+    Lunch *lunchToUse = [[Lunch alloc] initWithId:nil person1:loggedInPerson person2:personTheLunchIsWith dateTime:date andLocation:nil];
     [self.viewController handleLunchesFound:@[lunch, lunch, lunch, lunchToUse, lunch]];
     [self.viewController viewDidLoad];
     
@@ -131,7 +131,7 @@ NSObject <PersonProtocol> *personToReturn;
     
     Lunch *lunch = [[Lunch alloc] init];
     
-    Lunch *lunchToUse = [[Lunch alloc] initWithPerson1:personTheLunchIsWith person2:loggedInPerson dateTime:date andLocation:nil ];
+    Lunch *lunchToUse = [[Lunch alloc] initWithId:nil person1:personTheLunchIsWith person2:loggedInPerson dateTime:date andLocation:nil];
     [self.viewController handleLunchesFound:@[lunch, lunch, lunch, lunch, lunchToUse]];
     [self.viewController viewDidLoad];
     

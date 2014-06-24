@@ -11,8 +11,10 @@
     NSObject <PersonProtocol> *person2;
     NSDate *dateTime;
     NSObject <LocationProtocol> *location;
+    NSString * lunchId;
 }
-- (id)initWithPerson1:(NSObject <PersonProtocol> *)person1In
-              person2:(NSObject <PersonProtocol> *)person2In
-             dateTime:(NSDate *)timeIn andLocation:(NSObject <LocationProtocol> *)location;
+- (id)initWithId:(NSString *)id
+         person1:(NSObject <PersonProtocol> *)person1In
+         person2:(NSObject <PersonProtocol> *)person2In
+        dateTime:(NSDate *)timeIn andLocation:(NSObject <LocationProtocol> *)location;
 @end

@@ -8,9 +8,7 @@
 
 
 @interface Location : NSObject<LocationProtocol>{
-    NSString *name;
-    NSString *address;
-    NSString *zipCode;
+
 }
-- (id)initWithName:(NSString *)nameIn address:(NSString *)addressIn andZipCode:(NSString *)zipCodeIn ;
+- (id)initWithId:(NSString *)locationIdIn name:(NSString *)nameIn address:(NSString *)addressIn andZipCode:(NSString *)zipCodeIn;
 @end

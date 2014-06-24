@@ -5,9 +5,10 @@
 
 #import <Foundation/Foundation.h>
 #import "LocationProtocol.h"
+#import "LocationParserProtocol.h"
 
-@interface LocationParser : NSObject
+@interface LocationParser : NSObject <LocationParserProtocol>
 + (LocationParser *)singleton;
 
-- (NSObject <LocationProtocol> *)parseLocationUsingDictionary:(NSDictionary *)dictionary;
+
 @end

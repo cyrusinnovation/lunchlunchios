@@ -12,6 +12,7 @@
 @interface DetailViewController : UIViewController<CLLocationManagerDelegate>
 @property(nonatomic, strong) NSObject <LunchProtocol>  *lunch;
 @property(nonatomic, strong) NSObject <PersonProtocol>  *personLoggedIn;
+@property (strong, nonatomic) IBOutlet UIButton *lunchLocationButton;
 
 - (IBAction)findLunchLocationPushed:(id)sender;
 @end

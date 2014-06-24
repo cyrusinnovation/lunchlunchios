@@ -18,7 +18,7 @@
 }
 
 - (void)testIsOfCorrectProtocol {
-    XCTAssertTrue([Lunch conformsToProtocol:@protocol(LunchProtocol)]);
+    XCTAssertTrue([Lunch conformsToProtocol:@ protocol(LunchProtocol)]);
 }
 
 - (void)testInitAndGetFields {
@@ -27,11 +27,13 @@
     Location *expectedLocation = [[Location alloc] init];
     NSDate *expectedDateTime = [NSDate date];
 
-    Lunch *lunch = [[Lunch alloc] initWithPerson1:expectedPerson1 person2:expectedPerson2 dateTime:expectedDateTime andLocation:expectedLocation ];
+    NSString *expectedId = @"5124";
+    Lunch *lunch = [[Lunch alloc] initWithId:expectedId person1:expectedPerson1 person2:expectedPerson2 dateTime:expectedDateTime andLocation:expectedLocation];
     XCTAssertEqual(expectedPerson1, [lunch getPerson1]);
     XCTAssertEqual(expectedPerson2, [lunch getPerson2]);
     XCTAssertNotNil([lunch getDateAndTime]);
     XCTAssertEqual(expectedDateTime, [lunch getDateAndTime]);
     XCTAssertEqual(expectedLocation, [lunch getLocation]);
+    XCTAssertEqual(expectedId, [lunch getId]);
 }
 @end

@@ -9,12 +9,10 @@
 @implementation Lunch {
 
 }
-- (id)initWithPerson1:(NSObject <PersonProtocol> *)person1In
-              person2:(NSObject <PersonProtocol> *)person2In
-             dateTime:(NSDate *)timeIn
-          andLocation:(NSObject <LocationProtocol> *)locationIn {
+- (id)initWithId:(NSString *)idIn person1:(NSObject <PersonProtocol> *)person1In person2:(NSObject <PersonProtocol> *)person2In dateTime:(NSDate *)timeIn andLocation:(NSObject <LocationProtocol> *)locationIn {
     self = [super init];
     if (self) {
+        lunchId = idIn;
         person1 = person1In;
         person2 = person2In;
         dateTime = timeIn;
@@ -24,6 +22,10 @@
     return self;
 }
 
+
+- (NSString *)getId {
+    return lunchId;
+}
 
 - (NSObject <PersonProtocol> *)getPerson1 {
     return person1;

@@ -39,9 +39,10 @@
             NSObject <LocationProtocol> *location = [[LocationParser singleton] parseLocationUsingDictionary:[lunchDictionary objectForKey:@"location"]];
 
             NSDate *date = [dateMaker dateFromString:[lunchDictionary objectForKey:@"dateTime"]];
+            NSString * id = [lunchDictionary objectForKey:@"_id"];
 
             if (person1 != [NullPerson singleton] && person2 != [NullPerson singleton] && date != nil) {
-                [lunches addObject:[[Lunch alloc] initWithPerson1:person1 person2:person2 dateTime:date andLocation:location ]];
+                [lunches addObject:[[Lunch alloc] initWithId:id person1:person1 person2:person2 dateTime:date andLocation:location]];
             }
         }
     }
@@ -71,7 +72,7 @@
 
 - (BOOL)dictionaryHasAllKeys:(NSDictionary *)dictionary {
 
-    return [self hasKey:dictionary key:@"person1"] && [self hasKey:dictionary key:@"person2"] && [self hasKey:dictionary key:@"dateTime"];
+    return [self hasKey:dictionary key:@"person1"] && [self hasKey:dictionary key:@"person2"] && [self hasKey:dictionary key:@"dateTime"] && [self hasKey:dictionary key:@"_id"];
 }
 
 - (BOOL)hasKey:(NSDictionary *)dictionary key:(NSString *)key {

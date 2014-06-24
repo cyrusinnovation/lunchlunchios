@@ -43,7 +43,7 @@
 
 - (IBAction)createLunch:(id)sender {
     if (buddyDetailViewController.date != nil) {
-        Lunch *lunch = [[Lunch alloc] initWithPerson1:self.personLoggedIn person2:self.buddy dateTime:buddyDetailViewController.date andLocation:[NullLocation singleton] ];
+        Lunch *lunch = [[Lunch alloc] initWithId:nil person1:self.personLoggedIn person2:self.buddy dateTime:buddyDetailViewController.date andLocation:[NullLocation singleton]];
         NSObject <LunchCreatorProtocol> *lunchCreator = [LunchCreatorFactory buildLunchCreator:self];
         [lunchCreator createLunch:lunch];
     }

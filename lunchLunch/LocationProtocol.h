@@ -6,6 +6,7 @@
 #import <Foundation/Foundation.h>
 
 @protocol LocationProtocol <NSObject>
+- (NSString *) getId;
 - (NSString *)getName;
 
 - (NSString *)getAddress;

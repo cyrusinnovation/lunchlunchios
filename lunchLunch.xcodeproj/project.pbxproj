@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		3E8E2056127C2168F138AA10 /* MockLunchParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2BB33C2C04F49138065B /* MockLunchParser.m */; };
 		3E8E206FF629A7ABA32B1771 /* DisplayHandlerFactoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2ED1295EF9A5D178491B /* DisplayHandlerFactoryTest.m */; };
+		3E8E20AB71577074204E2521 /* MockLocationReceiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2C5D183413C403E80AD8 /* MockLocationReceiver.m */; };
 		3E8E20AE1C0FDD6BBECF602D /* DirectionsProviderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E219C44623ED57110D9E2 /* DirectionsProviderTest.m */; };
 		3E8E20BC9C786939ECBBDB5C /* ShowMapCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2360E14CABEEA4325A18 /* ShowMapCommand.m */; };
 		3E8E20F84C1C38927ECF793A /* LoginProviderFactoryTestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E207EAD14EAE1FDB8F863 /* LoginProviderFactoryTestHelper.m */; };
 		3E8E212B5BE52C31FFC7A417 /* BuddyDetailViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2522D825A4BCA1697A4F /* BuddyDetailViewControllerTest.m */; };
 		3E8E2154CF059B455A55E241 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E257B361FA961D89184FF /* DetailViewController.m */; };
-		3E8E21A8FF32EA3A5B446D85 /* LocationParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E204A9E167C5319C56068 /* LocationParser.m */; };
 		3E8E21D877A33D680856F446 /* LoginProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2365810921E686D12D18 /* LoginProvider.m */; };
 		3E8E21F57B145933D3FB034D /* NullPersonTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E29B9E4FB351A62D94D18 /* NullPersonTest.m */; };
 		3E8E2216E205D30FD950498C /* MainViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2AFE2CF2B37C8C99A202 /* MainViewControllerTest.m */; };
@@ -30,6 +30,7 @@
 		3E8E23974611684FAF6566CA /* PersonTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E221E03D3E5872AD2058F /* PersonTest.m */; };
 		3E8E23AA7897B56087C35255 /* CommandDispatcherTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E24D591465E8F89A95A85 /* CommandDispatcherTest.m */; };
 		3E8E23ADC57BE65F8D01A7E1 /* PersonParserTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2C0E3A2DDABFF79E15B7 /* PersonParserTest.m */; };
+		3E8E23BD9465E236F052C38B /* LocationParserTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2871C20D79B1752DAE82 /* LocationParserTest.m */; };
 		3E8E23CAB92F6263E5D4C518 /* DisplayHandlerFactoryTestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2B795D17F348A38CA413 /* DisplayHandlerFactoryTestHelper.m */; };
 		3E8E241BEC2F8F1A39E3B81D /* NullPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E219619F52A2612AD9F87 /* NullPerson.m */; };
 		3E8E2459D140BACBBF28061B /* LunchCreatorFactoryTestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2BB80AAADBF760FB1430 /* LunchCreatorFactoryTestHelper.m */; };
@@ -42,13 +43,14 @@
 		3E8E24DBD3E04A441BD98CFE /* DisplayHandlerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2A9C8F734EF05B2444AC /* DisplayHandlerFactory.m */; };
 		3E8E24F8039861D894E9FBF8 /* LunchCreatorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E25AA790121D1D8B27021 /* LunchCreatorTest.m */; };
 		3E8E250A242CDF3BAC4E93DC /* LunchProviderFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2DD9844DE6846D64B282 /* LunchProviderFactory.m */; };
+		3E8E2533684F80E4BC7705D9 /* LocationProviderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E25889B18402AEEB86B82 /* LocationProviderTest.m */; };
 		3E8E253C20B3F28946335AE7 /* MockUITextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E244797E4B93F5D1E8359 /* MockUITextField.m */; };
 		3E8E25444D81EBEFB6FF0D28 /* BuddyFinderFactoryTestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2E3B108D1692EB7DA824 /* BuddyFinderFactoryTestHelper.m */; };
 		3E8E25A763129FEA7EDEEFC2 /* LunchProviderFactoryTestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2FE612170A41A430F42B /* LunchProviderFactoryTestHelper.m */; };
 		3E8E25F59492361503587592 /* FoundBuddyViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2013879984C5A9478FC4 /* FoundBuddyViewControllerTest.m */; };
 		3E8E2604E8A128B0475EACFB /* DisplayHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2D553C26D5E14ECCB953 /* DisplayHandler.m */; };
 		3E8E260606C322824B631B59 /* MockLunchCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E238061E0468A727FE133 /* MockLunchCreator.m */; };
-		3E8E262D3FA581C86A563FBB /* LocationParserTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2E2F13AB5E92B73A203F /* LocationParserTest.m */; };
+		3E8E265A9BE6E31E55712E28 /* LocationProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2930C516F5681A305EAB /* LocationProvider.m */; };
 		3E8E266DB4AB61C21990FEB0 /* MockLoginProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2D8B3A4D5E5A17133E60 /* MockLoginProvider.m */; };
 		3E8E26A860642C1AD706D3FC /* LocationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2EA355A05470DC505AC9 /* LocationTest.m */; };
 		3E8E26FA78BD5B087FF308ED /* LoginProviderFactoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E28770A05904544239917 /* LoginProviderFactoryTest.m */; };
@@ -60,6 +62,7 @@
 		3E8E2801E4A5D7E2C990C394 /* MockDisplayHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2401A952947B7BD63481 /* MockDisplayHandler.m */; };
 		3E8E2833549F5D8B148EDC4B /* MockCLLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E283C4D4FE46432D9CCF6 /* MockCLLocationManager.m */; };
 		3E8E284010ACD249AABD668B /* UIApplicationTestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E24DF0F98A61C5CF6A9BD /* UIApplicationTestHelper.m */; };
+		3E8E28558A349E4D4AF36181 /* LocationProviderFactoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2D010310B4D77F0B94C9 /* LocationProviderFactoryTest.m */; };
 		3E8E2856E2941FAB79E6ADC2 /* MockConnectionFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2E74A21CD68EADE9AF00 /* MockConnectionFactory.m */; };
 		3E8E286FDDAC11AC4EFE9D9D /* CommandDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E28ADFB1BEC341E8FD727 /* CommandDispatcher.m */; };
 		3E8E28B8EF7D9AA42B34C2D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2643EFA8E5B1BB9FCC67 /* main.m */; };
@@ -71,15 +74,20 @@
 		3E8E299FC071B5AA6C528B7B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E8E231B14950F8E1308D985 /* Images.xcassets */; };
 		3E8E29BCCC540C9537DC0A74 /* MockPersonReceiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E289EFEFB4B32651B32C8 /* MockPersonReceiver.m */; };
 		3E8E29C468A236C31F396081 /* LunchProviderFactoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2B7908EE2C8F9287E15C /* LunchProviderFactoryTest.m */; };
+		3E8E2A0C14213DA9CC3A751B /* LocationProviderFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E22B4A0C976722FDDD715 /* LocationProviderFactory.m */; };
 		3E8E2A0E2D5CF5ED43911793 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3E8E20D8702A8B20CF54307B /* InfoPlist.strings */; };
 		3E8E2A22736149DE84EFE45A /* DirectionsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2B3E35BEBDDBD4B4412D /* DirectionsProvider.m */; };
 		3E8E2A2BAD64973C1E78F0CC /* MockBuddyFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E250E0402E457E6DAB72B /* MockBuddyFinder.m */; };
 		3E8E2A39D6B8C008066DDC83 /* DetailViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E250563F8414B3C57641F /* DetailViewControllerTest.m */; };
+		3E8E2A52DAB41D61C2FE310F /* LocationSelectionControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E22B1A8E912CBFBDDB93E /* LocationSelectionControllerTest.m */; };
 		3E8E2A663E5073B3B64DA3AB /* MockUITableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E247D2B6653D670634924 /* MockUITableView.m */; };
 		3E8E2A79CC5DECA2FEDC8C9B /* MockAlertBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E225129381935685DD9EF /* MockAlertBuilder.m */; };
+		3E8E2AD59354B7268EB722AA /* LocationSelectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2C467E6835E6745FFDEC /* LocationSelectionController.m */; };
+		3E8E2AEA3E4F0FECC8882559 /* LocationProviderFactoryTestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2757B2EEDD092B85AD14 /* LocationProviderFactoryTestHelper.m */; };
 		3E8E2B27536ABA2AB24E9B04 /* PersonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E24D555745DCD77621D6A /* PersonParser.m */; };
 		3E8E2B2E5FE20798C1BB91CF /* SegueCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2F1F605AB82C161009CA /* SegueCommand.m */; };
 		3E8E2B36BAD72A4068C3AD59 /* DetailsTableViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2BF3088C01303147FB91 /* DetailsTableViewControllerTest.m */; };
+		3E8E2B3847035DE2CEFD5C72 /* LocationParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2B127490A3671B97689D /* LocationParser.m */; };
 		3E8E2BF70F17CF3AF65B3B08 /* ShowMapCommandTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E23C464BC95445F470391 /* ShowMapCommandTest.m */; };
 		3E8E2C0352CC8BBB3C5F51D3 /* LunchTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E244ED1CD15C41A555AD9 /* LunchTest.m */; };
 		3E8E2C2B8FAA8DBA6CB96DB2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2B689E4C81823C990893 /* AppDelegate.m */; };
@@ -89,9 +97,11 @@
 		3E8E2C74737EFEE88D29B6FC /* LunchParserTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E20FBF3086DBDD02AF082 /* LunchParserTest.m */; };
 		3E8E2C7DC5824260FDCFDA2D /* BuddyFinderFactoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2991513CE249657C9ABB /* BuddyFinderFactoryTest.m */; };
 		3E8E2C9F9ADFB45F9B51384F /* DirectionProviderFactoryTestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2A2A807C284AD7A4DCD6 /* DirectionProviderFactoryTestHelper.m */; };
+		3E8E2CB07088E623C8C6186D /* MockLocationProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E22733D973F058766EF50 /* MockLocationProvider.m */; };
 		3E8E2CCB36339CE7B3DF9C12 /* SegueCommandTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E27D673C049589AB1B953 /* SegueCommandTest.m */; };
 		3E8E2D06AE13D2B633F2BF41 /* LoginProviderFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2C8410EB783390DDE5CD /* LoginProviderFactory.m */; };
 		3E8E2D48B59EF625A7FD3F55 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2BBC53A665B774912C65 /* Location.m */; };
+		3E8E2D551E389FC9E540E6F0 /* MockLocationParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2E09F80B5B675AB08359 /* MockLocationParser.m */; };
 		3E8E2DB8DB191CF54C7854B4 /* DetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2D58BEC4E9B4752BAECB /* DetailsTableViewController.m */; };
 		3E8E2E07C67BB837FB95638F /* MockNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2998B532959AC75E9799 /* MockNavigationController.m */; };
 		3E8E2E260B0C4C53CAAFAFBA /* MockLunchProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2A12D4605DC573791122 /* MockLunchProvider.m */; };
@@ -155,13 +165,14 @@
 
 /* Begin PBXFileReference section */
 		3E8E2013879984C5A9478FC4 /* FoundBuddyViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoundBuddyViewControllerTest.m; sourceTree = "<group>"; };
-		3E8E204A9E167C5319C56068 /* LocationParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationParser.m; sourceTree = "<group>"; };
 		3E8E204E33B8C29A89427C24 /* lunchLunch-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "lunchLunch-Prefix.pch"; sourceTree = "<group>"; };
+		3E8E206FFDAD0106A1C3AE1C /* LocationProviderProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationProviderProtocol.h; sourceTree = "<group>"; };
 		3E8E207EAD14EAE1FDB8F863 /* LoginProviderFactoryTestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginProviderFactoryTestHelper.m; sourceTree = "<group>"; };
 		3E8E2086357D7CE5DB3171F0 /* MockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockView.h; sourceTree = "<group>"; };
 		3E8E20889179670D1293B463 /* MockUITableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockUITableView.h; sourceTree = "<group>"; };
 		3E8E2091EA8D30E0B9C056F3 /* SegueCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegueCommand.h; sourceTree = "<group>"; };
 		3E8E209CDACB9BF3916469F3 /* AlertBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertBuilder.h; sourceTree = "<group>"; };
+		3E8E20A4024DF09FC7AF06C1 /* LocationParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationParser.h; sourceTree = "<group>"; };
 		3E8E20B0D2CA239A6986D3C1 /* LunchCreatorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LunchCreatorFactory.h; sourceTree = "<group>"; };
 		3E8E20B3B5C68DDD476E554E /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		3E8E20CC7102A49D753C42D7 /* NullLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NullLocation.m; sourceTree = "<group>"; };
@@ -183,8 +194,11 @@
 		3E8E223D1B8ED7612D5A346A /* ConnectionFactoryProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionFactoryProtocol.h; sourceTree = "<group>"; };
 		3E8E225129381935685DD9EF /* MockAlertBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MockAlertBuilder.m; path = lunchLunchTest/View/MockAlertBuilder.m; sourceTree = SOURCE_ROOT; };
 		3E8E22567D55942DB29989FC /* NullLocationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NullLocationTest.m; sourceTree = "<group>"; };
+		3E8E22733D973F058766EF50 /* MockLocationProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockLocationProvider.m; sourceTree = "<group>"; };
 		3E8E227C70B5FBDA5155456E /* LunchProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LunchProvider.h; sourceTree = "<group>"; };
 		3E8E229F68EFCFCD892C3BE3 /* LunchProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LunchProvider.m; sourceTree = "<group>"; };
+		3E8E22B1A8E912CBFBDDB93E /* LocationSelectionControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationSelectionControllerTest.m; sourceTree = "<group>"; };
+		3E8E22B4A0C976722FDDD715 /* LocationProviderFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationProviderFactory.m; sourceTree = "<group>"; };
 		3E8E22B7B02B3A2B34DF2015 /* CommandDispatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommandDispatcher.h; sourceTree = "<group>"; };
 		3E8E22BEDE90BFD48282EE7D /* NullLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NullLocation.h; sourceTree = "<group>"; };
 		3E8E22CDF49ADAD34EC9748B /* LunchCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LunchCreator.h; sourceTree = "<group>"; };
@@ -212,6 +226,7 @@
 		3E8E247AA07565DF08CBCDCE /* lunchLunch-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = "lunchLunch-Info.plist"; sourceTree = "<group>"; };
 		3E8E247D2B6653D670634924 /* MockUITableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockUITableView.m; sourceTree = "<group>"; };
 		3E8E248F8BA7C80167AFEDEE /* MockLunchReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockLunchReceiver.h; sourceTree = "<group>"; };
+		3E8E24C6A92E56184B184A07 /* LocationProviderFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationProviderFactory.h; sourceTree = "<group>"; };
 		3E8E24D555745DCD77621D6A /* PersonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonParser.m; sourceTree = "<group>"; };
 		3E8E24D591465E8F89A95A85 /* CommandDispatcherTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommandDispatcherTest.m; sourceTree = "<group>"; };
 		3E8E24DF0F98A61C5CF6A9BD /* UIApplicationTestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIApplicationTestHelper.m; sourceTree = "<group>"; };
@@ -221,18 +236,22 @@
 		3E8E250E0402E457E6DAB72B /* MockBuddyFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockBuddyFinder.m; sourceTree = "<group>"; };
 		3E8E2522D825A4BCA1697A4F /* BuddyDetailViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuddyDetailViewControllerTest.m; sourceTree = "<group>"; };
 		3E8E257B361FA961D89184FF /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		3E8E25889B18402AEEB86B82 /* LocationProviderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationProviderTest.m; sourceTree = "<group>"; };
+		3E8E259BB0FF5F20E98EDB6C /* LocationParserProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationParserProtocol.h; sourceTree = "<group>"; };
 		3E8E25AA790121D1D8B27021 /* LunchCreatorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LunchCreatorTest.m; sourceTree = "<group>"; };
-		3E8E25ADC53AE6114E3F653C /* LocationParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationParser.h; sourceTree = "<group>"; };
 		3E8E25CA1608C042EAD6616A /* BuddyFinderFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuddyFinderFactory.h; sourceTree = "<group>"; };
+		3E8E261A0EDDE634886DA828 /* LocationSelectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationSelectionController.h; sourceTree = "<group>"; };
 		3E8E2620CF13C17C40C0B676 /* MockNSURLConnectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockNSURLConnectionDelegate.h; sourceTree = "<group>"; };
 		3E8E263A2477095E74ED33D7 /* MockUITextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockUITextField.h; sourceTree = "<group>"; };
 		3E8E263BFA809A032792D3A7 /* SwizzleHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwizzleHelper.h; sourceTree = "<group>"; };
 		3E8E263C27B79FE7F76FAAE2 /* BuddyFinderProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuddyFinderProtocol.h; sourceTree = "<group>"; };
 		3E8E2643EFA8E5B1BB9FCC67 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3E8E266F445EB8485F62C737 /* MockLocationReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockLocationReceiver.h; sourceTree = "<group>"; };
 		3E8E269DA3B53E59915064F0 /* MockLunchParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockLunchParser.h; sourceTree = "<group>"; };
 		3E8E26E0A594BF81CD942833 /* DisplayHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayHandler.h; sourceTree = "<group>"; };
 		3E8E270073C0AFB090B61B68 /* MockUIAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockUIAlertView.h; sourceTree = "<group>"; };
 		3E8E271CA404BCA47348EF09 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		3E8E2757B2EEDD092B85AD14 /* LocationProviderFactoryTestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationProviderFactoryTestHelper.m; sourceTree = "<group>"; };
 		3E8E27769E136D753D1CF763 /* BuddyFinderFactoryTestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuddyFinderFactoryTestHelper.h; sourceTree = "<group>"; };
 		3E8E2776F4E0363F6F6431B5 /* MockNSURLConnectionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockNSURLConnectionDelegate.m; sourceTree = "<group>"; };
 		3E8E277F5372F2DD2D52BB3E /* LunchCreatorFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LunchCreatorFactory.m; sourceTree = "<group>"; };
@@ -245,6 +264,7 @@
 		3E8E282348D8EF26D0BEAD7B /* LunchProviderFactoryTestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LunchProviderFactoryTestHelper.h; sourceTree = "<group>"; };
 		3E8E283C4D4FE46432D9CCF6 /* MockCLLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockCLLocationManager.m; sourceTree = "<group>"; };
 		3E8E286DF9BABAB9A82C7A56 /* LunchCreatorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LunchCreatorProtocol.h; sourceTree = "<group>"; };
+		3E8E2871C20D79B1752DAE82 /* LocationParserTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationParserTest.m; sourceTree = "<group>"; };
 		3E8E28770A05904544239917 /* LoginProviderFactoryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginProviderFactoryTest.m; sourceTree = "<group>"; };
 		3E8E28843A59D1A5AE38970F /* MockCLLocationManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockCLLocationManagerDelegate.h; sourceTree = "<group>"; };
 		3E8E288900BF626FE0C19AE0 /* LunchParserProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LunchParserProtocol.h; sourceTree = "<group>"; };
@@ -254,6 +274,7 @@
 		3E8E28ADFB1BEC341E8FD727 /* CommandDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommandDispatcher.m; sourceTree = "<group>"; };
 		3E8E28CB1C0F365E005A1285 /* DirectionProviderFactoryTestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectionProviderFactoryTestHelper.h; sourceTree = "<group>"; };
 		3E8E28EE12EAE3C5DF5F2FB6 /* LunchReceiverProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LunchReceiverProtocol.h; sourceTree = "<group>"; };
+		3E8E2930C516F5681A305EAB /* LocationProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationProvider.m; sourceTree = "<group>"; };
 		3E8E295BEE86FDB7B86828B2 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3E8E29712CECFE8FA49870FB /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		3E8E297D26CB2C923F2E8CC1 /* LunchParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LunchParser.m; sourceTree = "<group>"; };
@@ -284,6 +305,7 @@
 		3E8E2AF15C123624582314DE /* MockLunchCreationHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MockLunchCreationHandler.m; path = lunchLunchTest/MockLunchCreationHandler.m; sourceTree = SOURCE_ROOT; };
 		3E8E2AFE2CF2B37C8C99A202 /* MainViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewControllerTest.m; sourceTree = "<group>"; };
 		3E8E2B00C13E0B47C6112F59 /* Lunch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Lunch.h; sourceTree = "<group>"; };
+		3E8E2B127490A3671B97689D /* LocationParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationParser.m; sourceTree = "<group>"; };
 		3E8E2B128297A23A31883D4B /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		3E8E2B246434FBD8D9496DB3 /* MockConnectionFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockConnectionFactory.h; sourceTree = "<group>"; };
 		3E8E2B3E35BEBDDBD4B4412D /* DirectionsProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectionsProvider.m; sourceTree = "<group>"; };
@@ -299,13 +321,19 @@
 		3E8E2BBC53A665B774912C65 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
 		3E8E2BF3088C01303147FB91 /* DetailsTableViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsTableViewControllerTest.m; sourceTree = "<group>"; };
 		3E8E2C0E3A2DDABFF79E15B7 /* PersonParserTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonParserTest.m; sourceTree = "<group>"; };
+		3E8E2C467E6835E6745FFDEC /* LocationSelectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationSelectionController.m; sourceTree = "<group>"; };
 		3E8E2C4BDDCB9877AED52CFA /* LunchCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LunchCreator.m; sourceTree = "<group>"; };
+		3E8E2C5B56E8AC3064967E38 /* LocationProviderFactoryTestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationProviderFactoryTestHelper.h; sourceTree = "<group>"; };
 		3E8E2C5BA7EDA4FF284D1A3F /* LoginProviderProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginProviderProtocol.h; sourceTree = "<group>"; };
+		3E8E2C5D183413C403E80AD8 /* MockLocationReceiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockLocationReceiver.m; sourceTree = "<group>"; };
 		3E8E2C8410EB783390DDE5CD /* LoginProviderFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginProviderFactory.m; sourceTree = "<group>"; };
 		3E8E2C91E8F9BD15A0F38710 /* MockAlertBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MockAlertBuilder.h; path = lunchLunchTest/View/MockAlertBuilder.h; sourceTree = SOURCE_ROOT; };
+		3E8E2C993A3755477DC74EE0 /* MockLocationParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockLocationParser.h; sourceTree = "<group>"; };
 		3E8E2CDA576EC3389C6C7A49 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		3E8E2CF57DEC5D00AD1D9AD3 /* DisplayHandlerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayHandlerProtocol.h; sourceTree = "<group>"; };
+		3E8E2D010310B4D77F0B94C9 /* LocationProviderFactoryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationProviderFactoryTest.m; sourceTree = "<group>"; };
 		3E8E2D030672953EAF3B30D2 /* MockLunchReceiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockLunchReceiver.m; sourceTree = "<group>"; };
+		3E8E2D0D18609F9576C260F7 /* MockLocationProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockLocationProvider.h; sourceTree = "<group>"; };
 		3E8E2D173A092E6DDD12EDDC /* LunchCreatorFactoryTestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LunchCreatorFactoryTestHelper.h; sourceTree = "<group>"; };
 		3E8E2D19B766BB205CF401C7 /* MockPersonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockPersonParser.h; sourceTree = "<group>"; };
 		3E8E2D45B96A510EF8BF1979 /* LunchParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LunchParser.h; sourceTree = "<group>"; };
@@ -319,9 +347,10 @@
 		3E8E2DD89CFA03A2CE018D08 /* MockCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockCommand.m; sourceTree = "<group>"; };
 		3E8E2DD9844DE6846D64B282 /* LunchProviderFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LunchProviderFactory.m; sourceTree = "<group>"; };
 		3E8E2DF80DF05B7B237C8556 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
-		3E8E2E2F13AB5E92B73A203F /* LocationParserTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationParserTest.m; sourceTree = "<group>"; };
+		3E8E2E09F80B5B675AB08359 /* MockLocationParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockLocationParser.m; sourceTree = "<group>"; };
 		3E8E2E3B108D1692EB7DA824 /* BuddyFinderFactoryTestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuddyFinderFactoryTestHelper.m; sourceTree = "<group>"; };
 		3E8E2E4A623AEE408A6B03C3 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		3E8E2E6DDD436A25D1756F34 /* LocationReceiverProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationReceiverProtocol.h; sourceTree = "<group>"; };
 		3E8E2E74A21CD68EADE9AF00 /* MockConnectionFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockConnectionFactory.m; sourceTree = "<group>"; };
 		3E8E2EA355A05470DC505AC9 /* LocationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationTest.m; sourceTree = "<group>"; };
 		3E8E2ED1295EF9A5D178491B /* DisplayHandlerFactoryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayHandlerFactoryTest.m; sourceTree = "<group>"; };
@@ -331,6 +360,7 @@
 		3E8E2F224CC7DB8BBC2A5CB4 /* LoginProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginProvider.h; sourceTree = "<group>"; };
 		3E8E2F772319A697B08ADF15 /* LoginProviderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginProviderTest.m; sourceTree = "<group>"; };
 		3E8E2F7CB6720C107D9A04E7 /* PersonProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonProtocol.h; sourceTree = "<group>"; };
+		3E8E2F8DB4675226A4B83D6E /* LocationProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationProvider.h; sourceTree = "<group>"; };
 		3E8E2FB9BFA30E91FD35943D /* CommandDispatcherTestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommandDispatcherTestHelper.h; sourceTree = "<group>"; };
 		3E8E2FE43D5E32D55F12C175 /* CommandDispatcherProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommandDispatcherProtocol.h; sourceTree = "<group>"; };
 		3E8E2FE612170A41A430F42B /* LunchProviderFactoryTestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LunchProviderFactoryTestHelper.m; sourceTree = "<group>"; };
@@ -483,6 +513,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		3E8E21C86970D5A99542A4A3 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				3E8E206FFDAD0106A1C3AE1C /* LocationProviderProtocol.h */,
+				3E8E2E6DDD436A25D1756F34 /* LocationReceiverProtocol.h */,
+				3E8E2930C516F5681A305EAB /* LocationProvider.m */,
+				3E8E2F8DB4675226A4B83D6E /* LocationProvider.h */,
+				3E8E22B4A0C976722FDDD715 /* LocationProviderFactory.m */,
+				3E8E24C6A92E56184B184A07 /* LocationProviderFactory.h */,
+			);
+			name = Provider;
+			sourceTree = "<group>";
+		};
 		3E8E223A05BCC5EE9054E3C8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -501,6 +544,17 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		3E8E223A8227FD3E7DEB8289 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				3E8E2871C20D79B1752DAE82 /* LocationParserTest.m */,
+				3E8E2959C938C918D88FCBDB /* Provider */,
+				3E8E2E09F80B5B675AB08359 /* MockLocationParser.m */,
+				3E8E2C993A3755477DC74EE0 /* MockLocationParser.h */,
+			);
+			name = Location;
+			sourceTree = "<group>";
+		};
 		3E8E22CF518213959E449954 /* Lunch */ = {
 			isa = PBXGroup;
 			children = (
@@ -511,7 +565,6 @@
 				3E8E2D030672953EAF3B30D2 /* MockLunchReceiver.m */,
 				3E8E2D8C08FCD39B1B87E717 /* Creator */,
 				3E8E2090F54691EB83CA278F /* Provider */,
-				3E8E2E2F13AB5E92B73A203F /* LocationParserTest.m */,
 			);
 			name = Lunch;
 			sourceTree = "<group>";
@@ -545,10 +598,16 @@
 				3E8E288900BF626FE0C19AE0 /* LunchParserProtocol.h */,
 				3E8E25D0F2249463F6700324 /* Creator */,
 				3E8E27652D7ABF89CE26FA5D /* Provider */,
-				3E8E204A9E167C5319C56068 /* LocationParser.m */,
-				3E8E25ADC53AE6114E3F653C /* LocationParser.h */,
 			);
 			name = Lunch;
+			sourceTree = "<group>";
+		};
+		3E8E246B8AE5B8C8B5151059 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				3E8E22B1A8E912CBFBDDB93E /* LocationSelectionControllerTest.m */,
+			);
+			name = Location;
 			sourceTree = "<group>";
 		};
 		3E8E25065E5A1815BA1F0D21 /* Directions */ = {
@@ -608,6 +667,7 @@
 				3E8E2CF57DEC5D00AD1D9AD3 /* DisplayHandlerProtocol.h */,
 				3E8E2A9C8F734EF05B2444AC /* DisplayHandlerFactory.m */,
 				3E8E237097932FD74FAE349A /* DisplayHandlerFactory.h */,
+				3E8E2D1391DF7D7CCF9E786A /* Location */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -680,6 +740,7 @@
 				3E8E25065E5A1815BA1F0D21 /* Directions */,
 				3E8E24DF0F98A61C5CF6A9BD /* UIApplicationTestHelper.m */,
 				3E8E29A99B26F3F695B219B0 /* UIApplicationTestHelper.h */,
+				3E8E223A8227FD3E7DEB8289 /* Location */,
 			);
 			name = WebServiceCommunication;
 			sourceTree = "<group>";
@@ -706,6 +767,21 @@
 				3E8E22BEDE90BFD48282EE7D /* NullLocation.h */,
 			);
 			name = Lunch;
+			sourceTree = "<group>";
+		};
+		3E8E2959C938C918D88FCBDB /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				3E8E25889B18402AEEB86B82 /* LocationProviderTest.m */,
+				3E8E2C5D183413C403E80AD8 /* MockLocationReceiver.m */,
+				3E8E266F445EB8485F62C737 /* MockLocationReceiver.h */,
+				3E8E2D010310B4D77F0B94C9 /* LocationProviderFactoryTest.m */,
+				3E8E2757B2EEDD092B85AD14 /* LocationProviderFactoryTestHelper.m */,
+				3E8E2C5B56E8AC3064967E38 /* LocationProviderFactoryTestHelper.h */,
+				3E8E22733D973F058766EF50 /* MockLocationProvider.m */,
+				3E8E2D0D18609F9576C260F7 /* MockLocationProvider.h */,
+			);
+			name = Provider;
 			sourceTree = "<group>";
 		};
 		3E8E2A01A75AC44CCA6882D6 /* Model */ = {
@@ -739,6 +815,7 @@
 				3E8E2A878C69043A0EF68F43 /* Person */,
 				3E8E243ED825630482991562 /* Lunch */,
 				3E8E233F1CB997FD6ECCC1D0 /* Directions */,
+				3E8E2E0F0D3C4B472563CEBA /* Location */,
 			);
 			name = WebServiceCommunication;
 			sourceTree = "<group>";
@@ -756,6 +833,15 @@
 				3E8E2EF8AB9716B92058605C /* ShowMapCommand.h */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		3E8E2D1391DF7D7CCF9E786A /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				3E8E261A0EDDE634886DA828 /* LocationSelectionController.h */,
+				3E8E2C467E6835E6745FFDEC /* LocationSelectionController.m */,
+			);
+			name = Location;
 			sourceTree = "<group>";
 		};
 		3E8E2D8C08FCD39B1B87E717 /* Creator */ = {
@@ -779,6 +865,17 @@
 				3E8E2ED869C8C74BE73E6378 /* LoginViewControllerTest.m */,
 			);
 			name = Login;
+			sourceTree = "<group>";
+		};
+		3E8E2E0F0D3C4B472563CEBA /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				3E8E2B127490A3671B97689D /* LocationParser.m */,
+				3E8E259BB0FF5F20E98EDB6C /* LocationParserProtocol.h */,
+				3E8E20A4024DF09FC7AF06C1 /* LocationParser.h */,
+				3E8E21C86970D5A99542A4A3 /* Provider */,
+			);
+			name = Location;
 			sourceTree = "<group>";
 		};
 		3E8E2F157B6565B7E052DBC3 /* Details */ = {
@@ -942,6 +1039,7 @@
 				3E8E21642FAAF76436DDB17C /* DisplayHandlerFactoryTestHelper.h */,
 				3E8E2C91E8F9BD15A0F38710 /* MockAlertBuilder.h */,
 				3E8E225129381935685DD9EF /* MockAlertBuilder.m */,
+				3E8E246B8AE5B8C8B5151059 /* Location */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -1072,10 +1170,13 @@
 				3E8E24DBD3E04A441BD98CFE /* DisplayHandlerFactory.m in Sources */,
 				3E8E2D48B59EF625A7FD3F55 /* Location.m in Sources */,
 				3E8E2FF1C34FF55CB9AB65C3 /* NullLocation.m in Sources */,
-				3E8E21A8FF32EA3A5B446D85 /* LocationParser.m in Sources */,
 				3E8E2A22736149DE84EFE45A /* DirectionsProvider.m in Sources */,
 				3E8E22B27B335E6C61B99A22 /* DirectionsProviderFactory.m in Sources */,
 				3E8E20BC9C786939ECBBDB5C /* ShowMapCommand.m in Sources */,
+				3E8E2AD59354B7268EB722AA /* LocationSelectionController.m in Sources */,
+				3E8E2B3847035DE2CEFD5C72 /* LocationParser.m in Sources */,
+				3E8E265A9BE6E31E55712E28 /* LocationProvider.m in Sources */,
+				3E8E2A0C14213DA9CC3A751B /* LocationProviderFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1135,7 +1236,6 @@
 				3E8E23CAB92F6263E5D4C518 /* DisplayHandlerFactoryTestHelper.m in Sources */,
 				3E8E26A860642C1AD706D3FC /* LocationTest.m in Sources */,
 				3E8E2F347AF19A91F0D2A022 /* NullLocationTest.m in Sources */,
-				3E8E262D3FA581C86A563FBB /* LocationParserTest.m in Sources */,
 				3E8E23ADC57BE65F8D01A7E1 /* PersonParserTest.m in Sources */,
 				3E8E2EDF8A0FECC8705C16AB /* MockLunchCreationHandler.m in Sources */,
 				3E8E2A79CC5DECA2FEDC8C9B /* MockAlertBuilder.m in Sources */,
@@ -1147,6 +1247,14 @@
 				3E8E2BF70F17CF3AF65B3B08 /* ShowMapCommandTest.m in Sources */,
 				3E8E2833549F5D8B148EDC4B /* MockCLLocationManager.m in Sources */,
 				3E8E2776AC1D6C26BA3720D8 /* MockCLLocationManagerDelegate.m in Sources */,
+				3E8E23BD9465E236F052C38B /* LocationParserTest.m in Sources */,
+				3E8E2533684F80E4BC7705D9 /* LocationProviderTest.m in Sources */,
+				3E8E20AB71577074204E2521 /* MockLocationReceiver.m in Sources */,
+				3E8E2D551E389FC9E540E6F0 /* MockLocationParser.m in Sources */,
+				3E8E28558A349E4D4AF36181 /* LocationProviderFactoryTest.m in Sources */,
+				3E8E2AEA3E4F0FECC8882559 /* LocationProviderFactoryTestHelper.m in Sources */,
+				3E8E2A52DAB41D61C2FE310F /* LocationSelectionControllerTest.m in Sources */,
+				3E8E2CB07088E623C8C6186D /* MockLocationProvider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -48,6 +48,7 @@
     return YES;
 }
 
+
 - (void)handlePersonFound:(NSObject <PersonProtocol> *)person {
     self.personFound = person;
     if (![self.personFound isEqual:[NullPerson singleton]]) {
