@@ -10,4 +10,5 @@
 @interface LocationSelectionController : UIViewController<LocationReceiverProtocol,UITableViewDelegate, UITableViewDataSource>
 @property (strong, nonatomic) IBOutlet UITableView *locationTable;
 @property(nonatomic, strong) NSObject <LunchProtocol>  *lunch;
+
 @end

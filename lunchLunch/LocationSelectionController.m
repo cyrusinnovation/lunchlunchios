@@ -5,11 +5,15 @@
 
 #import "LocationSelectionController.h"
 #import "LocationProviderFactory.h"
+#import "CommandDispatcher.h"
+#import "SegueCommand.h"
+#import "LocationDetailViewController.h"
 
 
 @implementation LocationSelectionController {
 
     NSArray *locationsFound;
+    NSObject <LocationProtocol> *detailedLocation;
 }
 - (void)handleLocationsFound:(NSArray *)locations {
     locationsFound = locations;
@@ -33,5 +37,18 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    detailedLocation = [locationsFound objectAtIndex:indexPath.row];
+    SegueCommand *segueCommand = [[SegueCommand alloc] initForViewController:self segueIdentifier:@"showLocationDetails"];
+    [[CommandDispatcher singleton] executeCommand:segueCommand];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showLocationDetails"]) {
+        LocationDetailViewController *controller = (LocationDetailViewController *) segue.destinationViewController;
+        controller.lunch = self.lunch;
+        controller.location = detailedLocation;
+    }
+}
 
 @end

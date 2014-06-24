@@ -10,6 +10,9 @@
 #import "MockLocationProvider.h"
 #import "Location.h"
 #import "MockUITableView.h"
+#import "SegueCommand.h"
+#import "LocationDetailViewController.h"
+#import "Lunch.h"
 
 @interface LocationSelectionControllerTest : XCTestCase
 @end
@@ -87,6 +90,43 @@
 
     [self checkViewCellBuilt:tableView cellToReturn:cellToReturn indexPath:indexPath expectedText:locationName];
 }
+
+- (void)testWillFireSegueCommandWhenARowISelectedOnTheTable {
+
+    XCTAssertNil([CommandDispatcherTestHelper getLastCommandExecuted]);
+    NSIndexPath *indexPath = [NSIndexPath indexPathForItem:3 inSection:1];
+    [self.viewController tableView:self.viewController.locationTable didSelectRowAtIndexPath:indexPath];
+    XCTAssertTrue([[CommandDispatcherTestHelper getLastCommandExecuted] isKindOfClass:[SegueCommand class]]);
+    SegueCommand *command = (SegueCommand *) [CommandDispatcherTestHelper getLastCommandExecuted];
+    XCTAssertEqualObjects(@"showLocationDetails", [command getSegueIdentifier]);
+    XCTAssertEqualObjects(self.viewController, [command getViewController]);
+
+}
+
+
+-(void)testWhenARowIsSelectedTheLocationBePassedAlongToViewControllerOnTheShowLocationDetailsSegue {
+
+    XCTAssertNil([CommandDispatcherTestHelper getLastCommandExecuted]);
+    Location *locationToPassAlong = [[Location alloc] init];
+    Lunch *lunchToPassAlong = [[Lunch alloc] init];
+    self.viewController.lunch = lunchToPassAlong;
+    [self.viewController handleLocationsFound:@[[[Location alloc] init], [[Location alloc] init], [[Location alloc] init], locationToPassAlong, [[Location alloc] init]]];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForItem:3 inSection:1];
+    [self.viewController tableView:self.viewController.locationTable didSelectRowAtIndexPath:indexPath];
+
+    LocationDetailViewController *destinationViewController = [[LocationDetailViewController alloc] init];
+    UIStoryboardSegue *segue = [[UIStoryboardSegue alloc] initWithIdentifier:@"showLocationDetails" source:self.viewController destination:destinationViewController];
+
+    XCTAssertNil(destinationViewController.location);
+    XCTAssertNil(destinationViewController.lunch);
+    [self.viewController prepareForSegue:segue sender:self.viewController];
+
+    XCTAssertEqual(locationToPassAlong, destinationViewController.location);
+    XCTAssertEqual(lunchToPassAlong, destinationViewController.lunch);
+}
+
+
+
 
 - (void)checkViewCellBuilt:(MockUITableView *)tableView cellToReturn:(UITableViewCell *)cellToReturn indexPath:(NSIndexPath *)indexPath expectedText:(NSString *)expectedText {
     UITableViewCell *viewCell = [self.viewController tableView:tableView cellForRowAtIndexPath:indexPath];

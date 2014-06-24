@@ -45,10 +45,6 @@
 
 }
 
-- (IBAction)backgroundTap:(id)sender {
-    [self.view endEditing:true];
-}
-
 
 
 @end
