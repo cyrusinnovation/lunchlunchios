@@ -8,6 +8,10 @@
 
 
 @interface MockLocationParser : NSObject<LocationParserProtocol>
+- (NSObject <LocationProtocol> *)getLocationForBuildJSONData;
+
+- (void)setLocationDataToReturn:(NSData *)dataToReturn;
+
 - (NSData *)getLocationDataPassedIn;
 
 -(void) setLocationsToReturn:(NSArray *)locations;

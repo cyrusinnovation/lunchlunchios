@@ -8,8 +8,9 @@
 
 @implementation MockNavigationController {
 
-    bool popViewControllerAnimatedCalled;
+    BOOL popViewControllerAnimatedCalled;
     BOOL shouldAnimatePop;
+    bool popToRootWasCalled;
 }
 - (UIViewController *)popViewControllerAnimated:(BOOL)animated {
     popViewControllerAnimatedCalled = true;
@@ -23,6 +24,14 @@
 
 - (BOOL)shouldAnimatePop {
     return shouldAnimatePop;
+}
+
+-(bool) wasPopToRootCalled{
+    return popToRootWasCalled;
+}
+- (NSArray *)popToRootViewControllerAnimated:(BOOL)animated {
+    popToRootWasCalled = true;
+    return [super popToRootViewControllerAnimated:animated];
 }
 
 @end

@@ -100,7 +100,6 @@
 
 }
 
-
 - (NSDictionary *)buildLocationDictionary:(Location *)location {
     return [NSDictionary dictionaryWithObjectsAndKeys:[location getName], @"name", [location getAddress], @"address", [location getZipCode], @"zipCode", [location getId],@"_id", nil];
 

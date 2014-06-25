@@ -22,20 +22,30 @@
 }
 
 - (NSURLConnection *)postData:(NSData *)data toURL:(NSString *)requestUrl withDelegate:(id <NSURLConnectionDataDelegate>)delegate {
+    return [self getConnection:data requestUrl:requestUrl delegate:delegate andConnectionType:@"POST"];
+
+}
+- (NSURLConnection *)putData:(NSData *)data toURL:(NSString *)requestUrl withDelegate:(id <NSURLConnectionDataDelegate>)delegate {
+    return [self getConnection:data requestUrl:requestUrl delegate:delegate andConnectionType:@"PUT"];;
+}
+
+- (NSURLConnection *)getConnection:(NSData *)data requestUrl:(NSString *)requestUrl
+                          delegate:(id <NSURLConnectionDataDelegate>)delegate andConnectionType:(NSString *)connectionType {
     NSURL * url = [NSURL URLWithString:requestUrl];
 
-    NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[data length]];
+    NSString *dataLength = [NSString stringWithFormat:@"%lu", (unsigned long)[data length]];
     NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:url];
-    [request setHTTPMethod:@"POST"];
+    [request setHTTPMethod:connectionType];
     [request setHTTPBody:data];
 
-    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+    [request setValue:dataLength forHTTPHeaderField:@"Content-Length"];
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
 
     NSURLConnection* connection =[[NSURLConnection alloc] initWithRequest:request delegate:delegate];
 
     return connection;
 }
+
 
 - (void)openURL:(NSString *)url {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];

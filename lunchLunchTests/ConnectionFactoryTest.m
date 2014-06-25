@@ -80,6 +80,30 @@
     NSURL *requestURL = [request URL];
     XCTAssertEqual(expectedURL, [requestURL absoluteString]);
 }
+-(void) testPutData{
+    ConnectionFactory *factory = [ConnectionFactory singleton];
+    NSString *expectedURL = @"someplace/stuff/dobo";
+    MockNSURLConnectionDelegate *delegate = [[MockNSURLConnectionDelegate alloc]init];
+
+    NSDictionary * dictionary = [NSDictionary dictionaryWithObjectsAndKeys:@"some", @"key1", @"stuff", @"key2", @"123",@"key3",nil];
+    NSData *data = [NSJSONSerialization dataWithJSONObject:dictionary options:NSJSONWritingPrettyPrinted error:nil];
+
+    NSURLConnection *connection = [factory putData:data toURL:expectedURL withDelegate:delegate];
+
+    XCTAssertTrue([[connection currentRequest] isKindOfClass:[NSMutableURLRequest class]]);
+
+    NSURLRequest *request = [connection currentRequest];
+    XCTAssertEqualObjects(@"PUT",  [request HTTPMethod]);
+    XCTAssertEqualObjects(@"application/json",  [[request allHTTPHeaderFields] objectForKey:@"Content-Type"]);
+    NSString *expectedDataLength = [NSString stringWithFormat:@"%lu", (unsigned long)[data length]];
+
+    XCTAssertEqualObjects(expectedDataLength,  [[request allHTTPHeaderFields] objectForKey:@"Content-Length"]);
+    XCTAssertEqualObjects(data, [request HTTPBody]);
+    XCTAssertTrue([[request URL] isKindOfClass:[NSURL class]]);
+
+    NSURL *requestURL = [request URL];
+    XCTAssertEqual(expectedURL, [requestURL absoluteString]);
+}
 -(void) testOpenURL{
     ConnectionFactory *factory = [ConnectionFactory singleton];
     NSString *expectedURL = @"go/here/jerk";

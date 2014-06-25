@@ -10,4 +10,6 @@
 - (BOOL)wasPopViewControllerAnimatedCalled;
 
 - (BOOL)shouldAnimatePop;
+
+- (bool)wasPopToRootCalled;
 @end

@@ -8,5 +8,6 @@
 @protocol ConnectionFactoryProtocol <NSObject>
 - (NSURLConnection *)buildAsynchronousGetRequestForURL:(NSString *)requestURL andDelegate:(id<NSURLConnectionDataDelegate>) delegate;
 -(NSURLConnection*)postData:(NSData *)data toURL:(NSString *)url withDelegate:(id<NSURLConnectionDataDelegate>) delegate;
+-(NSURLConnection*)putData:(NSData *)data toURL:(NSString *)url withDelegate:(id<NSURLConnectionDataDelegate>) delegate;
 -(void) openURL: (NSString *) url;
 @end

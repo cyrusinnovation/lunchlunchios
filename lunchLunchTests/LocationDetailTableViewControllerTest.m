@@ -30,8 +30,6 @@
 
 - (void)testWillShowLocationDetailsOnViewDidLoad {
 
-
-
     NSString *expectedName = @"Barcade";
     NSString *expectedAddress = @"388 Union Ave";
     NSString *expectedZipCode = @"11211";

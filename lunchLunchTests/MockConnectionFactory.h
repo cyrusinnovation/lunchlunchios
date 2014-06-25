@@ -9,6 +9,10 @@
 
 @interface MockConnectionFactory : NSObject<ConnectionFactoryProtocol>
 
+- (id <NSURLConnectionDataDelegate>)getDelegatePassedInForPut;
+
+- (NSData *)getDataPassedInToPut;
+
 - (NSString *)getRequestURLPassedInForPost;
 
 - (id <NSURLConnectionDataDelegate>)getDelegatePassedInForPost;
@@ -20,4 +24,6 @@
 - (id <NSURLConnectionDataDelegate>)getDelegatePassedInForGet;
 
 -(NSString *) getURLOpened;
+
+- (NSString *)getRequestURLPassedInForPut;
 @end

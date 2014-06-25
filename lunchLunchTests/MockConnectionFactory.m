@@ -13,6 +13,9 @@
     NSData *dataPassedInToPost;
     NSString *requestURLPassedInForPost;
     NSString *urlOpened;
+    id <NSURLConnectionDataDelegate> delegatePassedInToPut;
+    NSData *dataPassedInToPut;
+    NSString *requestURLPassedInForPut;
 }
 - (NSURLConnection *)buildAsynchronousGetRequestForURL:(NSString *)requestURL andDelegate:(id <NSURLConnectionDataDelegate>)delegate {
     requestURLPassedInForGet = requestURL;
@@ -27,11 +30,31 @@
     return nil;
 }
 
+- (NSURLConnection *)putData:(NSData *)data toURL:(NSString *)url withDelegate:(id <NSURLConnectionDataDelegate>)delegate {
+    requestURLPassedInForPut = url;
+    dataPassedInToPut = data;
+    delegatePassedInToPut = delegate;
+    return nil;
+}
+
 - (void)openURL:(NSString *)url {
     urlOpened = url;
 }
--(NSString *) getURLOpened{
+
+- (NSString *)getURLOpened {
     return urlOpened;
+}
+
+- (NSString *)getRequestURLPassedInForPut {
+    return requestURLPassedInForPut;
+}
+
+- (id <NSURLConnectionDataDelegate>)getDelegatePassedInForPut {
+    return delegatePassedInToPut;
+}
+
+- (NSData *)getDataPassedInToPut {
+    return dataPassedInToPut;
 }
 
 - (NSString *)getRequestURLPassedInForPost {

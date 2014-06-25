@@ -6,9 +6,12 @@
 #import <Foundation/Foundation.h>
 #import "LunchProtocol.h"
 #import "LocationProtocol.h"
+#import "LunchUpdateHandler.h"
 
 
-@interface LocationDetailViewController : UIViewController
+@interface LocationDetailViewController : UIViewController<LunchUpdateHandler>
 @property(nonatomic, strong) NSObject <LunchProtocol>  *lunch;
+
+- (IBAction)updateLunchButtonPressed:(id)sender;
 @property(nonatomic, strong) NSObject <LocationProtocol>  *location;
 @end

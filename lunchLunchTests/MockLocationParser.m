@@ -10,6 +10,8 @@
 
     NSArray *locationsToReturn;
     NSData *locationDataPassedIn;
+    NSData *locationDataToReturn;
+    NSObject <LocationProtocol> *locationForBuildJSONData;
 }
 - (NSObject <LocationProtocol> *)parseLocationUsingDictionary:(NSDictionary *)dictionary {
     return nil;
@@ -18,6 +20,19 @@
 - (NSArray *)parseLocationList:(NSData *)locationData {
     locationDataPassedIn = locationData;
     return locationsToReturn;
+}
+
+- (NSData *)buildLocationJSONData:(NSObject <LocationProtocol> *)location {
+    locationForBuildJSONData = location;
+    return locationDataToReturn;
+}
+
+- (NSObject <LocationProtocol> *)getLocationForBuildJSONData {
+    return locationForBuildJSONData;
+}
+
+- (void)setLocationDataToReturn:(NSData *)dataToReturn {
+    locationDataToReturn = dataToReturn;
 }
 
 - (NSData *)getLocationDataPassedIn {
