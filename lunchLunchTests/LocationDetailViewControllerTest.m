@@ -72,7 +72,7 @@
     XCTAssertEqual(lunch, [lunchUpdater getLunchForUpdate]);
 }
 
-- (void)testHandleLunchUpdatedWillPopUpThreeLevels {
+- (void)testHandleLunchUpdatedWillPopUpToRoot {
     MockNavigationController *navController = [[MockNavigationController alloc] init];
     [navController pushViewController:self.viewController animated:true];
     [self.viewController handleLunchUpdate];

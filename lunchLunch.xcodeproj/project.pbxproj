@@ -70,7 +70,9 @@
 		3E8E284010ACD249AABD668B /* UIApplicationTestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E24DF0F98A61C5CF6A9BD /* UIApplicationTestHelper.m */; };
 		3E8E28558A349E4D4AF36181 /* LocationProviderFactoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2D010310B4D77F0B94C9 /* LocationProviderFactoryTest.m */; };
 		3E8E2856E2941FAB79E6ADC2 /* MockConnectionFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2E74A21CD68EADE9AF00 /* MockConnectionFactory.m */; };
+		3E8E286BC50F3ED0E2254382 /* CreateLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2463A32DA6C9596BD606 /* CreateLocationViewController.m */; };
 		3E8E286FDDAC11AC4EFE9D9D /* CommandDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E28ADFB1BEC341E8FD727 /* CommandDispatcher.m */; };
+		3E8E289312E5A85CA82CB410 /* CreateLocationViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2DDD6535838F3434DB1D /* CreateLocationViewControllerTest.m */; };
 		3E8E28B8EF7D9AA42B34C2D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2643EFA8E5B1BB9FCC67 /* main.m */; };
 		3E8E28D8B62ED575E2BF8536 /* MainStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E8E2A9765FC6EE0287CD4E0 /* MainStoryBoard.storyboard */; };
 		3E8E290AA6EE90A860602B1E /* MockDirectionsProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2A6F52077C5484713484 /* MockDirectionsProvider.m */; };
@@ -189,6 +191,7 @@
 		3E8E20CC7102A49D753C42D7 /* NullLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NullLocation.m; sourceTree = "<group>"; };
 		3E8E20E29862AB5DD8E54AF7 /* PersonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonParser.h; sourceTree = "<group>"; };
 		3E8E20ED8DCFBB626C11C340 /* LunchCreatorFactoryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LunchCreatorFactoryTest.m; sourceTree = "<group>"; };
+		3E8E20F2D595C6BAE86EB13B /* CreateLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateLocationViewController.h; sourceTree = "<group>"; };
 		3E8E20FBF3086DBDD02AF082 /* LunchParserTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LunchParserTest.m; sourceTree = "<group>"; };
 		3E8E2104DB1E435EBC07D0B0 /* LunchUpdaterFactoryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LunchUpdaterFactoryTest.m; sourceTree = "<group>"; };
 		3E8E2138E11DD27AB6B59EAB /* LunchUpdaterFactoryTestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LunchUpdaterFactoryTestHelper.h; sourceTree = "<group>"; };
@@ -238,6 +241,7 @@
 		3E8E2453B64E030D4EC9CC3B /* MockNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockNavigationController.h; sourceTree = "<group>"; };
 		3E8E245F015A2449C1FAA444 /* MockDirectionsProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockDirectionsProvider.h; sourceTree = "<group>"; };
 		3E8E246316B888976EC14612 /* DetailsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsTableViewController.h; sourceTree = "<group>"; };
+		3E8E2463A32DA6C9596BD606 /* CreateLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateLocationViewController.m; sourceTree = "<group>"; };
 		3E8E246F97F07EAA64DDBF64 /* LunchUpdaterFactoryTestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LunchUpdaterFactoryTestHelper.m; sourceTree = "<group>"; };
 		3E8E247AA07565DF08CBCDCE /* lunchLunch-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = "lunchLunch-Info.plist"; sourceTree = "<group>"; };
 		3E8E247D2B6653D670634924 /* MockUITableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockUITableView.m; sourceTree = "<group>"; };
@@ -375,6 +379,7 @@
 		3E8E2DCC982839CA386E89BE /* MockUIAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockUIAlertView.m; sourceTree = "<group>"; };
 		3E8E2DD89CFA03A2CE018D08 /* MockCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockCommand.m; sourceTree = "<group>"; };
 		3E8E2DD9844DE6846D64B282 /* LunchProviderFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LunchProviderFactory.m; sourceTree = "<group>"; };
+		3E8E2DDD6535838F3434DB1D /* CreateLocationViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateLocationViewControllerTest.m; sourceTree = "<group>"; };
 		3E8E2DF80DF05B7B237C8556 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		3E8E2E09F80B5B675AB08359 /* MockLocationParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockLocationParser.m; sourceTree = "<group>"; };
 		3E8E2E3B108D1692EB7DA824 /* BuddyFinderFactoryTestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuddyFinderFactoryTestHelper.m; sourceTree = "<group>"; };
@@ -510,6 +515,13 @@
 				3E8E29D4F1D030B562D660F6 /* LunchProviderTest.m */,
 			);
 			name = Provider;
+			sourceTree = "<group>";
+		};
+		3E8E20968700FC9E4335C9C7 /* Creator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Creator;
 			sourceTree = "<group>";
 		};
 		3E8E209B1C607EDD787E75ED /* FindBuddy */ = {
@@ -656,6 +668,7 @@
 				3E8E22B1A8E912CBFBDDB93E /* LocationSelectionControllerTest.m */,
 				3E8E285279A3D7897A9A458F /* LocationDetailViewControllerTest.m */,
 				3E8E2F906DAB048370E32919 /* LocationDetailTableViewControllerTest.m */,
+				3E8E2DDD6535838F3434DB1D /* CreateLocationViewControllerTest.m */,
 			);
 			name = Location;
 			sourceTree = "<group>";
@@ -907,6 +920,8 @@
 				3E8E222DE36D3019B632C5F2 /* LocationDetailViewController.h */,
 				3E8E2AFDBF8B48EFAB897F06 /* LocationDetailTableViewController.m */,
 				3E8E2DA1C4575D317F84A780 /* LocationDetailTableViewController.h */,
+				3E8E2463A32DA6C9596BD606 /* CreateLocationViewController.m */,
+				3E8E20F2D595C6BAE86EB13B /* CreateLocationViewController.h */,
 			);
 			name = Location;
 			sourceTree = "<group>";
@@ -941,6 +956,7 @@
 				3E8E259BB0FF5F20E98EDB6C /* LocationParserProtocol.h */,
 				3E8E20A4024DF09FC7AF06C1 /* LocationParser.h */,
 				3E8E21C86970D5A99542A4A3 /* Provider */,
+				3E8E20968700FC9E4335C9C7 /* Creator */,
 			);
 			name = Location;
 			sourceTree = "<group>";
@@ -1248,6 +1264,7 @@
 				3E8E2A0C0807A347C0C731BA /* LocationDetailTableViewController.m in Sources */,
 				3E8E260F79B087B250A9B245 /* LunchUpdater.m in Sources */,
 				3E8E26DD69261E26515BA797 /* LunchUpdaterFactory.m in Sources */,
+				3E8E286BC50F3ED0E2254382 /* CreateLocationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1333,6 +1350,7 @@
 				3E8E200972B979F42E7B751E /* LunchUpdaterFactoryTest.m in Sources */,
 				3E8E20489BF5E94727936C8E /* LunchUpdaterFactoryTestHelper.m in Sources */,
 				3E8E233F2012D8580D779516 /* MockLunchUpdater.m in Sources */,
+				3E8E289312E5A85CA82CB410 /* CreateLocationViewControllerTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

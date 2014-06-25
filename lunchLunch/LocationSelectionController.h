@@ -11,4 +11,5 @@
 @property (strong, nonatomic) IBOutlet UITableView *locationTable;
 @property(nonatomic, strong) NSObject <LunchProtocol>  *lunch;
 
+- (IBAction)createLocation:(id)sender;
 @end

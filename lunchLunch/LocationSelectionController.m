@@ -8,6 +8,7 @@
 #import "CommandDispatcher.h"
 #import "SegueCommand.h"
 #import "LocationDetailViewController.h"
+#import "CreateLocationViewController.h"
 
 
 @implementation LocationSelectionController {
@@ -15,6 +16,7 @@
     NSArray *locationsFound;
     NSObject <LocationProtocol> *detailedLocation;
 }
+
 - (void)handleLocationsFound:(NSArray *)locations {
     locationsFound = locations;
     [self.locationTable reloadData];
@@ -43,11 +45,19 @@
     [[CommandDispatcher singleton] executeCommand:segueCommand];
 }
 
+- (IBAction)createLocation:(id)sender {
+    SegueCommand *segueCommand = [[SegueCommand alloc] initForViewController:self segueIdentifier:@"createLocation"];
+    [[CommandDispatcher singleton] executeCommand:segueCommand];
+}
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"showLocationDetails"]) {
         LocationDetailViewController *controller = (LocationDetailViewController *) segue.destinationViewController;
         controller.lunch = self.lunch;
         controller.location = detailedLocation;
+    }
+    if ([segue.identifier isEqualToString:@"createLocation"]) {
+        CreateLocationViewController *controller = (CreateLocationViewController *) segue.destinationViewController;
+        controller.lunch = self.lunch;
     }
 }
 
