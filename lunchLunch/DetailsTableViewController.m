@@ -32,8 +32,6 @@
     self.locationNameLabel.text = [location getName];
     self.locationZipCodeLabel.text = [location getZipCode];
     self.locationAddressLabel.text = [location getAddress];
-
-
 }
 
 

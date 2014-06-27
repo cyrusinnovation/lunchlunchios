@@ -43,17 +43,20 @@
     BuddyFinder *finder =
             [[BuddyFinder alloc] initWithConnectionFactory:factory personParser:parser andPersonReceiver:receiver];
     Person *person = [[Person alloc] initWithId:@"iasdasfas" firstName:@"Joe" lastName:@"Smith" email:@"JSmith@somethin.com"];
-    NSString *expectedJSON = @"IexpecttheParserToTurnThePersonIntoThis";
+
+
+    NSData *expectedJSON = [[NSData alloc] initWithBase64EncodedString:@"IexpecttheParserToTurnThePersonIntoThis" options:0];
     [parser setPersonJSONToReturn:expectedJSON];
 
     [finder findBuddyFor:person];
 
     XCTAssertEqualObjects(person, [parser getPersonToStringify]);
 
-    NSString *expectedURL = [NSString stringWithFormat:@"http://localhost:3000/findBuddy?person=%@", expectedJSON];
+    NSString *expectedURL = @"http://localhost:3000/findBuddy";
 
-    XCTAssertEqualObjects(expectedURL, [factory getRequestURLPassedInForGet]);
-    XCTAssertEqual(finder, [factory getDelegatePassedInForGet]);
+    XCTAssertEqualObjects(expectedURL, [factory getRequestURLPassedInForPost]);
+    XCTAssertEqual(finder, [factory getDelegatePassedInForPost]);
+    XCTAssertEqual(expectedJSON, [factory getDataPassedInToPost]);
 }
 
 - (void)testDidFailWithErrorCallErrorOnReceiver {

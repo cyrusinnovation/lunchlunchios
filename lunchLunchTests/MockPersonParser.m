@@ -11,7 +11,7 @@
     NSData *personDataPassedIn;
     NSObject <PersonProtocol> *personToReturn;
     NSObject <PersonProtocol> *personToStringfy;
-    NSString *personJSONToReturn;
+    NSData *personJSONToReturn;
 
 }
 
@@ -25,20 +25,20 @@
     return nil;
 }
 
-- (NSString *)buildPersonJSONString:(NSObject <PersonProtocol> *)person {
+- (NSData *)buildPersonJSONString:(NSObject <PersonProtocol> *)person {
     personToStringfy = person;
 
     return personJSONToReturn;
 }
 
-- (void) setPersonJSONToReturn:(NSString*) string{
+- (void) setPersonJSONToReturn:(NSData*) string{
     personJSONToReturn = string;
 }
 
 - (void)setPersonToReturn:(NSObject <PersonProtocol> *)person {
     personToReturn = person;
 }
--(NSObject<PersonProtocol   > * ) getPersonToStringify{
+-(NSObject<PersonProtocol> * ) getPersonToStringify{
     return personToStringfy;
 }
 - (NSData *)getPersonDataPassedIn {

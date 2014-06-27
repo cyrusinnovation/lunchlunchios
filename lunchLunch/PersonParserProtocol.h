@@ -11,5 +11,5 @@
 @protocol PersonParserProtocol <NSObject>
     -(NSObject<PersonProtocol> *)parsePersonUsingJsonData:(NSData * ) personJsonData;
     -(NSObject<PersonProtocol> *)parsePersonUsingDictionary:(NSDictionary *)personJsonDictionary;
-    -(NSString *) buildPersonJSONString : (NSObject<PersonProtocol>* )person;
+    -(NSData *) buildPersonJSONString : (NSObject<PersonProtocol>* )person;
 @end

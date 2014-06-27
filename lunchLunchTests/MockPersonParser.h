@@ -9,11 +9,11 @@
 
 @interface MockPersonParser : NSObject<PersonParserProtocol>
 
-- (void)setPersonJSONToReturn:(NSString *)string;
+- (void)setPersonJSONToReturn:(NSData *)string;
 
 - (void)setPersonToReturn:(NSObject <PersonProtocol> *)person;
 
-- (NSString *)getPersonToStringify;
+- (NSObject<PersonProtocol> *)getPersonToStringify;
 
 - (NSData *)getPersonDataPassedIn;
 @end

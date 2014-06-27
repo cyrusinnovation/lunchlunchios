@@ -91,12 +91,13 @@
     NSArray *values = [NSArray arrayWithObjects:firstName, lastName, email,personId, nil];
     NSArray *keys = [NSArray arrayWithObjects:@"firstName", @"lastName", @"email",@"_id", nil];
     NSDictionary *personDictionary = [NSDictionary dictionaryWithObjects:values forKeys:keys];
-    NSData *expectedData = [NSJSONSerialization dataWithJSONObject:personDictionary options:0 error:nil];
-    NSString *expectedJSON = [[NSString alloc] initWithData:expectedData encoding:NSUTF8StringEncoding];
+    NSDictionary *expectedDictionary = [NSDictionary dictionaryWithObject:personDictionary forKey:@"person"];
+
+    NSData *expectedData = [NSJSONSerialization dataWithJSONObject:expectedDictionary options:0 error:nil];
 
     PersonParser *parser = [PersonParser singleton];
-    NSString *personJson = [parser buildPersonJSONString:person];
-    XCTAssertEqualObjects(expectedJSON, personJson);
+    NSData *personJson = [parser buildPersonJSONString:person];
+    XCTAssertEqualObjects(expectedData, personJson);
 
 }
 

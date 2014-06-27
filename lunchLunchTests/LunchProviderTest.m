@@ -46,17 +46,17 @@
     LunchProvider *provider =
             [[LunchProvider alloc] initWithConnectionFactory:factory lunchParser:lunchParser personParser:personParser andLunchReceiver:receiver];
     Person *person = [[Person alloc] initWithId:nil firstName:@"Joe" lastName:@"Smith" email:@"JSmith@somethin.com"];
-    NSString *expectedJSON = @"IexpecttheParserToTurnThePersonIntoThis";
+    NSData *expectedJSON = [[NSData alloc] initWithBase64EncodedString:@"IexpecttheParserToTurnThePersonIntoThis" options:0];
     [personParser setPersonJSONToReturn:expectedJSON];
-
     [provider findLunchesFor:person];
 
     XCTAssertEqualObjects(person, [personParser getPersonToStringify]);
 
-    NSString *expectedURL = [NSString stringWithFormat:@"http://localhost:3000/getLunches?person=%@", expectedJSON];
+    NSString *expectedURL = @"http://localhost:3000/getLunches";
 
-    XCTAssertEqualObjects(expectedURL, [factory getRequestURLPassedInForGet]);
-    XCTAssertEqual(provider, [factory getDelegatePassedInForGet]);
+    XCTAssertEqualObjects(expectedURL, [factory getRequestURLPassedInForPost]);
+    XCTAssertEqual(provider, [factory getDelegatePassedInForPost]);
+    XCTAssertEqual(expectedJSON, [factory getDataPassedInToPost]);
 }
 
 

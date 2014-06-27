@@ -45,16 +45,16 @@
 }
 
 
-- (NSString *)buildPersonJSONString:(NSObject <PersonProtocol> *)person {
+- (NSData *)buildPersonJSONString:(NSObject <PersonProtocol> *)person {
     NSError *error;
     NSDictionary *personDictionary = [NSDictionary dictionaryWithObjectsAndKeys:[person getFirstName], @"firstName",
                                                                                 [person getLastName], @"lastName",
                                                                                 [person getEmailAddress], @"email",
                                                                                 [person getId], @"_id", nil];
 
-    NSData *personData = [NSJSONSerialization dataWithJSONObject:personDictionary options:0 error:&error];
+    NSData *personData = [NSJSONSerialization dataWithJSONObject:[NSDictionary dictionaryWithObject:personDictionary forKey:@"person"]options:0 error:&error];
 
-    return [[NSString alloc] initWithData:personData encoding:NSUTF8StringEncoding];
+    return personData;
 }
 
 

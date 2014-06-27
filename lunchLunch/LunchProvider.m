@@ -13,7 +13,7 @@
 @implementation LunchProvider {
 
     NSObject <ConnectionFactoryProtocol> *connectionFactory;
-    NSObject <PersonParserProtocol>* personParser;
+    NSObject <PersonParserProtocol> *personParser;
     NSObject <LunchParserProtocol> *lunchParser;
     NSObject <LunchReceiverProtocol> *lunchReceiver;
     NSMutableData *connectionData;
@@ -33,9 +33,9 @@
 
 
 - (void)findLunchesFor:(NSObject <PersonProtocol> *)person {
-    NSString *personString = [[personParser buildPersonJSONString:person] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    NSString *url = [NSString stringWithFormat:@"http://localhost:3000/getLunches?person=%@", personString];
-    [connectionFactory buildAsynchronousGetRequestForURL:url andDelegate:self];
+    NSData *personData = [personParser buildPersonJSONString:person];
+    NSString *url = @"http://localhost:3000/getLunches";
+    [connectionFactory postData:personData toURL:url withDelegate:self];
 
 }
 
@@ -47,7 +47,7 @@
     connectionData = [[NSMutableData alloc] init];
 }
 
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {    
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
     [connectionData appendData:data];
 }
 

@@ -9,14 +9,14 @@
 
 @implementation BuddyFinder {
     NSObject <ConnectionFactoryProtocol> *connectionFactory;
-    NSObject<PersonReceiverProtocol>* receiver;
-    NSObject<PersonParserProtocol> * parser;
-    NSMutableData* connectionData;
+    NSObject <PersonReceiverProtocol> *receiver;
+    NSObject <PersonParserProtocol> *parser;
+    NSMutableData *connectionData;
 }
 - (void)findBuddyFor:(NSObject <PersonProtocol> *)person {
-    NSString *personString = [[parser buildPersonJSONString:person] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    NSString *url = [NSString stringWithFormat:@"http://localhost:3000/findBuddy?person=%@", personString];
-    [connectionFactory buildAsynchronousGetRequestForURL:url andDelegate:self];
+    NSData *personData = [parser buildPersonJSONString:person];
+    NSString *url = @"http://localhost:3000/findBuddy";
+    [connectionFactory postData:personData toURL:url withDelegate:self];
 }
 
 - (id)initWithConnectionFactory:(NSObject <ConnectionFactoryProtocol> *)factory personParser:(NSObject <PersonParserProtocol> *)personParser andPersonReceiver:(NSObject <PersonReceiverProtocol> *)personReceiver {
