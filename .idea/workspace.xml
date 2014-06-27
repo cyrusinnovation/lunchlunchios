@@ -7,35 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bcc6f4bf-bcc4-4bad-8c9a-f8bdc2847256" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunch/CreateLocationSubController.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunch/CreateLocationSubController.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunch/LocationCreationHandler.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunch/LocationWriter.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunch/LocationWriter.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunch/LocationWriterFactory.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunch/LocationWriterFactory.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunchTests/LocationWriterFactoryTest.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunchTests/LocationWriterFactoryTestHelper.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunchTests/LocationWriterFactoryTestHelper.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunch/LocationWriterProtocol.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunchTests/LocationWriterTest.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunchTests/MockLocationCreationHandler.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunchTests/MockLocationCreationHandler.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunchTests/MockLocationWriter.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lunchLunchTests/MockLocationWriter.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunch.xcodeproj/xcuserdata/Cyrus.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterPath="$PROJECT_DIR$/lunchLunch.xcodeproj/xcuserdata/Cyrus.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunch/CreateLocationViewController.h" afterPath="$PROJECT_DIR$/lunchLunch/CreateLocationViewController.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunch/CreateLocationViewController.m" afterPath="$PROJECT_DIR$/lunchLunch/CreateLocationViewController.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunchTests/CreateLocationViewControllerTest.m" afterPath="$PROJECT_DIR$/lunchLunchTests/CreateLocationViewControllerTest.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunch/LocationParser.m" afterPath="$PROJECT_DIR$/lunchLunch/LocationParser.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunch/LocationParserProtocol.h" afterPath="$PROJECT_DIR$/lunchLunch/LocationParserProtocol.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunchTests/LocationParserTest.m" afterPath="$PROJECT_DIR$/lunchLunchTests/LocationParserTest.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunch/LunchCreator.h" afterPath="$PROJECT_DIR$/lunchLunch/LunchCreator.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunch/en.lproj/MainStoryBoard.storyboard" afterPath="$PROJECT_DIR$/lunchLunch/en.lproj/MainStoryBoard.storyboard" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunchTests/MockLocationParser.h" afterPath="$PROJECT_DIR$/lunchLunchTests/MockLocationParser.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunchTests/MockLocationParser.m" afterPath="$PROJECT_DIR$/lunchLunchTests/MockLocationParser.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunch.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/lunchLunch.xcodeproj/project.pbxproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lunchLunchTests/LocationWriterTest.m" afterPath="$PROJECT_DIR$/lunchLunchTests/LocationWriterTest.m" />
     </list>
     <ignored path="lunchLunch.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,8 +35,8 @@
       <file leaf-file-name="CreateLocationViewControllerTest.m" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lunchLunchTests/CreateLocationViewControllerTest.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="784" max-vertical-offset="1620">
-              <caret line="71" column="29" selection-start-line="71" selection-start-column="29" selection-end-line="71" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1249" max-vertical-offset="1785">
+              <caret line="96" column="59" selection-start-line="96" selection-start-column="59" selection-end-line="96" selection-end-column="59" />
               <folding>
                 <element signature="e#100#125#0" expanded="true" />
               </folding>
@@ -82,10 +56,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LocationParser.m" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="LocationParser.m" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lunchLunch/LocationParser.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5770065" vertical-offset="709" max-vertical-offset="1170">
+            <state vertical-scroll-proportion="0.0" vertical-offset="709" max-vertical-offset="1170">
               <caret line="68" column="71" selection-start-line="68" selection-start-column="71" selection-end-line="68" selection-end-column="71" />
               <folding />
             </state>
@@ -104,6 +78,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="LocationDetailViewController.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lunchLunch/LocationDetailViewController.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="LunchParser.h" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lunchLunch/LunchParser.h">
           <provider selected="true" editor-type-id="text-editor">
@@ -114,11 +98,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LunchParser.m" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="LunchParser.m" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lunchLunch/LunchParser.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="589" max-vertical-offset="1395">
-              <caret line="61" column="21" selection-start-line="61" selection-start-column="19" selection-end-line="61" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.60954446" vertical-offset="544" max-vertical-offset="1395">
+              <caret line="60" column="124" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -127,11 +111,9 @@
       <file leaf-file-name="LocationWriterTest.m" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lunchLunchTests/LocationWriterTest.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1369" max-vertical-offset="1890">
-              <caret line="113" column="29" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
-              <folding>
-                <element signature="e#100#125#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="1279" max-vertical-offset="1875">
+              <caret line="10" column="41" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -139,8 +121,8 @@
       <file leaf-file-name="CreateLocationViewController.m" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lunchLunch/CreateLocationViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="840">
-              <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="780">
+              <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
               <folding>
                 <element signature="e#100#130#0" expanded="true" />
               </folding>
@@ -148,23 +130,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CreateLocationViewController.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lunchLunch/CreateLocationViewController.h">
+      <file leaf-file-name="DisplayHandlerProtocol.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lunchLunch/DisplayHandlerProtocol.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
-              <caret line="12" column="39" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-              <folding>
-                <element signature="e#100#133#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CreateLocationSubController.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lunchLunch/CreateLocationSubController.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-              <caret line="4" column="111" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
+              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -232,13 +202,13 @@
         <option value="$PROJECT_DIR$/lunchLunchTests/MockLocationWriter.h" />
         <option value="$PROJECT_DIR$/lunchLunchTests/MockLocationWriter.m" />
         <option value="$PROJECT_DIR$/lunchLunch/CreateLocationSubController.m" />
-        <option value="$PROJECT_DIR$/lunchLunch/CreateLocationViewController.m" />
         <option value="$PROJECT_DIR$/lunchLunch/CreateLocationViewController.h" />
-        <option value="$PROJECT_DIR$/lunchLunchTests/CreateLocationViewControllerTest.m" />
-        <option value="$PROJECT_DIR$/lunchLunchTests/LocationWriterTest.m" />
         <option value="$PROJECT_DIR$/lunchLunch/LocationWriter.m" />
         <option value="$PROJECT_DIR$/lunchLunchTests/LocationParserTest.m" />
         <option value="$PROJECT_DIR$/lunchLunch/LocationParser.m" />
+        <option value="$PROJECT_DIR$/lunchLunchTests/CreateLocationViewControllerTest.m" />
+        <option value="$PROJECT_DIR$/lunchLunchTests/LocationWriterTest.m" />
+        <option value="$PROJECT_DIR$/lunchLunch/CreateLocationViewController.m" />
       </list>
     </option>
   </component>
@@ -541,7 +511,7 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="WebServiceCommunication" />
+              <option name="myItemId" value="View" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -559,111 +529,11 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="WebServiceCommunication" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Lunch" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lunchLunch" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lunchLunch" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebServiceCommunication" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Lunch" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Creator" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lunchLunch" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lunchLunch" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebServiceCommunication" />
+              <option name="myItemId" value="View" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Location" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lunchLunch" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lunchLunch" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebServiceCommunication" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Location" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Provider" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lunchLunch" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lunchLunch" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WebServiceCommunication" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Location" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Creator" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -827,22 +697,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lunchLunch/LocationSelectionController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="960">
-          <caret line="60" column="55" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lunchLunch/FoundBuddyViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="960">
-          <caret line="34" column="42" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lunchLunch/LocationDetailTableViewController.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6818182" vertical-offset="0" max-vertical-offset="352">
@@ -1050,7 +904,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="285">
           <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
           <folding>
-            <element signature="e#100#133#0" expanded="true" />
+            <element signature="e#100#133#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1078,7 +932,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="390">
           <caret line="17" column="81" selection-start-line="17" selection-start-column="81" selection-end-line="17" selection-end-column="81" />
           <folding>
-            <element signature="e#100#133#0" expanded="true" />
+            <element signature="e#100#133#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1098,7 +952,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
           <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
           <folding>
-            <element signature="e#100#133#0" expanded="true" />
+            <element signature="e#100#133#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1153,9 +1007,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
           <caret line="17" column="49" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="e#100#133#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1185,36 +1037,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lunchLunchTests/CreateLocationViewControllerTest.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="784" max-vertical-offset="1620">
-          <caret line="71" column="29" selection-start-line="71" selection-start-column="29" selection-end-line="71" selection-end-column="29" />
-          <folding>
-            <element signature="e#100#125#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lunchLunch/CreateLocationViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="840">
-          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-          <folding>
-            <element signature="e#100#130#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lunchLunchTests/LocationWriterTest.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1369" max-vertical-offset="1890">
-          <caret line="113" column="29" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
-          <folding>
-            <element signature="e#100#125#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lunchLunch/LocationWriter.m">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="619" max-vertical-offset="1080">
@@ -1233,18 +1055,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lunchLunch/LunchParser.h">
+    <entry file="file://$PROJECT_DIR$/lunchLunch/LocationParser.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="461">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lunchLunch/LunchParser.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="589" max-vertical-offset="1395">
-          <caret line="61" column="21" selection-start-line="61" selection-start-column="19" selection-end-line="61" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="709" max-vertical-offset="1170">
+          <caret line="68" column="71" selection-start-line="68" selection-start-column="71" selection-end-line="68" selection-end-column="71" />
           <folding />
         </state>
       </provider>
@@ -1259,10 +1073,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lunchLunch/LocationParser.m">
+    <entry file="file://$PROJECT_DIR$/lunchLunch/LocationDetailViewController.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5770065" vertical-offset="709" max-vertical-offset="1170">
-          <caret line="68" column="71" selection-start-line="68" selection-start-column="71" selection-end-line="68" selection-end-column="71" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="461">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lunchLunchTests/CreateLocationViewControllerTest.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1249" max-vertical-offset="1785">
+          <caret line="96" column="59" selection-start-line="96" selection-start-column="59" selection-end-line="96" selection-end-column="59" />
+          <folding>
+            <element signature="e#100#125#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lunchLunch/DisplayHandlerProtocol.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lunchLunch/CreateLocationViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="780">
+          <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+          <folding>
+            <element signature="e#100#130#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lunchLunchTests/LocationWriterTest.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="1875">
+          <caret line="10" column="41" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lunchLunch/LunchParser.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="461">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lunchLunch/LunchParser.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.60954446" vertical-offset="544" max-vertical-offset="1395">
+          <caret line="60" column="124" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -9,17 +9,15 @@
 #import "CreateLocationSubController.h"
 #import "LocationWriterFactory.h"
 #import "LunchUpdaterFactory.h"
+#import "DisplayHandlerFactory.h"
 
 
 @implementation CreateLocationViewController {
-
     CreateLocationSubController *subController;
 }
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"createLocationSubController"]) {
-        
         subController = (CreateLocationSubController *) segue.destinationViewController;
-
     }
 }
 
@@ -31,21 +29,19 @@
 - (void)locationSaved:(NSObject <LocationProtocol> *)location {
     NSObject <LunchUpdaterProtocol> *updater = [LunchUpdaterFactory buildLunchUpdater:self];
     [updater updateLunch:self.lunch withLocation:location];
-
 }
 
 - (void)locationSaveError {
-
+    NSObject <DisplayHandlerProtocol> *displayHandler = [DisplayHandlerFactory buildDisplayHandler];
+    [displayHandler showCommunicationError];
 }
 
 - (void)handleLunchUpdate {
-
     [self.navigationController popToRootViewControllerAnimated:true];
 }
 
 - (void)handleLunchUpdateFailed {
-
+    NSObject <DisplayHandlerProtocol> *displayHandler = [DisplayHandlerFactory buildDisplayHandler];
+    [displayHandler showCommunicationError];
 }
-
-
 @end

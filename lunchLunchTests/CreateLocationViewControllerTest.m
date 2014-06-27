@@ -5,18 +5,16 @@
 
 #import <XCTest/XCTest.h>
 #import "CreateLocationViewController.h"
-#import "LocationCreationHandler.h"
-#import "LunchUpdateHandler.h"
 #import "LocationWriterFactoryTestHelper.h"
-#import "LunchCreatorFactoryTestHelper.h"
 #import "CreateLocationSubController.h"
 #import "MockLocationWriter.h"
-#import "MockLunchCreator.h"
 #import "Location.h"
 #import "LunchUpdaterFactoryTestHelper.h"
 #import "MockLunchUpdater.h"
 #import "Lunch.h"
 #import "MockNavigationController.h"
+#import "DisplayHandlerFactoryTestHelper.h"
+#import "MockDisplayHandler.h"
 
 @interface CreateLocationViewControllerTest : XCTestCase
 @property(nonatomic, strong) CreateLocationViewController *viewController;
@@ -31,6 +29,7 @@
     self.viewController = [[CreateLocationViewController alloc] init];
     [LocationWriterFactoryTestHelper swizzleBuildLocationWriter];
     [LunchUpdaterFactoryTestHelper swizzleBuildLunchUpdater];
+    [DisplayHandlerFactoryTestHelper swizzleBuildDisplayHandler];
 
 }
 
@@ -38,6 +37,7 @@
     self.viewController = nil;
     [LocationWriterFactoryTestHelper deswizzleBuildLocationWriter];
     [LunchUpdaterFactoryTestHelper deswizzleBuildLunchUpdater];
+    [DisplayHandlerFactoryTestHelper deswizzleBuildDisplayHandler];
     [super tearDown];
 }
 
@@ -45,7 +45,6 @@
     XCTAssertTrue([CreateLocationViewController conformsToProtocol:@ protocol(LunchUpdateHandler)]);
     XCTAssertTrue([CreateLocationViewController conformsToProtocol:@ protocol(LocationCreationHandler)]);
 }
-
 
 
 - (void)testCreateLocationButtonTakesInformationFromTextFieldsAndPassesItToWriter {
@@ -98,6 +97,18 @@
     [navController pushViewController:self.viewController animated:true];
     [self.viewController handleLunchUpdate];
     XCTAssertTrue([navController wasPopToRootCalled]);
+}
 
+- (void)testLocationSaveFailureWillShowErrorMessage {
+    MockDisplayHandler *handler = [[MockDisplayHandler alloc] init];
+    [DisplayHandlerFactoryTestHelper setDisplayHandlerToBuild:handler];
+    [self.viewController locationSaveError];
+    XCTAssertTrue([handler wasShowCommunicationErrorCalled]);
+}
+- (void)testUpdateLunchFailureWillShowErrorMessage {
+    MockDisplayHandler *handler = [[MockDisplayHandler alloc] init];
+    [DisplayHandlerFactoryTestHelper setDisplayHandlerToBuild:handler];
+    [self.viewController handleLunchUpdateFailed];
+    XCTAssertTrue([handler wasShowCommunicationErrorCalled]);
 }
 @end

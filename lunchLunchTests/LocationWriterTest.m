@@ -8,7 +8,6 @@
 #import "MockLocationParser.h"
 #import "MockLocationCreationHandler.h"
 #import "MockConnectionFactory.h"
-#import "LocationWriterProtocol.h"
 #import "Location.h"
 #import "NullLocation.h"
 
