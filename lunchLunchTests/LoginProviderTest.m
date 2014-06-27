@@ -44,9 +44,13 @@
     NSString *email = @"dvfsdfdlkfsd@dfksadf.com";
     [provider findPersonByEmail:email];
 
-    NSString *expectedURL = [NSString stringWithFormat:@"http://localhost:3000/login?email=%@", email];
-    XCTAssertEqualObjects(expectedURL, [connectionFactory getRequestURLPassedInForGet]);
-    XCTAssertEqual(provider, [connectionFactory getDelegatePassedInForGet]);
+    NSString *expectedURL = @"http://localhost:3000/login";
+    NSDictionary *emailDictionary = [NSDictionary dictionaryWithObject:email forKey:@"email"];
+    NSData *expectedBody = [NSJSONSerialization dataWithJSONObject:emailDictionary options:NSJSONWritingPrettyPrinted error:nil];
+    
+    XCTAssertEqualObjects(expectedURL, [connectionFactory getRequestURLPassedInForPost]);
+    XCTAssertEqualObjects(expectedBody, [connectionFactory getDataPassedInToPost]);
+    XCTAssertEqual(provider, [connectionFactory getDelegatePassedInForPost]);
 }
 
 - (void)testDidFailWithErrorWillCallErrorOnPersonReciever {

@@ -26,8 +26,10 @@
 }
 
 - (void)findPersonByEmail:(NSString *)email {
-    NSString *loginURL = [NSString stringWithFormat:@"http://localhost:3000/login?email=%@", email];
-    [connectionFactory buildAsynchronousGetRequestForURL:loginURL andDelegate:self];
+    NSDictionary *dictionary = [NSDictionary dictionaryWithObject:email forKey:@"email"];
+    NSData *data = [NSJSONSerialization dataWithJSONObject:dictionary options:NSJSONWritingPrettyPrinted error:nil];
+    NSString *loginURL = @"http://localhost:3000/login";
+    [connectionFactory postData:data toURL:loginURL withDelegate:self];
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
