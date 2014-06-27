@@ -9,5 +9,11 @@
 
 @protocol LocationParserProtocol <NSObject>
 - (NSObject <LocationProtocol> *)parseLocationUsingDictionary:(NSDictionary *)dictionary;
--(NSArray *) parseLocationList:(NSData *) locationData;
+
+- (NSObject <LocationProtocol> *)parseLocationUsingJsonData:(NSData *)locationJSON;
+
+- (NSArray *)parseLocationList:(NSData *)locationData;
+
+- (NSData *)formatJSONWithName:(NSString *)name withAddress:(NSString *)address andZipCode:(NSString *)code;
+
 @end

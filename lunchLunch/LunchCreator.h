@@ -14,7 +14,10 @@
 
 @interface LunchCreator : NSObject <NSURLConnectionDataDelegate, LunchCreatorProtocol>
 - (id)initWithConnectionFactory:(NSObject <ConnectionFactoryProtocol> *)factory lunchParser:(NSObject <LunchParserProtocol> *)lunchParserForInit andLunchCreationHandler:(NSObject <LunchCreationHandler> *)createHandler;
--(NSObject<ConnectionFactoryProtocol> *) getConnectionFactory;
--(NSObject<LunchParserProtocol> *) getLunchParser;
--(NSObject<LunchCreationHandler> *)getLunchCreationHandler;
+
+- (NSObject <ConnectionFactoryProtocol> *)getConnectionFactory;
+
+- (NSObject <LunchParserProtocol> *)getLunchParser;
+
+- (NSObject <LunchCreationHandler> *)getLunchCreationHandler;
 @end

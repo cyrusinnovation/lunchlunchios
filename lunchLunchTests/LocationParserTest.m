@@ -38,6 +38,24 @@
     XCTAssertEqualObjects(expectedId, [location getId]);
 
 }
+- (void)testParseLocationWithJSONData {
+    NSString *expectedName = @"Go! Go! CURRY!";
+    NSString *expectedAddress = @"273 W 38th St";
+    NSString *expectedZipCode = @"10018";
+    NSString *expectedId = @"3423rfdsr";
+    NSDictionary *locationDictionary = [NSDictionary dictionaryWithObjectsAndKeys:expectedName, @"name", expectedAddress, @"address", expectedZipCode, @"zipCode", expectedId, @"_id", nil];
+    NSData *data = [NSJSONSerialization dataWithJSONObject:locationDictionary options:0 error:nil];
+
+    LocationParser *parser = [LocationParser singleton];
+    NSObject <LocationProtocol> *parsedLocation = [parser parseLocationUsingJsonData:data];
+    XCTAssertTrue([parsedLocation isKindOfClass:[Location class]]);
+    Location *location = (Location *) parsedLocation;
+    XCTAssertEqualObjects(expectedName, [location getName]);
+    XCTAssertEqualObjects(expectedAddress, [location getAddress]);
+    XCTAssertEqualObjects(expectedZipCode, [location getZipCode]);
+    XCTAssertEqualObjects(expectedId, [location getId]);
+
+}
 
 - (void)testParseLocation_MissingKeysWillReturnNullLocation {
     NSDictionary *missingName = [NSDictionary dictionaryWithObjects:
@@ -103,5 +121,19 @@
 - (NSDictionary *)buildLocationDictionary:(Location *)location {
     return [NSDictionary dictionaryWithObjectsAndKeys:[location getName], @"name", [location getAddress], @"address", [location getZipCode], @"zipCode", [location getId],@"_id", nil];
 
+}
+
+- (void)testWillFormatDataForAPI {
+    LocationParser *formatter = [LocationParser singleton] ;
+    [self checkFormattedInformation:formatter expectedName:@"Sushi" expectedAddress:@"351 4th Ave" expectedZipCode:@"11203"];
+    [self checkFormattedInformation:formatter expectedName:@"Malaysian" expectedAddress:@"3671 4th Ave" expectedZipCode:@"11219"];
+}
+
+- (void)checkFormattedInformation:(LocationParser *)formatter expectedName:(NSString *)expectedName expectedAddress:(NSString *)expectedAddress expectedZipCode:(NSString *)expectedZipCode {
+    NSData *actualFormatted = [formatter formatJSONWithName:expectedName withAddress:expectedAddress andZipCode:expectedZipCode];
+    NSDictionary *locationDictionary = [ NSDictionary dictionaryWithObjectsAndKeys:expectedName,  @"name" ,expectedAddress, @"address", expectedZipCode, @"zipCode", nil];
+    NSDictionary *expectedDictionary = [NSDictionary dictionaryWithObjectsAndKeys:locationDictionary, @"location", nil];
+    NSData *expectedData = [NSJSONSerialization dataWithJSONObject:expectedDictionary options:NSJSONWritingPrettyPrinted error:nil];
+    XCTAssertEqualObjects(expectedData, actualFormatted);
 }
 @end

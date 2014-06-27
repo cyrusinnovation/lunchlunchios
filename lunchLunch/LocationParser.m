@@ -30,6 +30,15 @@
     }
 }
 
+- (NSObject <LocationProtocol> *)parseLocationUsingJsonData:(NSData *)locationJSON {
+
+    NSDictionary *locationDictionary = [NSJSONSerialization
+            JSONObjectWithData:locationJSON
+                       options:0
+                         error:nil];
+    return [self parseLocationUsingDictionary:locationDictionary];
+}
+
 - (NSArray *)parseLocationList:(NSData *)locationData {
 
     NSArray *locationDataArray = [NSJSONSerialization
@@ -55,6 +64,13 @@
 - (BOOL)hasKey:(NSDictionary *)dictionary key:(NSString *)key {
 
     return [[dictionary allKeys] containsObject:key];
+}
+
+- (NSData *)formatJSONWithName:(NSString *)name withAddress:(NSString *)address andZipCode:(NSString *)zipCode {
+    NSDictionary * locationDictionary = [NSDictionary dictionaryWithObjectsAndKeys:name, @"name", address, @"address", zipCode, @"zipCode",nil];
+    NSDictionary *dataDictionary = [NSDictionary dictionaryWithObjectsAndKeys:locationDictionary,@"location",nil];
+    
+    return [NSJSONSerialization dataWithJSONObject:dataDictionary options:NSJSONWritingPrettyPrinted error:nil];;
 }
 
 @end
