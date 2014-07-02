@@ -51,6 +51,8 @@
     XCTAssertEqualObjects(@"GET",  [request HTTPMethod]);
     XCTAssertTrue([[request URL] isKindOfClass:[NSURL class]]);
 
+    XCTAssertEqualObjects(@"794a8e8f-9654-40cb-a576-635462307c37",  [[request allHTTPHeaderFields] objectForKey:@"api_key"]);
+
     NSURL *requestURL = [request URL];
     XCTAssertEqual(expectedURL, [requestURL absoluteString]);
 
@@ -71,6 +73,7 @@
     NSURLRequest *request = [connection currentRequest];
     XCTAssertEqualObjects(@"POST",  [request HTTPMethod]);
     XCTAssertEqualObjects(@"application/json",  [[request allHTTPHeaderFields] objectForKey:@"Content-Type"]);
+    XCTAssertEqualObjects(@"794a8e8f-9654-40cb-a576-635462307c37",  [[request allHTTPHeaderFields] objectForKey:@"api_key"]);
     NSString *expectedDataLength = [NSString stringWithFormat:@"%lu", (unsigned long)[data length]];
 
     XCTAssertEqualObjects(expectedDataLength,  [[request allHTTPHeaderFields] objectForKey:@"Content-Length"]);
@@ -95,6 +98,8 @@
     NSURLRequest *request = [connection currentRequest];
     XCTAssertEqualObjects(@"PUT",  [request HTTPMethod]);
     XCTAssertEqualObjects(@"application/json",  [[request allHTTPHeaderFields] objectForKey:@"Content-Type"]);
+    XCTAssertEqualObjects(@"794a8e8f-9654-40cb-a576-635462307c37",  [[request allHTTPHeaderFields] objectForKey:@"api_key"]);
+
     NSString *expectedDataLength = [NSString stringWithFormat:@"%lu", (unsigned long)[data length]];
 
     XCTAssertEqualObjects(expectedDataLength,  [[request allHTTPHeaderFields] objectForKey:@"Content-Length"]);
