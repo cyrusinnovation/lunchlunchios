@@ -5,6 +5,7 @@
 
 #import "LoginProvider.h"
 #import "NullPerson.h"
+#import "Constants.h"
 
 
 @implementation LoginProvider {
@@ -28,8 +29,8 @@
 - (void)findPersonByEmail:(NSString *)email {
     NSDictionary *dictionary = [NSDictionary dictionaryWithObject:email forKey:@"email"];
     NSData *data = [NSJSONSerialization dataWithJSONObject:dictionary options:NSJSONWritingPrettyPrinted error:nil];
-    NSString *loginURL = @"http://localhost:3000/login";
-    [connectionFactory postData:data toURL:loginURL withDelegate:self];
+    NSString *url = [NSString stringWithFormat:@"%@/login", SERVICE_URL];
+    [connectionFactory postData:data toURL:url withDelegate:self];
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {

@@ -5,6 +5,7 @@
 
 #import "LocationWriter.h"
 #import "NullLocation.h"
+#import "Constants.h"
 
 
 @implementation LocationWriter {
@@ -40,7 +41,8 @@
 
 - (void)createLocationWithName:(NSString *)name address:(NSString *)address andZipCode:(NSString *)zipCode {
     NSData *locationData = [locationParser formatJSONWithName:name withAddress:address andZipCode:zipCode];
-    [connectionFactory postData:locationData toURL:@"http://localhost:3000/createLocation" withDelegate:self];
+    NSString *url = [NSString stringWithFormat:@"%@/createLocation", SERVICE_URL];
+    [connectionFactory postData:locationData toURL:url withDelegate:self];
 
 }
 -(void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {

@@ -7,6 +7,7 @@
 #import "ConnectionFactoryProtocol.h"
 #import "LocationParserProtocol.h"
 #import "LunchUpdateHandler.h"
+#import "Constants.h"
 
 
 @implementation LunchUpdater {
@@ -26,7 +27,6 @@
 }
 
 
-
 - (NSObject <ConnectionFactoryProtocol> *)getConnectionFactory {
     return connectionFactory;
 }
@@ -40,13 +40,14 @@
     NSDictionary *locationDictionary = [self buildLocationDictionary:location];
     NSDictionary *lunchDictionary = [NSDictionary dictionaryWithObject:[lunch getId] forKey:@"_id"];
     NSDictionary *dataDictionary = [NSDictionary dictionaryWithObjectsAndKeys:lunchDictionary, @"lunch",
-                    locationDictionary, @"location",nil];
+                                                                              locationDictionary, @"location", nil];
     NSData *putData = [NSJSONSerialization dataWithJSONObject:dataDictionary options:NSJSONWritingPrettyPrinted error:nil];
-    [connectionFactory putData:putData toURL:@"http://localhost:3000/setlunchlocation" withDelegate:self];
+    NSString *url = [NSString stringWithFormat:@"%@/setlunchlocation", SERVICE_URL];
+    [connectionFactory putData:putData toURL:url withDelegate:self];
 }
 
-- (NSDictionary *)buildLocationDictionary:(NSObject<LocationProtocol> *)location {
-    return [NSDictionary dictionaryWithObjectsAndKeys:[location getName], @"name", [location getAddress], @"address", [location getZipCode], @"zipCode", [location getId],@"_id", nil];
+- (NSDictionary *)buildLocationDictionary:(NSObject <LocationProtocol> *)location {
+    return [NSDictionary dictionaryWithObjectsAndKeys:[location getName], @"name", [location getAddress], @"address", [location getZipCode], @"zipCode", [location getId], @"_id", nil];
 
 }
 

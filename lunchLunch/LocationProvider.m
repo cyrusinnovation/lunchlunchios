@@ -4,6 +4,7 @@
 //
 
 #import "LocationProvider.h"
+#import "Constants.h"
 
 
 @implementation LocationProvider {
@@ -25,7 +26,8 @@
     return self;
 }
 - (void)getAllLocations {
-    [connectionFactory buildAsynchronousGetRequestForURL:@"http://localhost:3000/locations" andDelegate:self];
+    NSString *url = [NSString stringWithFormat:@"%@/locations", SERVICE_URL];
+    [connectionFactory buildAsynchronousGetRequestForURL:url andDelegate:self];
 }
 
 - (NSObject <ConnectionFactoryProtocol> *)getConnectionFactory {

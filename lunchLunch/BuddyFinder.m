@@ -5,6 +5,7 @@
 
 #import "BuddyFinder.h"
 #import "NullPerson.h"
+#import "Constants.h"
 
 
 @implementation BuddyFinder {
@@ -15,7 +16,8 @@
 }
 - (void)findBuddyFor:(NSObject <PersonProtocol> *)person {
     NSData *personData = [parser buildPersonJSONData:person];
-    NSString *url = @"http://localhost:3000/findBuddy";
+    NSString *url = [NSString stringWithFormat:@"%@/findBuddy", SERVICE_URL];
+
     [connectionFactory postData:personData toURL:url withDelegate:self];
 }
 

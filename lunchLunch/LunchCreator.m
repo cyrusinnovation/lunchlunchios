@@ -5,6 +5,7 @@
 
 #import "LunchCreator.h"
 #import "LunchCreationHandler.h"
+#import "Constants.h"
 
 
 @implementation LunchCreator {
@@ -28,7 +29,8 @@
 
 - (void)createLunch:(NSObject <LunchProtocol> *)lunch {
     NSData *lunchData = [lunchParser buildLunchJSONData:lunch];
-    [connectionFactory postData:lunchData toURL:@"http://localhost:3000/createLunch" withDelegate:self];
+    NSString *url = [NSString stringWithFormat:@"%@/createLunch", SERVICE_URL];
+    [connectionFactory postData:lunchData toURL:url withDelegate:self];
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {

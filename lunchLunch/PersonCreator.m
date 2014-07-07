@@ -5,6 +5,7 @@
 
 #import "PersonCreator.h"
 #import "NullPerson.h"
+#import "Constants.h"
 
 
 @interface PersonCreator ()
@@ -14,14 +15,13 @@
 @end
 
 @implementation PersonCreator {
-
-
     NSMutableData *connectionData;
 }
 
 - (void)createPersonWithFirstName:(NSString *)firstName lastName:(NSString *)lastName andEmail:(NSString *)email {
     NSData *data = [self.parser buildPersonJSONWithFirstName:firstName lastName:lastName emailAddress:email];
-    [self.factory postData:data toURL:@"http://localhost:3000/createPerson" withDelegate:self];
+    NSString *url = [NSString stringWithFormat:@"%@/createPerson", SERVICE_URL];
+    [self.factory postData:data toURL:url withDelegate:self];
 }
 
 - (id)initWithConnectionFactory:(NSObject <ConnectionFactoryProtocol> *)factory

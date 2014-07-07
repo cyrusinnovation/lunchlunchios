@@ -8,6 +8,7 @@
 #import "LunchParserProtocol.h"
 #import "PersonParserProtocol.h"
 #import "LunchReceiverProtocol.h"
+#import "Constants.h"
 
 
 @implementation LunchProvider {
@@ -34,7 +35,7 @@
 
 - (void)findLunchesFor:(NSObject <PersonProtocol> *)person {
     NSData *personData = [personParser buildPersonJSONData:person];
-    NSString *url = @"http://localhost:3000/getLunches";
+    NSString *url = [NSString stringWithFormat:@"%@/getLunches", SERVICE_URL];
     [connectionFactory postData:personData toURL:url withDelegate:self];
 
 }
