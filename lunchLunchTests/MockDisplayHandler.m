@@ -26,5 +26,9 @@
 -(NSString *) getErrorMessageShown{
     return errorMessageShown;
 }
+-(void) reset{
+    errorMessageShown = nil;
+    showCommunicationErrorCalled = false;
+}
 
 @end

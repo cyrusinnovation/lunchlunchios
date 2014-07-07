@@ -10,9 +10,12 @@
 @implementation MockPersonParser {
     NSData *personDataPassedIn;
     NSObject <PersonProtocol> *personToReturn;
-    NSObject <PersonProtocol> *personToStringfy;
+    NSObject <PersonProtocol> *personToJsonify;
     NSData *personJSONToReturn;
 
+    NSString *firstNameForBuild;
+    NSString *lastNameForBuild;
+    NSString *emailForBuild;
 }
 
 
@@ -25,22 +28,41 @@
     return nil;
 }
 
-- (NSData *)buildPersonJSONString:(NSObject <PersonProtocol> *)person {
-    personToStringfy = person;
+- (NSData *)buildPersonJSONData:(NSObject <PersonProtocol> *)person {
+    personToJsonify = person;
 
     return personJSONToReturn;
 }
 
-- (void) setPersonJSONToReturn:(NSData*) string{
+- (NSData *)buildPersonJSONWithFirstName:(NSString *)firstName lastName:(NSString *)lastName emailAddress:(NSString *)email {
+    firstNameForBuild = firstName;
+    lastNameForBuild = lastName;
+    emailForBuild = email;
+    return personJSONToReturn;
+}
+-(NSString *)getFirstNameForBuild{
+    return firstNameForBuild;
+}
+-(NSString *)getLastNameForBuild{
+    return lastNameForBuild;
+}
+-(NSString *)getEmailForBuild{
+    return emailForBuild;
+}
+
+
+- (void)setPersonJSONToReturn:(NSData *)string {
     personJSONToReturn = string;
 }
 
 - (void)setPersonToReturn:(NSObject <PersonProtocol> *)person {
     personToReturn = person;
 }
--(NSObject<PersonProtocol> * ) getPersonToStringify{
-    return personToStringfy;
+
+- (NSObject <PersonProtocol> *)getPersonToJSONify {
+    return personToJsonify;
 }
+
 - (NSData *)getPersonDataPassedIn {
     return personDataPassedIn;
 }

@@ -50,7 +50,7 @@
     [personParser setPersonJSONToReturn:expectedJSON];
     [provider findLunchesFor:person];
 
-    XCTAssertEqualObjects(person, [personParser getPersonToStringify]);
+    XCTAssertEqualObjects(person, [personParser getPersonToJSONify]);
 
     NSString *expectedURL = @"http://localhost:3000/getLunches";
 

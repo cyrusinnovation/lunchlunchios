@@ -14,7 +14,7 @@
     NSMutableData *connectionData;
 }
 - (void)findBuddyFor:(NSObject <PersonProtocol> *)person {
-    NSData *personData = [parser buildPersonJSONString:person];
+    NSData *personData = [parser buildPersonJSONData:person];
     NSString *url = @"http://localhost:3000/findBuddy";
     [connectionFactory postData:personData toURL:url withDelegate:self];
 }

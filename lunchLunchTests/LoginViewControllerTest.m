@@ -147,4 +147,17 @@
     XCTAssertEqual(personFound, destinationViewController.personLoggedIn);
 
 }
+
+- (void)testCreateNewAccountWillFireSegueCommandWithCreatePerson {
+
+    XCTAssertNil([CommandDispatcherTestHelper getLastCommandExecuted]);
+
+    [self.viewController createNewAccount:nil];
+    XCTAssertTrue([[CommandDispatcherTestHelper getLastCommandExecuted] isKindOfClass:[SegueCommand class]]);
+    SegueCommand *command = (SegueCommand *) [CommandDispatcherTestHelper getLastCommandExecuted];
+    XCTAssertEqualObjects(@"createPerson", [command getSegueIdentifier]);
+    XCTAssertEqualObjects(self.viewController, [command getViewController]);
+
+}
+
 @end

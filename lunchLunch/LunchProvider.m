@@ -33,7 +33,7 @@
 
 
 - (void)findLunchesFor:(NSObject <PersonProtocol> *)person {
-    NSData *personData = [personParser buildPersonJSONString:person];
+    NSData *personData = [personParser buildPersonJSONData:person];
     NSString *url = @"http://localhost:3000/getLunches";
     [connectionFactory postData:personData toURL:url withDelegate:self];
 

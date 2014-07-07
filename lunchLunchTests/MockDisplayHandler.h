@@ -11,4 +11,6 @@
 - (bool)wasShowCommunicationErrorCalled;
 
 - (NSString *)getErrorMessageShown;
+
+- (void)reset;
 @end

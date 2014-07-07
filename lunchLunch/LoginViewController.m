@@ -34,6 +34,10 @@
     [super viewDidLoad];
 
 }
+- (IBAction)createNewAccount:(id)sender {
+    SegueCommand *segueCommand = [[SegueCommand alloc] initForViewController:self segueIdentifier:@"createPerson"];
+    [[CommandDispatcher singleton] executeCommand:segueCommand];
+}
 
 
 - (void)didReceiveMemoryWarning {

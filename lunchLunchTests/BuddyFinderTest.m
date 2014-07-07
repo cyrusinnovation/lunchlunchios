@@ -50,7 +50,7 @@
 
     [finder findBuddyFor:person];
 
-    XCTAssertEqualObjects(person, [parser getPersonToStringify]);
+    XCTAssertEqualObjects(person, [parser getPersonToJSONify]);
 
     NSString *expectedURL = @"http://localhost:3000/findBuddy";
 

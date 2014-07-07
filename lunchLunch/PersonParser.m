@@ -45,15 +45,24 @@
 }
 
 
-- (NSData *)buildPersonJSONString:(NSObject <PersonProtocol> *)person {
+- (NSData *)buildPersonJSONData:(NSObject <PersonProtocol> *)person {
     NSError *error;
     NSDictionary *personDictionary = [NSDictionary dictionaryWithObjectsAndKeys:[person getFirstName], @"firstName",
                                                                                 [person getLastName], @"lastName",
                                                                                 [person getEmailAddress], @"email",
                                                                                 [person getId], @"_id", nil];
 
-    NSData *personData = [NSJSONSerialization dataWithJSONObject:[NSDictionary dictionaryWithObject:personDictionary forKey:@"person"]options:0 error:&error];
+    NSData *personData = [NSJSONSerialization dataWithJSONObject:[NSDictionary dictionaryWithObject:personDictionary forKey:@"person"] options:0 error:&error];
 
+    return personData;
+}
+
+- (NSData *)buildPersonJSONWithFirstName:(NSString *)firstName lastName:(NSString *)lastName emailAddress:(NSString *)email {
+    NSDictionary *personDictionary = [NSDictionary dictionaryWithObjectsAndKeys:firstName, @"firstName",
+                                                                                lastName, @"lastName",
+                                                                                email, @"email",
+                                                                                nil];
+    NSData *personData = [NSJSONSerialization dataWithJSONObject:[NSDictionary dictionaryWithObject:personDictionary forKey:@"person"] options:0 error:nil];
     return personData;
 }
 

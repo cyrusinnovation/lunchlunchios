@@ -8,16 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		3E8E200972B979F42E7B751E /* LunchUpdaterFactoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2104DB1E435EBC07D0B0 /* LunchUpdaterFactoryTest.m */; };
+		3E8E201376307D0984CB6186 /* PersonCreatorTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2F742225EC52B6A84BDB /* PersonCreatorTest.m */; };
 		3E8E20489BF5E94727936C8E /* LunchUpdaterFactoryTestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E246F97F07EAA64DDBF64 /* LunchUpdaterFactoryTestHelper.m */; };
 		3E8E2056127C2168F138AA10 /* MockLunchParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2BB33C2C04F49138065B /* MockLunchParser.m */; };
+		3E8E205E9E6E4CF5D1B479E8 /* CreatePersonSubControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E23BD2BF5B7CC4570DD14 /* CreatePersonSubControllerTest.m */; };
 		3E8E206FF629A7ABA32B1771 /* DisplayHandlerFactoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2ED1295EF9A5D178491B /* DisplayHandlerFactoryTest.m */; };
 		3E8E20AB71577074204E2521 /* MockLocationReceiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2C5D183413C403E80AD8 /* MockLocationReceiver.m */; };
 		3E8E20AE1C0FDD6BBECF602D /* DirectionsProviderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E219C44623ED57110D9E2 /* DirectionsProviderTest.m */; };
 		3E8E20BC9C786939ECBBDB5C /* ShowMapCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2360E14CABEEA4325A18 /* ShowMapCommand.m */; };
 		3E8E20F84C1C38927ECF793A /* LoginProviderFactoryTestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E207EAD14EAE1FDB8F863 /* LoginProviderFactoryTestHelper.m */; };
 		3E8E212B5BE52C31FFC7A417 /* BuddyDetailViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2522D825A4BCA1697A4F /* BuddyDetailViewControllerTest.m */; };
+		3E8E214A0616E819EB26231B /* CreatePersonViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E21C4DAA9D1911F990EAE /* CreatePersonViewControllerTest.m */; };
 		3E8E2154CF059B455A55E241 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E257B361FA961D89184FF /* DetailViewController.m */; };
 		3E8E21D877A33D680856F446 /* LoginProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2365810921E686D12D18 /* LoginProvider.m */; };
+		3E8E21E5BD6EAED08CA74BBB /* PersonCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2802729DA37EDEA04493 /* PersonCreator.m */; };
 		3E8E21F57B145933D3FB034D /* NullPersonTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E29B9E4FB351A62D94D18 /* NullPersonTest.m */; };
 		3E8E2216E205D30FD950498C /* MainViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2AFE2CF2B37C8C99A202 /* MainViewControllerTest.m */; };
 		3E8E2254A8C9641E5D24F32A /* LoginProviderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2F772319A697B08ADF15 /* LoginProviderTest.m */; };
@@ -25,6 +29,7 @@
 		3E8E226D99359B0CB5B51C8C /* AlertBuilderTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2A0B6B4069701B11FD91 /* AlertBuilderTest.m */; };
 		3E8E22B27B335E6C61B99A22 /* DirectionsProviderFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2AAE292EEE39950059EB /* DirectionsProviderFactory.m */; };
 		3E8E22C84AFC6CC9FD63A27F /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2DF80DF05B7B237C8556 /* Person.m */; };
+		3E8E22D4960326C0391E153B /* MockPersonCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E29624BDCD7CD050C0AF1 /* MockPersonCreator.m */; };
 		3E8E22EF5811032FCCB16EE5 /* BuddyFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2315EA311CD0F3CDC3D8 /* BuddyFinder.m */; };
 		3E8E22F16AD4BE522B24EFE2 /* MockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2DC0553BD411332F64CE /* MockViewController.m */; };
 		3E8E23123A8EAB3FAD92147F /* LunchParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E297D26CB2C923F2E8CC1 /* LunchParser.m */; };
@@ -62,6 +67,7 @@
 		3E8E26A860642C1AD706D3FC /* LocationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2EA355A05470DC505AC9 /* LocationTest.m */; };
 		3E8E26DD69261E26515BA797 /* LunchUpdaterFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E26B16B875440CC5DCFA5 /* LunchUpdaterFactory.m */; };
 		3E8E26FA78BD5B087FF308ED /* LoginProviderFactoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E28770A05904544239917 /* LoginProviderFactoryTest.m */; };
+		3E8E2722D2FD941C93F90CC5 /* PersonCreatorFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2985B7373C9671F575A3 /* PersonCreatorFactory.m */; };
 		3E8E2738E2E4F554EC51A5F8 /* AnimationTestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E21FB20C583DADEAD1F75 /* AnimationTestHelper.m */; };
 		3E8E2776AC1D6C26BA3720D8 /* MockCLLocationManagerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E27EA0089FA2F15351842 /* MockCLLocationManagerDelegate.m */; };
 		3E8E27961138BB0E0D7D31BC /* AlertBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2200A86CC49F725CA49D /* AlertBuilder.m */; };
@@ -85,6 +91,7 @@
 		3E8E299FC071B5AA6C528B7B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E8E231B14950F8E1308D985 /* Images.xcassets */; };
 		3E8E29BCCC540C9537DC0A74 /* MockPersonReceiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E289EFEFB4B32651B32C8 /* MockPersonReceiver.m */; };
 		3E8E29C468A236C31F396081 /* LunchProviderFactoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2B7908EE2C8F9287E15C /* LunchProviderFactoryTest.m */; };
+		3E8E29EFD9D39D981927E8A1 /* CreatePersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E23F2FED49F29C27341D1 /* CreatePersonViewController.m */; };
 		3E8E2A0C0807A347C0C731BA /* LocationDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2AFDBF8B48EFAB897F06 /* LocationDetailTableViewController.m */; };
 		3E8E2A0C14213DA9CC3A751B /* LocationProviderFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E22B4A0C976722FDDD715 /* LocationProviderFactory.m */; };
 		3E8E2A0E2D5CF5ED43911793 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3E8E20D8702A8B20CF54307B /* InfoPlist.strings */; };
@@ -112,6 +119,7 @@
 		3E8E2C74737EFEE88D29B6FC /* LunchParserTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E20FBF3086DBDD02AF082 /* LunchParserTest.m */; };
 		3E8E2C7DC5824260FDCFDA2D /* BuddyFinderFactoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2991513CE249657C9ABB /* BuddyFinderFactoryTest.m */; };
 		3E8E2C9F9ADFB45F9B51384F /* DirectionProviderFactoryTestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2A2A807C284AD7A4DCD6 /* DirectionProviderFactoryTestHelper.m */; };
+		3E8E2CA92A9B7065C7F13255 /* PersonCreatorFactoryTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E29E92BCE630CE8BFED9F /* PersonCreatorFactoryTest.m */; };
 		3E8E2CB07088E623C8C6186D /* MockLocationProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E22733D973F058766EF50 /* MockLocationProvider.m */; };
 		3E8E2CC30B5DDB24C5880773 /* LocationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E24F86A2C8D884676A181 /* LocationDetailViewController.m */; };
 		3E8E2CCB36339CE7B3DF9C12 /* SegueCommandTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E27D673C049589AB1B953 /* SegueCommandTest.m */; };
@@ -131,10 +139,12 @@
 		3E8E2EC4FC8A383F25C8C414 /* MockPersonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E23DB1BB2E94B96625F71 /* MockPersonParser.m */; };
 		3E8E2EDF8A0FECC8705C16AB /* MockLunchCreationHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2AF15C123624582314DE /* MockLunchCreationHandler.m */; };
 		3E8E2EE841F4E08A2587D57A /* LoginViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2ED869C8C74BE73E6378 /* LoginViewControllerTest.m */; };
+		3E8E2EF8A35D105D36742768 /* CreatePersonSubController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2841B7674372A17E363F /* CreatePersonSubController.m */; };
 		3E8E2F2DBDADA1EC63C8B7CC /* CommandDispatcherTestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2A469E706BD46BC57EBA /* CommandDispatcherTestHelper.m */; };
 		3E8E2F347AF19A91F0D2A022 /* NullLocationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E22567D55942DB29989FC /* NullLocationTest.m */; };
 		3E8E2F455DE1FC2F31F9A4FE /* MockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2400BE2ECB069402E436 /* MockView.m */; };
 		3E8E2F94196C8FBD38A844BE /* LunchCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2C4BDDCB9877AED52CFA /* LunchCreator.m */; };
+		3E8E2FA4A7262A8C971B2973 /* PersonCreatorFactoryTestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E2A4D1CABBE1E2254E898 /* PersonCreatorFactoryTestHelper.m */; };
 		3E8E2FF1C34FF55CB9AB65C3 /* NullLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E20CC7102A49D753C42D7 /* NullLocation.m */; };
 		6E117143192FC31500F8FCBA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E117142192FC31500F8FCBA /* AVFoundation.framework */; };
 		6E117145192FC31A00F8FCBA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E117144192FC31A00F8FCBA /* CoreData.framework */; };
@@ -203,6 +213,7 @@
 		3E8E20E29862AB5DD8E54AF7 /* PersonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonParser.h; sourceTree = "<group>"; };
 		3E8E20ED8DCFBB626C11C340 /* LunchCreatorFactoryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LunchCreatorFactoryTest.m; sourceTree = "<group>"; };
 		3E8E20F2D595C6BAE86EB13B /* CreateLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateLocationViewController.h; sourceTree = "<group>"; };
+		3E8E20F581124916C9B1E9E0 /* MockPersonCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockPersonCreator.h; sourceTree = "<group>"; };
 		3E8E20FBF3086DBDD02AF082 /* LunchParserTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LunchParserTest.m; sourceTree = "<group>"; };
 		3E8E2104DB1E435EBC07D0B0 /* LunchUpdaterFactoryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LunchUpdaterFactoryTest.m; sourceTree = "<group>"; };
 		3E8E2138E11DD27AB6B59EAB /* LunchUpdaterFactoryTestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LunchUpdaterFactoryTestHelper.h; sourceTree = "<group>"; };
@@ -213,6 +224,8 @@
 		3E8E218CB738835F493EF8E1 /* DirectionsProviderFactoryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectionsProviderFactoryTest.m; sourceTree = "<group>"; };
 		3E8E219619F52A2612AD9F87 /* NullPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NullPerson.m; sourceTree = "<group>"; };
 		3E8E219C44623ED57110D9E2 /* DirectionsProviderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectionsProviderTest.m; sourceTree = "<group>"; };
+		3E8E21C4DAA9D1911F990EAE /* CreatePersonViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatePersonViewControllerTest.m; sourceTree = "<group>"; };
+		3E8E21FB014FF76A37513704 /* PersonCreatorFactoryTestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonCreatorFactoryTestHelper.h; sourceTree = "<group>"; };
 		3E8E21FB20C583DADEAD1F75 /* AnimationTestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationTestHelper.m; sourceTree = "<group>"; };
 		3E8E21FB3D74984FF6FCE9DC /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		3E8E2200A86CC49F725CA49D /* AlertBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertBuilder.m; sourceTree = "<group>"; };
@@ -241,10 +254,12 @@
 		3E8E238061E0468A727FE133 /* MockLunchCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockLunchCreator.m; sourceTree = "<group>"; };
 		3E8E238FDA80682C5B2823EF /* DirectionsProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectionsProvider.h; sourceTree = "<group>"; };
 		3E8E23A47010CD732EF5E905 /* LocationWriterFactoryTestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationWriterFactoryTestHelper.h; sourceTree = "<group>"; };
+		3E8E23BD2BF5B7CC4570DD14 /* CreatePersonSubControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatePersonSubControllerTest.m; sourceTree = "<group>"; };
 		3E8E23C464BC95445F470391 /* ShowMapCommandTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowMapCommandTest.m; sourceTree = "<group>"; };
 		3E8E23CB9CA15C5F5A25048C /* LocationWriterFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationWriterFactory.h; sourceTree = "<group>"; };
 		3E8E23D1C488FDF9E93375C2 /* LoginProviderFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginProviderFactory.h; sourceTree = "<group>"; };
 		3E8E23DB1BB2E94B96625F71 /* MockPersonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockPersonParser.m; sourceTree = "<group>"; };
+		3E8E23F2FED49F29C27341D1 /* CreatePersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatePersonViewController.m; sourceTree = "<group>"; };
 		3E8E2400BE2ECB069402E436 /* MockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockView.m; sourceTree = "<group>"; };
 		3E8E2401A952947B7BD63481 /* MockDisplayHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockDisplayHandler.m; sourceTree = "<group>"; };
 		3E8E24126DA005013B1A9513 /* SwizzleHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwizzleHelper.m; sourceTree = "<group>"; };
@@ -300,13 +315,17 @@
 		3E8E27ABF7D45F0B9F5B08D1 /* MockLocationWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockLocationWriter.h; sourceTree = "<group>"; };
 		3E8E27AE9E9C792CC39C08AB /* ConnectionFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionFactory.h; sourceTree = "<group>"; };
 		3E8E27D673C049589AB1B953 /* SegueCommandTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegueCommandTest.m; sourceTree = "<group>"; };
+		3E8E27DADB96927629D32A64 /* CreatePersonSubController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatePersonSubController.h; sourceTree = "<group>"; };
 		3E8E27EA0089FA2F15351842 /* MockCLLocationManagerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockCLLocationManagerDelegate.m; sourceTree = "<group>"; };
 		3E8E27F9023D6F9D52C4AAE4 /* MockCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockCommand.h; sourceTree = "<group>"; };
+		3E8E2802729DA37EDEA04493 /* PersonCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonCreator.m; sourceTree = "<group>"; };
 		3E8E28029AA93034DFB9D65A /* ConnectionFactoryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionFactoryTest.m; sourceTree = "<group>"; };
 		3E8E2819494CB7085DE6BD83 /* MockLunchCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockLunchCreator.h; sourceTree = "<group>"; };
 		3E8E282348D8EF26D0BEAD7B /* LunchProviderFactoryTestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LunchProviderFactoryTestHelper.h; sourceTree = "<group>"; };
+		3E8E2825561B9F7D4EB6CF5B /* PersonCreatorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonCreatorProtocol.h; sourceTree = "<group>"; };
 		3E8E283C4D4FE46432D9CCF6 /* MockCLLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockCLLocationManager.m; sourceTree = "<group>"; };
 		3E8E28403264A9135E428637 /* MockLocationWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockLocationWriter.m; sourceTree = "<group>"; };
+		3E8E2841B7674372A17E363F /* CreatePersonSubController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatePersonSubController.m; sourceTree = "<group>"; };
 		3E8E285279A3D7897A9A458F /* LocationDetailViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationDetailViewControllerTest.m; sourceTree = "<group>"; };
 		3E8E286DF9BABAB9A82C7A56 /* LunchCreatorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LunchCreatorProtocol.h; sourceTree = "<group>"; };
 		3E8E2871C20D79B1752DAE82 /* LocationParserTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationParserTest.m; sourceTree = "<group>"; };
@@ -319,14 +338,18 @@
 		3E8E28A9CAF93F4A9AB13460 /* LoginProviderFactoryTestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginProviderFactoryTestHelper.h; sourceTree = "<group>"; };
 		3E8E28ADFB1BEC341E8FD727 /* CommandDispatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommandDispatcher.m; sourceTree = "<group>"; };
 		3E8E28CB1C0F365E005A1285 /* DirectionProviderFactoryTestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DirectionProviderFactoryTestHelper.h; sourceTree = "<group>"; };
+		3E8E28E923942F2AC520729A /* PersonCreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonCreator.h; sourceTree = "<group>"; };
 		3E8E28EE12EAE3C5DF5F2FB6 /* LunchReceiverProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LunchReceiverProtocol.h; sourceTree = "<group>"; };
 		3E8E28F1DF066D83A1A7266F /* LocationWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationWriter.m; sourceTree = "<group>"; };
 		3E8E291FBF74BF9E801BE287 /* LunchUpdater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LunchUpdater.h; sourceTree = "<group>"; };
+		3E8E291FCE11EC2D9CA8B4B6 /* PersonCreatorFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonCreatorFactory.h; sourceTree = "<group>"; };
 		3E8E2930C516F5681A305EAB /* LocationProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationProvider.m; sourceTree = "<group>"; };
 		3E8E295BEE86FDB7B86828B2 /* en */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3E8E29624BDCD7CD050C0AF1 /* MockPersonCreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockPersonCreator.m; sourceTree = "<group>"; };
 		3E8E29712CECFE8FA49870FB /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		3E8E297D26CB2C923F2E8CC1 /* LunchParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LunchParser.m; sourceTree = "<group>"; };
 		3E8E2983B5EF1D1D0721C85C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3E8E2985B7373C9671F575A3 /* PersonCreatorFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonCreatorFactory.m; sourceTree = "<group>"; };
 		3E8E2991513CE249657C9ABB /* BuddyFinderFactoryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuddyFinderFactoryTest.m; sourceTree = "<group>"; };
 		3E8E2998B532959AC75E9799 /* MockNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockNavigationController.m; sourceTree = "<group>"; };
 		3E8E29A99B26F3F695B219B0 /* UIApplicationTestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIApplicationTestHelper.h; sourceTree = "<group>"; };
@@ -337,6 +360,7 @@
 		3E8E29C4BB91D95E23C39BF4 /* LunchCreationHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LunchCreationHandler.h; sourceTree = "<group>"; };
 		3E8E29D4F1D030B562D660F6 /* LunchProviderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LunchProviderTest.m; sourceTree = "<group>"; };
 		3E8E29DA84E8EDE65C646C7D /* DisplayHandlerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayHandlerTest.m; sourceTree = "<group>"; };
+		3E8E29E92BCE630CE8BFED9F /* PersonCreatorFactoryTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonCreatorFactoryTest.m; sourceTree = "<group>"; };
 		3E8E2A0B6B4069701B11FD91 /* AlertBuilderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertBuilderTest.m; sourceTree = "<group>"; };
 		3E8E2A12D4605DC573791122 /* MockLunchProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockLunchProvider.m; sourceTree = "<group>"; };
 		3E8E2A2A807C284AD7A4DCD6 /* DirectionProviderFactoryTestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DirectionProviderFactoryTestHelper.m; sourceTree = "<group>"; };
@@ -344,6 +368,7 @@
 		3E8E2A35ADBE08953179D095 /* LunchUpdateHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LunchUpdateHandler.h; sourceTree = "<group>"; };
 		3E8E2A43DB6D7BC9086DAC71 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryBoard.storyboard; sourceTree = "<group>"; };
 		3E8E2A469E706BD46BC57EBA /* CommandDispatcherTestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommandDispatcherTestHelper.m; sourceTree = "<group>"; };
+		3E8E2A4D1CABBE1E2254E898 /* PersonCreatorFactoryTestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonCreatorFactoryTestHelper.m; sourceTree = "<group>"; };
 		3E8E2A6F52077C5484713484 /* MockDirectionsProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockDirectionsProvider.m; sourceTree = "<group>"; };
 		3E8E2A71CD9B3231C8207820 /* MockBuddyFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockBuddyFinder.h; sourceTree = "<group>"; };
 		3E8E2A9C475FDE0656529C56 /* LunchProviderFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LunchProviderFactory.h; sourceTree = "<group>"; };
@@ -408,6 +433,7 @@
 		3E8E2E2286FF26766C563C5D /* MockLocationCreationHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockLocationCreationHandler.h; sourceTree = "<group>"; };
 		3E8E2E3B108D1692EB7DA824 /* BuddyFinderFactoryTestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuddyFinderFactoryTestHelper.m; sourceTree = "<group>"; };
 		3E8E2E4A623AEE408A6B03C3 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		3E8E2E623A7A0C2111811488 /* CreatePersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatePersonViewController.h; sourceTree = "<group>"; };
 		3E8E2E6DDD436A25D1756F34 /* LocationReceiverProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationReceiverProtocol.h; sourceTree = "<group>"; };
 		3E8E2E74A21CD68EADE9AF00 /* MockConnectionFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockConnectionFactory.m; sourceTree = "<group>"; };
 		3E8E2EA355A05470DC505AC9 /* LocationTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationTest.m; sourceTree = "<group>"; };
@@ -417,6 +443,7 @@
 		3E8E2EF8AB9716B92058605C /* ShowMapCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowMapCommand.h; sourceTree = "<group>"; };
 		3E8E2F1F605AB82C161009CA /* SegueCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegueCommand.m; sourceTree = "<group>"; };
 		3E8E2F224CC7DB8BBC2A5CB4 /* LoginProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginProvider.h; sourceTree = "<group>"; };
+		3E8E2F742225EC52B6A84BDB /* PersonCreatorTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonCreatorTest.m; sourceTree = "<group>"; };
 		3E8E2F772319A697B08ADF15 /* LoginProviderTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginProviderTest.m; sourceTree = "<group>"; };
 		3E8E2F7CB6720C107D9A04E7 /* PersonProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonProtocol.h; sourceTree = "<group>"; };
 		3E8E2F8DB4675226A4B83D6E /* LocationProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationProvider.h; sourceTree = "<group>"; };
@@ -664,6 +691,10 @@
 			children = (
 				3E8E20B3B5C68DDD476E554E /* LoginViewController.m */,
 				3E8E2CDA576EC3389C6C7A49 /* LoginViewController.h */,
+				3E8E23F2FED49F29C27341D1 /* CreatePersonViewController.m */,
+				3E8E2E623A7A0C2111811488 /* CreatePersonViewController.h */,
+				3E8E2841B7674372A17E363F /* CreatePersonSubController.m */,
+				3E8E27DADB96927629D32A64 /* CreatePersonSubController.h */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -730,6 +761,18 @@
 				3E8E2B9A25D51CCE22519BC2 /* WebServiceCommunication */,
 			);
 			path = lunchLunch;
+			sourceTree = "<group>";
+		};
+		3E8E2597F03F04F76084B83D /* Creator */ = {
+			isa = PBXGroup;
+			children = (
+				3E8E2825561B9F7D4EB6CF5B /* PersonCreatorProtocol.h */,
+				3E8E2802729DA37EDEA04493 /* PersonCreator.m */,
+				3E8E28E923942F2AC520729A /* PersonCreator.h */,
+				3E8E2985B7373C9671F575A3 /* PersonCreatorFactory.m */,
+				3E8E291FCE11EC2D9CA8B4B6 /* PersonCreatorFactory.h */,
+			);
+			name = Creator;
 			sourceTree = "<group>";
 		};
 		3E8E25D0F2249463F6700324 /* Creator */ = {
@@ -817,6 +860,7 @@
 				3E8E2037C04EDB80DB72A674 /* Login */,
 				3E8E2F5B6429989371F6D372 /* FindBuddy */,
 				3E8E2C0E3A2DDABFF79E15B7 /* PersonParserTest.m */,
+				3E8E2AF3929234A527543617 /* Creator */,
 			);
 			name = Person;
 			sourceTree = "<group>";
@@ -911,8 +955,22 @@
 				3E8E20E29862AB5DD8E54AF7 /* PersonParser.h */,
 				3E8E201AFDABC535B6D3B71C /* Login */,
 				3E8E209B1C607EDD787E75ED /* FindBuddy */,
+				3E8E2597F03F04F76084B83D /* Creator */,
 			);
 			name = Person;
+			sourceTree = "<group>";
+		};
+		3E8E2AF3929234A527543617 /* Creator */ = {
+			isa = PBXGroup;
+			children = (
+				3E8E2F742225EC52B6A84BDB /* PersonCreatorTest.m */,
+				3E8E29E92BCE630CE8BFED9F /* PersonCreatorFactoryTest.m */,
+				3E8E2A4D1CABBE1E2254E898 /* PersonCreatorFactoryTestHelper.m */,
+				3E8E21FB014FF76A37513704 /* PersonCreatorFactoryTestHelper.h */,
+				3E8E29624BDCD7CD050C0AF1 /* MockPersonCreator.m */,
+				3E8E20F581124916C9B1E9E0 /* MockPersonCreator.h */,
+			);
+			name = Creator;
 			sourceTree = "<group>";
 		};
 		3E8E2B9A25D51CCE22519BC2 /* WebServiceCommunication */ = {
@@ -993,6 +1051,8 @@
 			isa = PBXGroup;
 			children = (
 				3E8E2ED869C8C74BE73E6378 /* LoginViewControllerTest.m */,
+				3E8E21C4DAA9D1911F990EAE /* CreatePersonViewControllerTest.m */,
+				3E8E23BD2BF5B7CC4570DD14 /* CreatePersonSubControllerTest.m */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -1316,6 +1376,10 @@
 				3E8E2386E60A1DAE411D7A4D /* CreateLocationSubController.m in Sources */,
 				3E8E2D0BE28103A101849B9D /* LocationWriter.m in Sources */,
 				3E8E2B42759D7D5F90A1F6DB /* LocationWriterFactory.m in Sources */,
+				3E8E21E5BD6EAED08CA74BBB /* PersonCreator.m in Sources */,
+				3E8E29EFD9D39D981927E8A1 /* CreatePersonViewController.m in Sources */,
+				3E8E2EF8A35D105D36742768 /* CreatePersonSubController.m in Sources */,
+				3E8E2722D2FD941C93F90CC5 /* PersonCreatorFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1407,6 +1471,12 @@
 				3E8E252AB905FEDCCD6368DD /* LocationWriterFactoryTest.m in Sources */,
 				3E8E295D6DF4CD2CFB8EB81A /* LocationWriterFactoryTestHelper.m in Sources */,
 				3E8E2C625D4C50FC957A498D /* MockLocationWriter.m in Sources */,
+				3E8E201376307D0984CB6186 /* PersonCreatorTest.m in Sources */,
+				3E8E214A0616E819EB26231B /* CreatePersonViewControllerTest.m in Sources */,
+				3E8E205E9E6E4CF5D1B479E8 /* CreatePersonSubControllerTest.m in Sources */,
+				3E8E2CA92A9B7065C7F13255 /* PersonCreatorFactoryTest.m in Sources */,
+				3E8E2FA4A7262A8C971B2973 /* PersonCreatorFactoryTestHelper.m in Sources */,
+				3E8E22D4960326C0391E153B /* MockPersonCreator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1567,6 +1637,12 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/lunchLunch.app/lunchLunch";
 				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(PROJECT_DIR)",
+				);
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 					"$(DEVELOPER_FRAMEWORKS_DIR)",

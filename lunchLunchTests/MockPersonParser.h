@@ -9,11 +9,17 @@
 
 @interface MockPersonParser : NSObject<PersonParserProtocol>
 
+- (NSString *)getFirstNameForBuild;
+
+- (NSString *)getLastNameForBuild;
+
+- (NSString *)getEmailForBuild;
+
 - (void)setPersonJSONToReturn:(NSData *)string;
 
 - (void)setPersonToReturn:(NSObject <PersonProtocol> *)person;
 
-- (NSObject<PersonProtocol> *)getPersonToStringify;
+- (NSObject<PersonProtocol> *)getPersonToJSONify;
 
 - (NSData *)getPersonDataPassedIn;
 @end

@@ -11,6 +11,9 @@
 
 @interface LoginViewController : UIViewController<UITextFieldDelegate, PersonReceiverProtocol>
 @property(strong, nonatomic) IBOutlet UITextField *emailTextField;
+
+- (IBAction)createNewAccount:(id)sender;
+
 - (IBAction)backgroundTap:(id)sender;
 
 

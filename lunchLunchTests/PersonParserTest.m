@@ -80,7 +80,7 @@
     [self checkNullPersonWhenMissingKeys:missingIdDictionary];
 }
 
-- (void)testBuildPersonJSONString {
+- (void)testBuildPersonJSONData {
 
     NSString *firstName = @"Renee";
     NSString *lastName = @"Montoya";
@@ -96,9 +96,26 @@
     NSData *expectedData = [NSJSONSerialization dataWithJSONObject:expectedDictionary options:0 error:nil];
 
     PersonParser *parser = [PersonParser singleton];
-    NSData *personJson = [parser buildPersonJSONString:person];
+    NSData *personJson = [parser buildPersonJSONData:person];
     XCTAssertEqualObjects(expectedData, personJson);
 
+}
+- (void)testBuildPersonJSONDataWithFirstNameLastNameAndEmail {
+
+    NSString *firstName = @"Jim";
+    NSString *lastName = @"Gordon";
+    NSString *email = @"jgordon@gcpd.com";
+
+    NSArray *values = [NSArray arrayWithObjects:firstName, lastName, email, nil];
+    NSArray *keys = [NSArray arrayWithObjects:@"firstName", @"lastName", @"email", nil];
+    NSDictionary *personDictionary = [NSDictionary dictionaryWithObjects:values forKeys:keys];
+    NSDictionary *expectedDictionary = [NSDictionary dictionaryWithObject:personDictionary forKey:@"person"];
+
+    NSData *expectedData = [NSJSONSerialization dataWithJSONObject:expectedDictionary options:0 error:nil];
+
+    PersonParser *parser = [PersonParser singleton];
+    NSData *personJson = [parser buildPersonJSONWithFirstName:firstName lastName:lastName emailAddress:email];
+    XCTAssertEqualObjects(expectedData, personJson);
 }
 
 - (void)checkNullPersonWhenMissingKeys:(NSDictionary *)missingFirstNameDictionary {

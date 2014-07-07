@@ -9,6 +9,4 @@
 
 @interface LocationParser : NSObject <LocationParserProtocol>
 + (LocationParser *)singleton;
-
-
 @end
